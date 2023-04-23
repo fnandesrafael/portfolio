@@ -1,13 +1,13 @@
 .home-wrapper {
+  align-items: center;
   display: flex;
   flex-flow: column;
-  align-items: center;
 }
 
 .img-frame {
   display: flex;
-  justify-content: center;
   height: 20em;
+  justify-content: center;
   left: 50%;
   overflow: hidden;
   position: absolute;
@@ -22,12 +22,10 @@
 }
 
 .username {
-  color: #ffe9bc;
-  font-family: 'Bodoni Moda';
-  font-style: normal;
   font-size: 1.25em;
+  font-style: normal;
   letter-spacing: 0.5em;
+  position: absolute;
   text-align: center;
   top: calc(45% + 9em); /* calcula a posição vertical em relação ao topo */
-  position: absolute;
 }

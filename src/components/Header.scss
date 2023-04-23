@@ -1,6 +1,14 @@
 .header-wrapper {
+  align-items: center;
   box-sizing: border-box;
-  border: 1px solid red;
-  height: 3em;
+  display: flex;
+  flex-flow: row;
+  height: 5em;
+  justify-content: space-between;
+  padding: 3em;
   width: 100%;
+
+  p {
+    letter-spacing: 0.1em;
+  }
 }
