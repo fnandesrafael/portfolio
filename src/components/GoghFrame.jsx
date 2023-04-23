@@ -22,7 +22,7 @@ export default function GoghFrame() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1 },
+              transition: { duration: 1.5 },
             }}
             whileHover={{
               scale: 2.5,
@@ -37,7 +37,7 @@ export default function GoghFrame() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1 },
+              transition: { duration: 1.5 },
             }}
             whileHover={{
               scale: 2.5,

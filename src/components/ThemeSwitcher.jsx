@@ -1,5 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { ThemeContext } from '../context/ThemeProvider';
+import MoonIcon from './icons/MoonIcon';
+import SunIcon from './icons/SunIcon';
 import './ThemeSwitcher.scss';
 
 export default function ThemeSwitcher() {
@@ -14,5 +16,11 @@ export default function ThemeSwitcher() {
     setTheme(theme === 'dark-mode' ? 'light-mode' : 'dark-mode');
   };
 
-  return <button onClick={switchTheme}>Switch Theme</button>;
+  return (
+    <div className="toggle-wrapper">
+      <MoonIcon />
+      <button onClick={switchTheme}>Switch Theme</button>
+      <SunIcon />
+    </div>
+  );
 }

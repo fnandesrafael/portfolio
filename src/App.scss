@@ -20,11 +20,21 @@ body {
     background-color: $bg-light;
     color: $txt-light;
     transition: 1s;
+
+    svg {
+      fill: $txt-light;
+      transition: 1s;
+    }
   }
 
   &.dark-mode {
     background-color: $bg-dark;
     color: $txt-dark;
     transition: 1s;
+
+    svg {
+      fill: $txt-dark;
+      transition: 1s;
+    }
   }
 }

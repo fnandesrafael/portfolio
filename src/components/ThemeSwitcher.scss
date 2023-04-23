@@ -1,0 +1,14 @@
+.toggle-wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  padding: 0.5em;
+  width: 10em;
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+}
+
