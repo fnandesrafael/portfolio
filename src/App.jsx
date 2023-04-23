@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import Home from './pages/Home';
 import Hello from './pages/Hello';
 import NotFound from './pages/NotFound';
+import './App.scss';
 
 export default function App() {
   const location = useLocation();
