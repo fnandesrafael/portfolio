@@ -1,16 +1,18 @@
-.container {
-  align-items: center;
+.home-wrapper {
   display: flex;
   flex-flow: column;
-  height: 100%;
-  justify-content: center;
+  align-items: center;
 }
 
 .img-frame {
   display: flex;
   justify-content: center;
   height: 20em;
+  left: 50%;
   overflow: hidden;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
   width: 15em;
 
   img {
@@ -25,6 +27,7 @@
   font-style: normal;
   font-size: 1.25em;
   letter-spacing: 0.5em;
-  margin-top: 2em;
   text-align: center;
+  top: calc(45% + 9em); /* calcula a posição vertical em relação ao topo */
+  position: absolute;
 }
