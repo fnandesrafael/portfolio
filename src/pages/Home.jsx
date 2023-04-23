@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import DarkPaint from '../assets/images/the_starry_night.png';
-import LightPaint from '../assets/images/green_wheat_field_with_cypress.jpg';
+import DarkVanGogh from '../assets/images/the_starry_night.jpg';
+import LightVanGogh from '../assets/images/green_wheat_field_with_cypress.jpg';
 import './Home.scss';
 import Header from '../components/Header';
 import { ThemeContext } from '../context/ThemeProvider';
@@ -28,7 +28,7 @@ export default function Home() {
                 scale: 2.5,
               }}
               transition={transition}
-              src={theme === 'dark-mode' ? DarkPaint : LightPaint}
+              src={theme === 'dark-mode' ? DarkVanGogh : LightVanGogh}
             />
           </Link>
         </div>
