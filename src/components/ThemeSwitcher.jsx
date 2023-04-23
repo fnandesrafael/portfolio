@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { ThemeContext } from '../context/ThemeProvider';
+import './ThemeSwitcher.scss';
 
 export default function ThemeSwitcher() {
   const { theme, setTheme } = useContext(ThemeContext);
