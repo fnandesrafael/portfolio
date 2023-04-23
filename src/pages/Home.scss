@@ -4,27 +4,10 @@
   flex-flow: column;
 }
 
-.img-frame {
-  display: flex;
-  height: 20em;
-  justify-content: center;
-  left: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  width: 15em;
-
-  img {
-    height: 20em;
-    object-fit: cover;
-  }
-}
-
 .username {
   font-size: 1.25em;
   font-style: normal;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.75em;
   position: absolute;
   text-align: center;
   top: calc(45% + 9em);
