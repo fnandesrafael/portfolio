@@ -7,15 +7,15 @@
 }
 
 .img-frame {
+  display: flex;
+  justify-content: center;
   height: 20em;
   overflow: hidden;
   width: 15em;
-  position: relative;
 
   img {
     height: 20em;
     object-fit: cover;
-    width: 15em;
   }
 }
 

@@ -12,10 +12,10 @@ export default function Home() {
       <div className="img-frame">
         <Link to="/hello">
           <motion.img
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 2 }}
             animate={{ opacity: 1, transition: { delay: 0.5, duration: 2 } }}
             whileHover={{
-              scale: 1.2,
+              scale: 2.5,
             }}
             transition={transition}
             src={DarkImg}
