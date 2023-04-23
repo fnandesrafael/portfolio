@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Home.scss';
-import Header from '../components/Header';
 import GoghFrame from '../components/GoghFrame';
 
 export default function Home() {
   return (
     <>
-      <Header />
       <div className="home-wrapper">
         <GoghFrame />
         <motion.p

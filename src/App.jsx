@@ -5,12 +5,14 @@ import Home from './pages/Home';
 import Hello from './pages/Hello';
 import NotFound from './pages/NotFound';
 import './App.scss';
+import Header from './components/Header';
 
 export default function App() {
   const location = useLocation();
 
   return (
     <div className="app">
+      <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
