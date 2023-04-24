@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&display=swap");
-
-$bg-dark: #131313;
-$txt-dark: #ffe4c4;
-$bg-light: #d9d9d9;
-$txt-light: #131313;
+@import './styles/variables';
 
 #root {
   height: 100%;
@@ -20,21 +16,11 @@ body {
     background-color: $bg-light;
     color: $txt-light;
     transition: 1s;
-
-    svg {
-      fill: $txt-light;
-      transition: 1s;
-    }
   }
 
   &.dark-mode {
     background-color: $bg-dark;
     color: $txt-dark;
     transition: 1s;
-
-    svg {
-      fill: $txt-dark;
-      transition: 1s;
-    }
   }
 }
