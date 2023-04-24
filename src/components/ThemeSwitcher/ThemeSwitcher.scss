@@ -12,34 +12,11 @@ $toggle-radious: $toggle-height;
   padding: 0.5em;
   width: 8em;
 
-  .toggle-sun, .toggle-moon {
-    height: 1.5em;
-    width: 1.5em;
-
-    body.dark-mode & {
-      fill: $dark-mode-fill;
-      transition: 1s;
-    }
-
-    body.light-mode & {
-      fill: $light-mode-fill;
-      transition: 1s;
-    }
-  }
-
   .toggle {
-    cursor: pointer;
     border-radius: calc($toggle-height / 2);
+    cursor: pointer;
     height: $toggle-height;
     width: $toggle-width;
-
-    .toggle-input {
-      display: none;
-
-      &:checked ~ .toggle-element::after {
-        transform: translate($toggle-height);
-      }
-    }
 
     .toggle-element {
       border-radius: $toggle-radious;
@@ -47,6 +24,17 @@ $toggle-radious: $toggle-height;
       position: relative;
       transition: 0.2s;
       width: $toggle-width;
+
+      &::after {
+        border-radius: $toggle-radious;
+        content: "";
+        height: $toggle-height;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: transform 0.2s;
+        width: calc($toggle-width / 2);
+      }
 
       body.dark-mode & {
         border: 1px solid $dark-mode-fill;
@@ -65,17 +53,29 @@ $toggle-radious: $toggle-height;
           transition: 0.5s;
         }
       }
+    }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: $toggle-height;
-        width: calc($toggle-width / 2);
-        border-radius: $toggle-radious;
-        transition: transform 0.2s;
+    .toggle-input {
+      display: none;
+
+      &:checked ~ .toggle-element::after {
+        transform: translate($toggle-height);
       }
+    }
+  }
+
+  .toggle-sun, .toggle-moon {
+    height: 1.5em;
+    width: 1.5em;
+
+    body.dark-mode & {
+      fill: $dark-mode-fill;
+      transition: 1s;
+    }
+
+    body.light-mode & {
+      fill: $light-mode-fill;
+      transition: 1s;
     }
   }
 }
