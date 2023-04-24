@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeProvider';
 import MoonIcon from './MoonIcon';
 import SunIcon from './SunIcon';
+import Toggle from './Toggle';
 import './ThemeSwitcher.scss';
 
 export default function ThemeSwitcher() {
@@ -19,7 +20,7 @@ export default function ThemeSwitcher() {
   return (
     <div className="toggle-wrapper">
       <MoonIcon />
-      <button onClick={switchTheme}>Switch Theme</button>
+      <Toggle switchTheme={switchTheme} />
       <SunIcon />
     </div>
   );
