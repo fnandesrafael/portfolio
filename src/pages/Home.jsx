@@ -12,7 +12,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="name"
+        className="home-name"
       >
         Rafael de Lima
       </motion.p>

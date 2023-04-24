@@ -6,21 +6,21 @@
 }
 
 body {
-  background-color: $bg-dark;
-  color: $txt-dark;
+  background-color: $dark-mode-bg;
+  color: $dark-mode-txt;
   font-family: 'Bodoni Moda', serif;
   margin: 0;
   scroll-behavior: smooth;
 
   &.light-mode {
-    background-color: $bg-light;
-    color: $txt-light;
+    background-color: $light-mode-bg;
+    color: $light-mode-txt;
     transition: 1s;
   }
 
   &.dark-mode {
-    background-color: $bg-dark;
-    color: $txt-dark;
+    background-color: $dark-mode-bg;
+    color: $dark-mode-txt;
     transition: 1s;
   }
 }

@@ -2,13 +2,15 @@
   align-items: center;
   display: flex;
   flex-flow: column;
+
+  .home-name {
+    font-size: 1.25em;
+    font-style: normal;
+    letter-spacing: 0.75em;
+    position: absolute;
+    text-align: center;
+    top: calc(45% + 10em);
+  }
 }
 
-.name {
-  font-size: 1.25em;
-  font-style: normal;
-  letter-spacing: 0.75em;
-  position: absolute;
-  text-align: center;
-  top: calc(45% + 10em);
-}
+
