@@ -10,7 +10,7 @@
   padding: 3em;
   width: 100%;
 
-  .user {
+  .header-username {
     font-size: 0.8em;
     letter-spacing: 0.2em;
 
@@ -20,24 +20,14 @@
   }
 
   body.light-mode & {
-    background-color: $bg-light;
-    color: $txt-light;
+    background-color: $light-mode-bg;
+    color: $light-mode-txt;
     transition: 1s;
-
-    svg {
-      fill: $fill-light;
-      transition: 1s;
-    }
   }
 
   body.dark-mode & {
-    background-color: $bg-dark;
-    color: $txt-dark;
+    background-color: $dark-mode-bg;
+    color: $dark-mode-txt;
     transition: 1s;
-
-    svg {
-      fill: $fill-dark;
-      transition: 1s;
-    }
   }
 }
