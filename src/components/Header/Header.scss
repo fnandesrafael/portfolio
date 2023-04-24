@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.header-wrapper {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row;
+  height: 5em;
+  justify-content: space-between;
+  padding: 3em;
+  width: 100%;
+
+  p {
+    letter-spacing: 0.1em;
+  }
+
+  body.light-mode & {
+    background-color: $bg-light;
+    transition: 1s;
+
+    svg {
+      fill: $txt-light;
+      transition: 1s;
+    }
+  }
+
+  body.dark-mode & {
+    background-color: $bg-dark;
+    transition: 1s;
+
+    svg {
+      fill: $txt-dark;
+      transition: 1s;
+    }
+  }
+}

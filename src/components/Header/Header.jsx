@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { motion } from 'framer-motion';
-import ThemeSwitcher from './ThemeSwitcher';
+import ThemeSwitcher from '../ThemeSwitcher';
 
 export default function Header() {
   return (

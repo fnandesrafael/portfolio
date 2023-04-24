@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
-import { ThemeContext } from '../context/ThemeProvider';
-import MoonIcon from './icons/MoonIcon';
-import SunIcon from './icons/SunIcon';
+import { ThemeContext } from '../../context/ThemeProvider';
+import MoonIcon from './MoonIcon';
+import SunIcon from './SunIcon';
 import './ThemeSwitcher.scss';
 
 export default function ThemeSwitcher() {

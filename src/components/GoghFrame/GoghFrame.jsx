@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../context/ThemeProvider';
-import DarkVanGogh from '../assets/images/the_starry_night.jpg';
-import LightVanGogh from '../assets/images/green_wheat_field_with_cypress.jpg';
+import { ThemeContext } from '../../context/ThemeProvider';
+import DarkVanGogh from '../../assets/images/the_starry_night.jpg';
+import LightVanGogh from '../../assets/images/green_wheat_field_with_cypress.jpg';
 import './GoghFrame.scss';
 
 const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
