@@ -16,13 +16,13 @@ export default function GoghFrame() {
       <Link to="/hello">
         {theme === 'dark-mode' ? (
           <motion.img
-            key="dark"
+            key={theme}
             src={DarkVanGogh}
             initial={{ y: -200, opacity: 0, scale: 2 }}
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5 },
+              transition: { duration: 1.5, ease: transition.ease },
             }}
             whileHover={{
               scale: 2.5,
@@ -31,13 +31,13 @@ export default function GoghFrame() {
           />
         ) : (
           <motion.img
-            key="light"
+            key={theme}
             src={LightVanGogh}
             initial={{ y: 200, opacity: 0, scale: 2 }}
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5 },
+              transition: { duration: 1.5, ease: transition.ease },
             }}
             whileHover={{
               scale: 2.5,
