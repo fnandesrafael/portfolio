@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 $toggle-width: 2.5em;
-$toggle-height: $toggle-width / 2;
+$toggle-height: calc($toggle-width / 2);
 $toggle-radious: $toggle-height;
 
 .toggle-wrapper {

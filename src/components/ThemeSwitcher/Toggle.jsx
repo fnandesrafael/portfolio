@@ -11,7 +11,7 @@ export default function Toggle({ switchTheme }) {
         type="checkbox"
         name=""
         id="checkbox"
-        onClick={switchTheme}
+        onChange={switchTheme}
         checked={theme === 'light-mode'}
       />
       <div className="toggle-element" />
