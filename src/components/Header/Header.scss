@@ -10,26 +10,33 @@
   padding: 3em;
   width: 100%;
 
-  p {
-    letter-spacing: 0.1em;
+  .user {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   body.light-mode & {
     background-color: $bg-light;
+    color: $txt-light;
     transition: 1s;
 
     svg {
-      fill: $txt-light;
+      fill: $fill-light;
       transition: 1s;
     }
   }
 
   body.dark-mode & {
     background-color: $bg-dark;
+    color: $txt-dark;
     transition: 1s;
 
     svg {
-      fill: $txt-dark;
+      fill: $fill-dark;
       transition: 1s;
     }
   }

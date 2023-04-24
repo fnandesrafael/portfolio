@@ -9,10 +9,10 @@ export default function Home() {
       <GoghFrame />
       <motion.p
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 0.5, duration: 1 } }}
+        animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
-        className="username"
+        transition={{ delay: 0.5, duration: 1 }}
+        className="name"
       >
         Rafael de Lima
       </motion.p>

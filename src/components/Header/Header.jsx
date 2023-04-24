@@ -11,7 +11,7 @@ export default function Header() {
       transition={{ delay: 2, duration: 1 }}
       className="header-wrapper"
     >
-      <p>@rafaelimaf</p>
+      <p className="user">@rafaelimaf</p>
       <ThemeSwitcher />
     </motion.header>
   );
