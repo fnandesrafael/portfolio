@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.header-wrapper {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row;
+  height: 5em;
+  justify-content: space-between;
+  padding: 3em;
+  width: 100%;
+
+  .header-username {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  body.light-mode & {
+    background-color: $light-mode-bg;
+    color: $light-mode-txt;
+    transition: 1s;
+  }
+
+  body.dark-mode & {
+    background-color: $dark-mode-bg;
+    color: $dark-mode-txt;
+    transition: 1s;
+  }
+}

@@ -1,45 +1,26 @@
+@import 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&display=swap';
+@import './styles/variables';
+
 #root {
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 2rem;
-  text-align: center;
+  height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  transition: filter 300ms;
-  will-change: filter;
-}
+body {
+  background-color: $dark-mode-bg;
+  color: $dark-mode-txt;
+  font-family: 'Bodoni Moda', serif;
+  margin: 0;
+  scroll-behavior: smooth;
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  &.light-mode {
+    background-color: $light-mode-bg;
+    color: $light-mode-txt;
+    transition: 1s;
   }
 
-  to {
-    transform: rotate(360deg);
+  &.dark-mode {
+    background-color: $dark-mode-bg;
+    color: $dark-mode-txt;
+    transition: 1s;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
