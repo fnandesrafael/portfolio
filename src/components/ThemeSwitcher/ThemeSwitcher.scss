@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 
-$toggle-width: 2.5em;
+$toggle-width: 2em;
 $toggle-height: calc($toggle-width / 2);
 $toggle-radious: $toggle-height;
 
@@ -66,7 +66,6 @@ $toggle-radious: $toggle-height;
 
   .toggle-sun, .toggle-moon {
     height: 1.5em;
-    width: 1.5em;
 
     body.dark-mode & {
       fill: $dark-mode-fill;
