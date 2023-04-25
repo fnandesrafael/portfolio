@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import './NotFound.scss';
 
-function NotFound() {
+export default function NotFound() {
   return (
     <div className="not-found-wrapper">
       <motion.h1
@@ -16,5 +16,3 @@ function NotFound() {
     </div>
   );
 }
-
-export default NotFound;

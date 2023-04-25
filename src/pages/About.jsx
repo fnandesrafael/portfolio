@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './About.scss';
+
 export default function About() {
-  return <div>About</div>;
+  return <div className="about-wrapper">WIP</div>;
 }
