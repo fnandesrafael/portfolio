@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import './Hello.scss';
 
-const GREETINGS = ['Pax!', 'Olá!', 'Hola!', 'Hello!'];
+const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
 const TRANSITION = {
   delay: 1,
   duration: 0.6,
