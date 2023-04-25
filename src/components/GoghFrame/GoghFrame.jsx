@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeProvider';
 import DarkVanGogh from '../../assets/images/the_starry_night.jpg';
 import LightVanGogh from '../../assets/images/green_wheat_field_with_cypress.jpg';
+
 import './GoghFrame.scss';
 
-const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
+const TRANSITION = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
 
 export default function GoghFrame() {
   const { theme } = useContext(ThemeContext);
@@ -22,12 +23,12 @@ export default function GoghFrame() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: transition.ease },
+              transition: { duration: 1.5, ease: TRANSITION.ease },
             }}
             whileHover={{
               scale: 2.5,
             }}
-            transition={transition}
+            transition={TRANSITION}
           />
         ) : (
           <motion.img
@@ -37,12 +38,12 @@ export default function GoghFrame() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: transition.ease },
+              transition: { duration: 1.5, ease: TRANSITION.ease },
             }}
             whileHover={{
               scale: 2.5,
             }}
-            transition={transition}
+            transition={TRANSITION}
           />
         )}
       </Link>

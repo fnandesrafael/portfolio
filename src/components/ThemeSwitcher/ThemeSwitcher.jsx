@@ -3,6 +3,7 @@ import { ThemeContext } from '../../context/ThemeProvider';
 import MoonIcon from './MoonIcon';
 import SunIcon from './SunIcon';
 import Toggle from './Toggle';
+
 import './ThemeSwitcher.scss';
 
 export default function ThemeSwitcher() {

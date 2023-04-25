@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Home.scss';
 import GoghFrame from '../components/GoghFrame';
+
+import './Home.scss';
 
 export default function Home() {
   return (

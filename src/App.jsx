@@ -4,9 +4,10 @@ import { AnimatePresence } from 'framer-motion';
 import Home from './pages/Home';
 import Hello from './pages/Hello';
 import NotFound from './pages/NotFound';
-import './App.scss';
 import Header from './components/Header';
 import { ThemeContext } from './context/ThemeProvider';
+
+import './App.scss';
 
 export default function App() {
   const { theme } = useContext(ThemeContext);
