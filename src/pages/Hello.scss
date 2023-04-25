@@ -1,0 +1,22 @@
+.hello-wrapper {
+  color: #d9d9d9;
+  height: 100vh;
+  width: 100%;
+
+  .hello-greeting {
+    left: 50%;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  body.dark-mode & {
+    background-color: #ffe4c4;
+    color: #131313;
+  }
+
+  body.light-mode & {
+    background-color: #131313;
+    color: #d9d9d9;
+  }
+}
