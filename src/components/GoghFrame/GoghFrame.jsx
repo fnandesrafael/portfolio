@@ -14,7 +14,7 @@ export default function GoghFrame() {
 
   return (
     <div className="img-frame">
-      <Link to="/hello">
+      <Link to="/about">
         {theme === 'dark-mode' ? (
           <motion.img
             key={theme}
@@ -26,7 +26,7 @@ export default function GoghFrame() {
               transition: { duration: 1.5, ease: TRANSITION.ease },
             }}
             whileHover={{
-              scale: 2.5,
+              scale: 2.2,
             }}
             transition={TRANSITION}
           />
@@ -41,7 +41,7 @@ export default function GoghFrame() {
               transition: { duration: 1.5, ease: TRANSITION.ease },
             }}
             whileHover={{
-              scale: 2.5,
+              scale: 2.2,
             }}
             transition={TRANSITION}
           />

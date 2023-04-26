@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import ThemeSwitcher from '../ThemeSwitcher';
 
 import './Header.scss';
 
 export default function Header() {
-  return (
+  const [canShow, setCanShow] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setTimeout(() => {
+        setCanShow(true);
+      }, 2100);
+    } else {
+      setCanShow(true);
+    }
+  }, []);
+
+  return canShow ? (
     <motion.header
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 2, duration: 1 }}
       className="header-wrapper"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
     >
-      <p className="header-username">@rafaelimaf</p>
+      <Link to="/home">
+        <span className="header-username">@rafaelimaf</span>
+      </Link>
       <ThemeSwitcher />
     </motion.header>
-  );
+  ) : null;
 }
