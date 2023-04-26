@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ThemeSwitcher from '../ThemeSwitcher';
 
 import './Header.scss';
@@ -8,13 +8,19 @@ import './Header.scss';
 export default function Header() {
   const [canShow, setCanShow] = useState(false);
 
+  const location = useLocation();
+
   useEffect(() => {
-    setTimeout(() => {
+    if (location.pathname === '/') {
+      setTimeout(() => {
+        setCanShow(true);
+      }, 2100);
+    } else {
       setCanShow(true);
-    }, 2000);
+    }
   }, []);
 
-  return !canShow ? null : (
+  return canShow ? (
     <motion.header
       className="header-wrapper"
       initial={{ opacity: 0 }}
@@ -25,5 +31,5 @@ export default function Header() {
       </Link>
       <ThemeSwitcher />
     </motion.header>
-  );
+  ) : null;
 }
