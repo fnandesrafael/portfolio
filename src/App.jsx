@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <div className="app-wrapper">
-      {location.pathname === '/' ? null : <Header />}
+      <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Hello />} />

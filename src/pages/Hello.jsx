@@ -6,8 +6,8 @@ import './Hello.scss';
 
 const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
 const TRANSITION = {
-  delay: 1.5,
-  duration: 0.6,
+  delay: 0.8,
+  duration: 1,
   ease: [0.43, 0.13, 0.23, 0.96],
 };
 
@@ -18,7 +18,7 @@ export default function Hello() {
   useEffect(() => {
     const interval = setInterval(() => {
       setGreetingIndex((prevIndex) => prevIndex + 1);
-    }, 250);
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
@@ -26,7 +26,7 @@ export default function Hello() {
   useEffect(() => {
     setTimeout(() => {
       setHasGreeted(true);
-    }, 3000);
+    }, 1500);
   }, []);
 
   return (
