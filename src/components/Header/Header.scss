@@ -2,13 +2,11 @@
 
 .header-wrapper {
   align-items: center;
-  box-sizing: border-box;
   display: flex;
-  flex-flow: row;
-  height: 5em;
+  flex-flow: row-reverse;
+  height: 3em;
   justify-content: space-between;
-  padding: 3em;
-  width: 100%;
+  padding: 2em 3em;
 
   .header-username {
     font-size: 0.8em;

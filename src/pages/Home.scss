@@ -4,12 +4,13 @@
   flex-flow: column;
 
   .home-name {
-    font-size: 1.25em;
+    font-size: 1em;
     font-style: normal;
-    letter-spacing: 1em;
+    font-weight: 500;
+    letter-spacing: 0.75em;
     position: absolute;
     text-align: center;
-    top: calc(50% + 10em);
+    top: calc(50% + 12em);
   }
 }
 

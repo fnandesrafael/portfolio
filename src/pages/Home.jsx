@@ -14,7 +14,7 @@ export default function Home() {
         exit={{ opacity: 0, transition: { duration: 1 } }}
         className="home-name"
       >
-        Rafael de Lima
+        @fnandesrafael
       </motion.p>
     </div>
   );
