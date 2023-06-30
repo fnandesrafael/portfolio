@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import './About.scss';
+
 export default function About() {
   useEffect(() => {
     setTimeout(() => {
