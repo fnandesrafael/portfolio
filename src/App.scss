@@ -12,6 +12,10 @@ body {
   margin: 0;
   scroll-behavior: smooth;
 
+  &.overflow {
+    overflow: hidden;
+  }
+
   &.light-mode {
     background-color: $light-mode-bg;
     color: $light-mode-txt;
