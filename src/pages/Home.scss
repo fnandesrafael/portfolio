@@ -17,6 +17,7 @@
     animation: spin 60s infinite linear;
     height: 30vh;
     margin-right: 35vh;
+    pointer-events: none;
     transform-origin: center;
     transition: 1s;
     z-index: 1;
