@@ -30,6 +30,7 @@ body {
 
   &.overflow {
     overflow: hidden;
+    touch-action: none;
   }
 
   &.light-mode {
