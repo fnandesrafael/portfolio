@@ -13,6 +13,20 @@
   display: flex;
   flex-flow: column;
 
+  .mouse-follower {
+    font-size: 1em;
+    letter-spacing: 0.25vw;
+    color: white;
+    left: 0;
+    margin-left: 2vw;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 8vw;
+    z-index: 1;
+  }
+
   .badge {
     animation: spin 60s infinite linear;
     height: 28vh;
