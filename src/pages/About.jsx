@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import './About.scss';
 
 export default function About() {
+  useEffect(() => {
+    setTimeout(() => {
+      document.body.classList.remove('overflow');
+    }, 200);
+  }, []);
+
   return (
     <div className="about-wrapper">
       <h1

@@ -1,15 +1,38 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .home-wrapper {
   align-items: center;
   display: flex;
   flex-flow: column;
 
+  .badge {
+    animation: spin 60s infinite linear;
+    height: 30vh;
+    margin-right: 35vh;
+    pointer-events: none;
+    transform-origin: center;
+    transition: 1s;
+    z-index: 1;
+  }
+
   .home-name {
-    font-size: 1.25em;
+    font-size: 8.75vw;
     font-style: normal;
-    letter-spacing: 1em;
+    font-weight: 100;
+    left: -0.25em;
+    letter-spacing: 0.25em;
     position: absolute;
-    text-align: center;
-    top: calc(50% + 10em);
+    text-align: start;
+    top: calc(100% - 18vw);
+    white-space: nowrap;
   }
 }
 
