@@ -16,7 +16,7 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    document.body.className = `overflow ${theme}`;
+    document.body.className = theme;
     localStorage.setItem('theme', JSON.stringify(theme));
   }, [theme]);
 
