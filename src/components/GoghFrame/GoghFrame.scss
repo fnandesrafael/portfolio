@@ -1,17 +1,17 @@
 .img-frame {
   border-radius: 10em 10em 0 0;
   display: flex;
-  height: 24em;
+  height: 50vh;
   justify-content: center;
   left: 50%;
   overflow: hidden;
   position: absolute;
   top: 45%;
   transform: translate(-50%, -50%);
-  width: 15em;
+  width: 15vw;
 
   img {
-    height: 24em;
+    height: 28em;
     object-fit: cover;
   }
 }

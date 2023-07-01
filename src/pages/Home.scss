@@ -1,7 +1,26 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .home-wrapper {
   align-items: center;
   display: flex;
   flex-flow: column;
+
+  .badge {
+    animation: spin 60s infinite linear;
+    height: 30vh;
+    margin-right: 35vh;
+    transform-origin: center;
+    transition: 1s;
+    z-index: 1;
+  }
 
   .home-name {
     font-size: 8.75vw;
