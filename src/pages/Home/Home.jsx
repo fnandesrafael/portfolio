@@ -30,8 +30,8 @@ export default function Home() {
     document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
       document.body.classList.remove('overflow');
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
