@@ -26,9 +26,12 @@ export default function Home() {
   };
 
   useEffect(() => {
+    document.body.classList.add('overflow');
     document.addEventListener('mousemove', handleMouseMove);
+
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
+      document.body.classList.remove('overflow');
     };
   }, []);
 
