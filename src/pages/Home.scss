@@ -14,10 +14,10 @@
   flex-flow: column;
 
   .mouse-follower {
-    font-size: 1em;
-    letter-spacing: 0.25vw;
     color: white;
+    font-size: 1em;
     left: 0;
+    letter-spacing: 0.25vw;
     margin-left: 2vw;
     mix-blend-mode: difference;
     pointer-events: none;
