@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import GoghFrame from '../components/GoghFrame';
 import badgeLight from '../assets/images/badge_light.png';
 import badgeDark from '../assets/images/badge_dark.png';
+import { ThemeContext } from '../context/ThemeProvider';
 
 import './Home.scss';
-import { ThemeContext } from '../context/ThemeProvider';
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
