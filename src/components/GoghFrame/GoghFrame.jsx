@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeProvider';
-import DarkVanGogh from '../../assets/images/the_starry_night.jpg';
-import LightVanGogh from '../../assets/images/green_wheat_field_with_cypress.jpg';
+import DarkGogh from '../../assets/images/the_starry_night.jpg';
+import LightGogh from '../../assets/images/green_wheat_field_with_cypress.jpg';
 
 import './GoghFrame.scss';
 
@@ -18,7 +18,7 @@ export default function GoghFrame() {
         {theme === 'dark-mode' ? (
           <motion.img
             key={theme}
-            src={DarkVanGogh}
+            src={DarkGogh}
             initial={{ y: -200, opacity: 0, scale: 2 }}
             animate={{
               y: 0,
@@ -33,7 +33,7 @@ export default function GoghFrame() {
         ) : (
           <motion.img
             key={theme}
-            src={LightVanGogh}
+            src={LightGogh}
             initial={{ y: 200, opacity: 0, scale: 2 }}
             animate={{
               y: 0,

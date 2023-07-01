@@ -18,7 +18,7 @@ export default function App() {
   useEffect(() => {
     document.body.className = `overflow ${theme}`;
     localStorage.setItem('theme', JSON.stringify(theme));
-  }, [theme, location.pathname]);
+  }, [theme]);
 
   return (
     <div className="app-wrapper">
