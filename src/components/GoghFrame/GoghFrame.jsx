@@ -18,14 +18,14 @@ export default function GoghFrame() {
             key={`${theme}-paint`}
             className="gogh-paint"
             src={DarkGogh}
-            initial={{ y: -200, opacity: 0, scale: 2 }}
+            initial={{ y: -200, opacity: 0, scale: 2.4 }}
             animate={{
               y: 0,
               opacity: 1,
               transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
             }}
             whileHover={{
-              scale: 2.5,
+              scale: 3,
             }}
             transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
           />
@@ -34,14 +34,14 @@ export default function GoghFrame() {
             key={`${theme}-paint`}
             className="gogh-paint"
             src={LightGogh}
-            initial={{ y: 200, opacity: 0, scale: 2 }}
+            initial={{ y: 200, opacity: 0, scale: 2.4 }}
             animate={{
               y: 0,
               opacity: 1,
               transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
             }}
             whileHover={{
-              scale: 2.5,
+              scale: 3,
             }}
             transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
           />

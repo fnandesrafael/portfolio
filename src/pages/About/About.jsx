@@ -36,9 +36,10 @@ export default function About() {
           <motion.img
             className="gogh-paint"
             src={DarkGogh}
-            initial={{ y: 0, scale: 2.5 }}
+            initial={{ y: 0, scale: 3 }}
             animate={{
               y: 10,
+              scale: 2.5,
               filter: 'saturate(0)',
               transition: {
                 duration: 1.5,
@@ -50,9 +51,10 @@ export default function About() {
           <motion.img
             className="gogh-paint"
             src={LightGogh}
-            initial={{ y: 0, scale: 2.5 }}
+            initial={{ y: 0, scale: 3 }}
             animate={{
               y: -10,
+              scale: 2.5,
               filter: 'saturate(0)',
               transition: {
                 duration: 1.5,
