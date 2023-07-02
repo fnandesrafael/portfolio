@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ThemeContext } from '../../context/ThemeProvider';
 import DarkGogh from '../../assets/images/the_starry_night.jpg';
@@ -8,6 +8,18 @@ import './About.scss';
 
 export default function About() {
   const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.body.style.cssText = 'overflow: hidden';
+
+    const scrollLock = setTimeout(() => {
+      document.body.style.cssText = 'overflow: auto';
+    }, 1000);
+
+    return () => {
+      clearTimeout(scrollLock);
+    };
+  }, []);
 
   return (
     <div className="about-wrapper">
@@ -50,6 +62,9 @@ export default function About() {
           />
         )}
       </motion.div>
+      <div style={{ display: 'flex', marginTop: '100vh' }}>
+        <h1>Lorem Ipsum</h1>
+      </div>
     </div>
   );
 }
