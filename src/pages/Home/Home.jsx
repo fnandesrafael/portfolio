@@ -26,12 +26,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    document.body.style.cssText = `overflow: hidden`;
+    document.body.style.cssText = `overflow: hidden; touch-action: none;`;
     document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
-      document.body.style.cssText = `overflow: auto`;
+      document.body.style.cssText = `overflow: auto; touch-action: auto`;
     };
   }, []);
 
