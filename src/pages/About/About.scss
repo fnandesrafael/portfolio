@@ -1,7 +1,10 @@
 .about-wrapper {
-  .gogh-bg {
-    top: -25;
-    width: 100%;
-    z-index: -3;
+  display: flex;
+  flex-direction: column;
+
+  .paint-frame {
+    display: flex;
+    opacity: 1;
+    z-index: -1;
   }
 }
