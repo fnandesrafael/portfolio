@@ -24,9 +24,9 @@ export default function About() {
           <motion.img
             className="gogh-paint"
             src={DarkGogh}
-            initial={{ y: -10, scale: 2.5 }}
+            initial={{ y: 0, scale: 2.5 }}
             animate={{
-              y: 0,
+              y: 10,
               filter: 'saturate(0)',
               transition: {
                 duration: 1.5,
