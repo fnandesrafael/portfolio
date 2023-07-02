@@ -7,43 +7,43 @@ import LightGogh from '../../assets/images/green_wheat_field_with_cypress.jpg';
 
 import './GoghFrame.scss';
 
-const TRANSITION = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
-
 export default function GoghFrame() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="img-frame">
+    <div className="paint-frame">
       <Link to="/about">
         {theme === 'dark-mode' ? (
           <motion.img
-            key={theme}
+            key={`${theme}-paint`}
+            className="gogh-paint"
             src={DarkGogh}
             initial={{ y: -200, opacity: 0, scale: 2 }}
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: TRANSITION.ease },
+              transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
             }}
             whileHover={{
-              scale: 2.2,
+              scale: 2.5,
             }}
-            transition={TRANSITION}
+            transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
           />
         ) : (
           <motion.img
-            key={theme}
+            key={`${theme}-paint`}
+            className="gogh-paint"
             src={LightGogh}
             initial={{ y: 200, opacity: 0, scale: 2 }}
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: TRANSITION.ease },
+              transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
             }}
             whileHover={{
-              scale: 2.2,
+              scale: 2.5,
             }}
-            transition={TRANSITION}
+            transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
           />
         )}
       </Link>
