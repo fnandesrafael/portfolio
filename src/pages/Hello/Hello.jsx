@@ -16,11 +16,16 @@ export default function Hello() {
   const [greetingIndex, setGreetingIndex] = useState(0);
 
   useEffect(() => {
+    document.body.style.cssText = 'overflow: hidden';
+
     const interval = setInterval(() => {
       setGreetingIndex((prevIndex) => prevIndex + 1);
     }, 250);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      document.body.style.cssText = 'overflow: auto';
+    };
   }, []);
 
   useEffect(() => {
