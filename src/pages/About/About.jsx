@@ -39,7 +39,7 @@ export default function About() {
             initial={{ y: 0, scale: 3 }}
             animate={{
               y: 10,
-              scale: 2.5,
+              scale: 2.65,
               filter: 'saturate(0.25)',
               transition: {
                 duration: 1.5,
@@ -54,7 +54,7 @@ export default function About() {
             initial={{ y: 0, scale: 3 }}
             animate={{
               y: -10,
-              scale: 2.5,
+              scale: 2.65,
               filter: 'saturate(0.25)',
               transition: {
                 duration: 1.5,
