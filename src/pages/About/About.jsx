@@ -40,7 +40,7 @@ export default function About() {
             animate={{
               y: 10,
               scale: 2.5,
-              filter: 'saturate(0)',
+              filter: 'saturate(0.25)',
               transition: {
                 duration: 1.5,
                 ease: [0.43, 0.13, 0.23, 0.96],
@@ -55,7 +55,7 @@ export default function About() {
             animate={{
               y: -10,
               scale: 2.5,
-              filter: 'saturate(0)',
+              filter: 'saturate(0.25)',
               transition: {
                 duration: 1.5,
                 ease: [0.43, 0.13, 0.23, 0.96],
