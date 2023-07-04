@@ -5,11 +5,6 @@ import { motion } from 'framer-motion';
 import './Hello.scss';
 
 const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
-const TRANSITION = {
-  delay: 1,
-  duration: 1,
-  ease: [0.43, 0.13, 0.23, 0.96],
-};
 
 export default function Hello() {
   const [hasGreeted, setHasGreeted] = useState(false);
@@ -38,7 +33,11 @@ export default function Hello() {
     <motion.div
       initial={{ y: 0 }}
       animate={{ y: -1000 }}
-      transition={TRANSITION}
+      transition={{
+        delay: 1,
+        duration: 1,
+        ease: [0.43, 0.13, 0.23, 0.96],
+      }}
       className="hello-wrapper"
     >
       {hasGreeted ? (
