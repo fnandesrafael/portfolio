@@ -1,0 +1,14 @@
+.about-wrapper {
+  .paint-frame {
+    align-items: center;
+    display: flex;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  .gogh-paint {
+    margin-top: 15vh;
+    object-fit: cover;
+  }
+}
+
