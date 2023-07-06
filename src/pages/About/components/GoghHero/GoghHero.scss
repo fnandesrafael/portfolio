@@ -7,13 +7,14 @@
   .hero-name {
     color: #fff;
     font-size: 6vw;
-    left: 5vw;
+    left: 0.75em;
     letter-spacing: 0.45em;
     mix-blend-mode: difference;
     position: absolute;
-    top: 19vw;
-    width: 100%;
-    z-index: 2;
+    text-align: left;
+    width: 125vw;
+    word-wrap: break-word;
+    z-index: 1;
   }
 
   .paint-frame {

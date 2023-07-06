@@ -27,7 +27,7 @@ export default function GoghHero() {
           transition: { delay: 1.25, duration: 0.8, ease: 'easeInOut' },
         }}
       >
-        Rafael Fernandes
+        {'Rafael Fernandes'}
       </motion.h1>
       {theme === 'dark-mode' ? (
         <motion.img
