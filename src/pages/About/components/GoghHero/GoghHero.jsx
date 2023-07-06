@@ -10,46 +10,48 @@ export default function GoghHero() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <motion.div
-      className="paint-frame"
-      animate={{
-        borderRadius: 0,
-        height: '110vh',
-        transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
-        width: '100%',
-      }}
-    >
-      {theme === 'dark-mode' ? (
-        <motion.img
-          className="gogh-paint"
-          src={DarkGogh}
-          initial={{ y: 0, scale: 3 }}
-          animate={{
-            y: 10,
-            scale: 2.65,
-            filter: 'saturate(0.15)',
-            transition: {
-              duration: 1.5,
-              ease: [0.43, 0.13, 0.23, 0.96],
-            },
-          }}
-        />
-      ) : (
-        <motion.img
-          className="gogh-paint"
-          src={LightGogh}
-          initial={{ y: 0, scale: 3 }}
-          animate={{
-            y: -10,
-            scale: 2.65,
-            filter: 'saturate(0.15)',
-            transition: {
-              duration: 1.5,
-              ease: [0.43, 0.13, 0.23, 0.96],
-            },
-          }}
-        />
-      )}
+    <div className="hero-wrapper">
+      <motion.div
+        className="paint-frame"
+        animate={{
+          borderRadius: 0,
+          height: '110vh',
+          transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
+          width: '100%',
+        }}
+      >
+        {theme === 'dark-mode' ? (
+          <motion.img
+            className="gogh-paint"
+            src={DarkGogh}
+            initial={{ y: 0, scale: 3 }}
+            animate={{
+              y: 10,
+              scale: 2.65,
+              filter: 'saturate(0.15)',
+              transition: {
+                duration: 1.5,
+                ease: [0.43, 0.13, 0.23, 0.96],
+              },
+            }}
+          />
+        ) : (
+          <motion.img
+            className="gogh-paint"
+            src={LightGogh}
+            initial={{ y: 0, scale: 3 }}
+            animate={{
+              y: -10,
+              scale: 2.65,
+              filter: 'saturate(0.15)',
+              transition: {
+                duration: 1.5,
+                ease: [0.43, 0.13, 0.23, 0.96],
+              },
+            }}
+          />
+        )}
+      </motion.div>
       <motion.h1
         className="hero-name"
         initial={{ opacity: 0 }}
@@ -60,6 +62,6 @@ export default function GoghHero() {
       >
         Rafael Fernandes
       </motion.h1>
-    </motion.div>
+    </div>
   );
 }
