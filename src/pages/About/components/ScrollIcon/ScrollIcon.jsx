@@ -33,10 +33,10 @@ export default function ScrollIcon() {
             y: 12,
             opacity: [0, 1, 1, 0],
             transition: {
-              delay: 3.5,
+              delay: 2.5,
               duration: 1,
               repeat: Infinity,
-              repeatDelay: 1.5,
+              repeatDelay: 1,
               repeatType: 'loop',
             },
           }}

@@ -10,7 +10,7 @@ export default function About() {
 
     const scrollLock = setTimeout(() => {
       document.body.style.cssText = 'overflow: auto';
-    }, 1250);
+    }, 2750);
 
     return () => {
       clearTimeout(scrollLock);
