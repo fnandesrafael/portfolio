@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import GoghHero from './components/GoghHero';
 
 import './About.scss';
+import ScrollIcon from './components/ScrollIcon/ScrollIcon';
 
 export default function About() {
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function About() {
   return (
     <div className="about-wrapper">
       <GoghHero />
+      <ScrollIcon />
       <div style={{ display: 'flex', marginTop: '100vh' }}>
         <h1>Lorem Ipsum</h1>
       </div>
