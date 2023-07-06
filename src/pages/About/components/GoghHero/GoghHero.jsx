@@ -19,6 +19,16 @@ export default function GoghHero() {
         width: '100%',
       }}
     >
+      <motion.h1
+        className="hero-name"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 1.25, duration: 0.8, ease: 'easeInOut' },
+        }}
+      >
+        Rafael Fernandes
+      </motion.h1>
       {theme === 'dark-mode' ? (
         <motion.img
           className="gogh-paint"
