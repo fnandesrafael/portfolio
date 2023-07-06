@@ -6,6 +6,41 @@ import LightGogh from '../../../../assets/images/green_wheat_field_with_cypress.
 
 import './GoghHero.scss';
 
+const letterVariant = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: [0.43, 0.13, 0.23, 0.96],
+    },
+  },
+};
+
+const firstNameVariant = {
+  animate: {
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.04,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const secondNameVariant = {
+  animate: {
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.04,
+      staggerDirection: 1,
+    },
+  },
+};
+
 export default function GoghHero() {
   const { theme } = useContext(ThemeContext);
 
@@ -52,16 +87,27 @@ export default function GoghHero() {
           />
         )}
       </motion.div>
-      <motion.h1
-        className="hero-name"
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 1.25, duration: 0.8, ease: 'easeInOut' },
-        }}
-      >
-        Rafael Fernandes
-      </motion.h1>
+      <motion.div initial="initial" animate="animate" className="hero-name">
+        <motion.span className="first-name" variants={firstNameVariant}>
+          <motion.span variants={letterVariant}>R</motion.span>
+          <motion.span variants={letterVariant}>a</motion.span>
+          <motion.span variants={letterVariant}>f</motion.span>
+          <motion.span variants={letterVariant}>a</motion.span>
+          <motion.span variants={letterVariant}>e</motion.span>
+          <motion.span variants={letterVariant}>l</motion.span>
+        </motion.span>
+        <motion.span className="second-name" variants={secondNameVariant}>
+          <motion.span variants={letterVariant}>F</motion.span>
+          <motion.span variants={letterVariant}>e</motion.span>
+          <motion.span variants={letterVariant}>r</motion.span>
+          <motion.span variants={letterVariant}>n</motion.span>
+          <motion.span variants={letterVariant}>a</motion.span>
+          <motion.span variants={letterVariant}>n</motion.span>
+          <motion.span variants={letterVariant}>d</motion.span>
+          <motion.span variants={letterVariant}>e</motion.span>
+          <motion.span variants={letterVariant}>s</motion.span>
+        </motion.span>
+      </motion.div>
     </div>
   );
 }
