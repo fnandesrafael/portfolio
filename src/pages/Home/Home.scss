@@ -13,20 +13,6 @@
   display: flex;
   flex-flow: column;
 
-  .mouse-follower {
-    color: white;
-    font-size: 1em;
-    left: 0;
-    letter-spacing: 0.25vw;
-    margin-left: 2vw;
-    mix-blend-mode: difference;
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    width: 8vw;
-    z-index: 1;
-  }
-
   .badge {
     animation: spin 60s infinite linear;
     height: 28vh;
@@ -49,6 +35,20 @@
     text-align: start;
     top: calc(100% - 13.65vw);
     white-space: nowrap;
+  }
+
+  .mouse-follower {
+    color: white;
+    font-size: 1em;
+    left: 0;
+    letter-spacing: 0.25vw;
+    margin-left: 2vw;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 8vw;
+    z-index: 1;
   }
 }
 

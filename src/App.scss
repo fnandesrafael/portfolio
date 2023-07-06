@@ -13,6 +13,11 @@ body {
   margin: 0;
   scroll-behavior: smooth;
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .app-wrapper {
     display: flex;
     flex-flow: column;
@@ -35,21 +40,16 @@ body {
     }
   }
 
-  &.light-mode {
-    background-color: $light-mode-bg;
-    color: $light-mode-txt;
-    transition: 1s;
-  }
-
   &.dark-mode {
     background-color: $dark-mode-bg;
     color: $dark-mode-txt;
     transition: 1s;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
+  &.light-mode {
+    background-color: $light-mode-bg;
+    color: $light-mode-txt;
+    transition: 1s;
   }
 }
 
