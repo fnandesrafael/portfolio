@@ -14,7 +14,7 @@ export default function Header() {
     if (location.pathname === '/') {
       setTimeout(() => {
         setCanShow(true);
-      }, 6000);
+      }, 4000);
     } else {
       setCanShow(true);
     }

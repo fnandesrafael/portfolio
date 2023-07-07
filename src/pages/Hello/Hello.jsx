@@ -15,7 +15,7 @@ export default function Hello() {
 
     const interval = setInterval(() => {
       setGreetingIndex((prevIndex) => prevIndex + 1);
-    }, 750);
+    }, 500);
 
     return () => {
       clearInterval(interval);
@@ -26,7 +26,7 @@ export default function Hello() {
   useEffect(() => {
     setTimeout(() => {
       navigate('/home');
-    }, 4000);
+    }, 2500);
   }, []);
 
   return (
@@ -46,7 +46,7 @@ export default function Hello() {
         animate={{
           opacity: [0, 1, 1, 1, 0],
         }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         {GREETINGS[greetingIndex]}
       </motion.h1>
