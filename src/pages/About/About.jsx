@@ -9,7 +9,7 @@ export default function About() {
     document.body.style.cssText = 'overflow: hidden';
 
     const scrollLock = setTimeout(() => {
-      document.body.style.cssText = 'overflow: auto';
+      document.body.style.cssText = 'overflow-x: hidden';
     }, 2750);
 
     return () => {
