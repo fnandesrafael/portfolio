@@ -35,7 +35,7 @@ export default function Hello() {
       exit={{ y: -1000 }}
       transition={{
         duration: 1,
-        ease: 'easeInOut',
+        ease: [0.75, 0.25, 0.75, 0.15],
       }}
       className="hello-wrapper"
     >
