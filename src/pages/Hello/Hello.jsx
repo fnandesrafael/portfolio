@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './Hello.scss';
 
-const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
+const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!', '🔥'];
 
 export default function Hello() {
-  const [hasGreeted, setHasGreeted] = useState(false);
   const [greetingIndex, setGreetingIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.body.style.cssText = 'overflow: hidden';
 
     const interval = setInterval(() => {
       setGreetingIndex((prevIndex) => prevIndex + 1);
-    }, 250);
+    }, 750);
 
     return () => {
       clearInterval(interval);
@@ -25,26 +25,31 @@ export default function Hello() {
 
   useEffect(() => {
     setTimeout(() => {
-      setHasGreeted(true);
-    }, 2000);
+      navigate('/home');
+    }, 4000);
   }, []);
 
   return (
     <motion.div
       initial={{ y: 0 }}
-      animate={{ y: -1000 }}
+      exit={{ y: -1000 }}
       transition={{
-        delay: 1,
         duration: 1,
-        ease: [0.43, 0.13, 0.23, 0.96],
+        ease: 'easeInOut',
       }}
       className="hello-wrapper"
     >
-      {hasGreeted ? (
-        <Navigate to="/home" />
-      ) : (
-        <h1 className="hello-greeting">{GREETINGS[greetingIndex]}</h1>
-      )}
+      <motion.h1
+        key={`greeting-${greetingIndex}`}
+        className="hello-greeting"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: [0, 1, 1, 1, 0],
+        }}
+        transition={{ duration: 0.8, ease: 'easeInOut' }}
+      >
+        {GREETINGS[greetingIndex]}
+      </motion.h1>
     </motion.div>
   );
 }
