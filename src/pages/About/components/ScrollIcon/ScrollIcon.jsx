@@ -30,7 +30,7 @@ export default function ScrollIcon() {
           r="3.94643"
           initial={{ y: 0, opacity: 1 }}
           animate={{
-            y: 12,
+            y: 15,
             opacity: [0, 1, 1, 0],
             transition: {
               delay: 2.5,
