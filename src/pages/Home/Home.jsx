@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import GoghFrame from '../../components/GoghFrame';
+import GoghFrame from './components/GoghFrame';
 import badgeLight from '../../assets/images/badge_light.png';
 import badgeDark from '../../assets/images/badge_dark.png';
 import { ThemeContext } from '../../context/ThemeProvider';
@@ -26,12 +26,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    document.body.classList.add('overflow');
+    document.body.style.cssText = `overflow: hidden; touch-action: none;`;
     document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      document.body.classList.remove('overflow');
       document.removeEventListener('mousemove', handleMouseMove);
+      document.body.style.cssText = `overflow: auto; touch-action: auto`;
     };
   }, []);
 
@@ -46,7 +46,7 @@ export default function Home() {
           animate={{ opacity: 1, transition: { delay: 0.5, duration: 1 } }}
           exit={{ opacity: 0, transition: { duration: 1 } }}
         >
-          enter the frame
+          click on the frame and stay on it
         </motion.p>
       ) : null}
       <motion.img

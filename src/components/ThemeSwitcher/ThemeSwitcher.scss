@@ -1,80 +1,47 @@
 @import '../../styles/variables';
 
-$toggle-width: 2em;
-$toggle-height: calc($toggle-width / 2);
-$toggle-radious: $toggle-height;
-
 .toggle-wrapper {
   align-items: center;
   display: flex;
   flex-flow: row;
+  height: 2em;
   justify-content: space-around;
-  padding: 0.5em;
-  width: 8em;
+  margin: 0.5em;
+  width: 2em;
 
   .toggle {
-    border-radius: calc($toggle-height / 2);
+    align-items: center;
+    border-radius: 100%;
     cursor: pointer;
-    height: $toggle-height;
-    width: $toggle-width;
+    display: flex;
+    height: 2.5em;
+    justify-content: center;
+    width: 2.5em;
 
-    .toggle-element {
-      border-radius: $toggle-radious;
-      height: $toggle-height;
-      position: relative;
-      transition: 0.2s;
-      width: $toggle-width;
+    body.dark-mode & {
+      background-color: $dark-mode-fill;
+    }
 
-      &::after {
-        border-radius: $toggle-radious;
-        content: "";
-        height: $toggle-height;
-        left: 0;
-        position: absolute;
-        top: 0;
-        transition: transform 0.2s;
-        width: calc($toggle-width / 2);
-      }
-
-      body.dark-mode & {
-        border: 1px solid $dark-mode-fill;
-
-        &::after {
-          background-color: $dark-mode-fill;
-          transition: 0.5s;
-        }
-      }
-
-      body.light-mode & {
-        border: 1px solid $light-mode-fill;
-
-        &::after {
-          background-color: $light-mode-fill;
-          transition: 0.5s;
-        }
-      }
+    body.light-mode & {
+      background-color: $light-mode-txt;
     }
 
     .toggle-input {
       display: none;
-
-      &:checked ~ .toggle-element::after {
-        transform: translate($toggle-height);
-      }
     }
   }
 
   .toggle-sun, .toggle-moon {
-    height: 1.5em;
+    height: 1.75em;
+    padding: 0.5em;
+    width: 1.75em;
 
     body.dark-mode & {
-      fill: $dark-mode-fill;
-      transition: 1s;
+      fill: $light-mode-fill;
     }
 
     body.light-mode & {
-      fill: $light-mode-fill;
-      transition: 1s;
+      fill: $dark-mode-fill;
     }
   }
 }

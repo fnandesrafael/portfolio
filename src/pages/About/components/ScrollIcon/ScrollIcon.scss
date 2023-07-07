@@ -1,0 +1,20 @@
+.scroll-icon-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  left: 50%;
+  position: absolute;
+  top: 75%;
+
+  .scroll-icon {
+    left: 50%;
+    stroke: #fff;
+    top: 75%;
+    z-index: 1;
+
+    circle {
+      fill: #fff
+    }
+  }
+}
+

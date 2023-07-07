@@ -2,29 +2,18 @@
 
 .header-wrapper {
   align-items: center;
-  display: flex;
-  flex-flow: row-reverse;
   height: 3em;
-  justify-content: space-between;
-  padding: 3vh 1vw;
-
-  .header-username {
-    font-size: 0.8em;
-    letter-spacing: 0.2em;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
+  padding: 1.5em 2em;
+  position: fixed;
+  right: 0;
+  top: 0;
 
   body.light-mode & {
-    // background-color: $light-mode-bg;
     color: $light-mode-txt;
     transition: 1s;
   }
 
   body.dark-mode & {
-    // background-color: $dark-mode-bg;
     color: $dark-mode-txt;
     transition: 1s;
   }

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import './NotFound.scss';
 
 export default function NotFound() {
+  useEffect(() => {
+    document.body.style.cssText = 'overflow: hidden';
+  }, []);
+
   return (
     <div className="not-found-wrapper">
       <motion.h1
