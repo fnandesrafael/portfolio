@@ -15,7 +15,7 @@ const letterVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.8,
       ease: [0.43, 0.13, 0.23, 0.96],
     },
   },
@@ -50,8 +50,8 @@ export default function GoghHero() {
         className="paint-frame"
         animate={{
           borderRadius: '10em 10em 0 0',
-          height: '195vh',
-          top: 50,
+          height: '215vh',
+          top: 75,
           transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
           width: '100%',
         }}

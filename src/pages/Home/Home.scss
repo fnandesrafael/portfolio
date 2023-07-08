@@ -26,15 +26,22 @@
   }
 
   .home-name {
+    display: flex;
     font-size: 6.42vw;
     font-style: normal;
     font-weight: 100;
-    left: 0;
+    justify-content: space-around;
+    left: -0.42em;
     letter-spacing: 0.5em;
     position: absolute;
     text-align: start;
-    top: calc(100% - 13.65vw);
+    top: calc(100% - 7.25vw);
     white-space: nowrap;
+    width: 108.75%;
+
+    span {
+      display: inline-block;
+    }
   }
 
   .mouse-follower {
