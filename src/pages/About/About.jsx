@@ -24,7 +24,7 @@ export default function About() {
       <div
         style={{
           display: 'flex',
-          marginTop: '110vh',
+          marginTop: '119vh',
           alignItems: 'center',
           flexFlow: 'column',
         }}
