@@ -20,6 +20,14 @@ const letterVariant = {
       ease: [0.43, 0.13, 0.23, 0.96],
     },
   },
+  exit: {
+    opacity: 0,
+    y: 100,
+    transition: {
+      duration: 1,
+      ease: [0.43, 0.13, 0.23, 0.96],
+    },
+  },
 };
 
 const firstNameVariant = {
@@ -30,10 +38,24 @@ const firstNameVariant = {
       staggerDirection: -1,
     },
   },
+  exit: {
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.04,
+      staggerDirection: -1,
+    },
+  },
 };
 
 const secondNameVariant = {
   animate: {
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.04,
+      staggerDirection: 1,
+    },
+  },
+  exit: {
     transition: {
       delayChildren: 1,
       staggerChildren: 0.04,
@@ -85,15 +107,20 @@ export default function Home() {
         </motion.p>
       ) : null}
       <motion.img
+        key={`${theme}-badge`}
         className="badge"
         src={theme === 'dark-mode' ? badgeDark : badgeLight}
-        key={`${theme}-badge`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
         exit={{ opacity: 0, transition: { duration: 1 } }}
       />
       <GoghFrame />
-      <motion.div initial="initial" animate="animate" className="home-name">
+      <motion.div
+        className="home-name"
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         <motion.span className="first-name" variants={firstNameVariant}>
           <motion.span variants={letterVariant}>R</motion.span>
           <motion.span variants={letterVariant}>a</motion.span>
