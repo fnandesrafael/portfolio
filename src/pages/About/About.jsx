@@ -21,7 +21,14 @@ export default function About() {
     <div className="about-wrapper">
       <GoghHero />
       <ScrollIcon />
-      <div style={{ display: 'flex', marginTop: '100vh' }}>
+      <div
+        style={{
+          display: 'flex',
+          marginTop: '110vh',
+          alignItems: 'center',
+          flexFlow: 'column',
+        }}
+      >
         <h1>Lorem Ipsum</h1>
       </div>
     </div>

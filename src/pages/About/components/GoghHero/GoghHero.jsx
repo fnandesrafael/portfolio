@@ -49,8 +49,9 @@ export default function GoghHero() {
       <motion.div
         className="paint-frame"
         animate={{
-          borderRadius: 0,
-          height: '110vh',
+          borderRadius: '10em 10em 0 0',
+          height: '195vh',
+          top: 50,
           transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
           width: '100%',
         }}
@@ -61,7 +62,7 @@ export default function GoghHero() {
             src={DarkGogh}
             initial={{ y: 0, scale: 3 }}
             animate={{
-              y: 10,
+              y: 350,
               scale: 2.65,
               filter: 'saturate(0.15)',
               transition: {
@@ -76,7 +77,7 @@ export default function GoghHero() {
             src={LightGogh}
             initial={{ y: 0, scale: 3 }}
             animate={{
-              y: -10,
+              y: 300,
               scale: 2.65,
               filter: 'saturate(0.15)',
               transition: {
