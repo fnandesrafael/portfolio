@@ -16,7 +16,7 @@ const letterVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.8,
       ease: [0.43, 0.13, 0.23, 0.96],
     },
   },
@@ -24,7 +24,7 @@ const letterVariant = {
     opacity: 0,
     y: 100,
     transition: {
-      duration: 1,
+      duration: 0.8,
       ease: [0.43, 0.13, 0.23, 0.96],
     },
   },
