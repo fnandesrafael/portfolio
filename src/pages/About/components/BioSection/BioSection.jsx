@@ -7,14 +7,13 @@ export default function BioSection() {
     <div className="bio-wrapper">
       <div className="bio-l-container">
         <p className="bio-text">
-          Sou um desenvolvedor web recém formado pela Trybe, onde tive a
-          oportunidade de aprender e colaborar com pessoas e times incríveis,
-          que me ajudaram a crescer como pessoa e profissional. Minha
-          curiosidade por computação gráfica, design, semiótica, estética e
-          ludologia me inspira a criar e desenhar aplicações, explorando
-          tecnologias que me ajudem a transmitir narrativas significativas,
-          levando o processo de desenvolvimento de um modo mais ou menos
-          artesanal.
+          I am a recently graduated web developer from Trybe, where I had the
+          opportunity to learn and collaborate with amazing people and teams who
+          helped me grow as a person and professional. My curiosity for computer
+          graphics, design, semiotics, aesthetics, and ludology inspires me to
+          create and design applications, exploring technologies that help me
+          convey meaningful narratives, while taking the development process in
+          a more artisanal way.
         </p>
       </div>
       <div className="bio-r-container">
