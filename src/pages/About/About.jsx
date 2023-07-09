@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import GoghHero from './components/GoghHero';
+import ScrollIcon from './components/ScrollIcon/ScrollIcon';
+import BioSection from './components/BioSection/BioSection';
 
 import './About.scss';
-import ScrollIcon from './components/ScrollIcon/ScrollIcon';
 
 export default function About() {
   useEffect(() => {
@@ -21,16 +22,7 @@ export default function About() {
     <div className="about-wrapper">
       <GoghHero />
       <ScrollIcon />
-      <div
-        style={{
-          display: 'flex',
-          marginTop: '119vh',
-          alignItems: 'center',
-          flexFlow: 'column',
-        }}
-      >
-        <h1>Lorem Ipsum</h1>
-      </div>
+      <BioSection />
     </div>
   );
 }

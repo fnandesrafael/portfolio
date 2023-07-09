@@ -45,7 +45,7 @@ export default function GoghHero() {
   const { theme } = useContext(ThemeContext);
   const { scrollYProgress } = useScroll();
 
-  const scrollMotion = useTransform(scrollYProgress, [0, 1], [2.65, 3]);
+  const scrollMotion = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
 
   return (
     <div className="hero-wrapper">
