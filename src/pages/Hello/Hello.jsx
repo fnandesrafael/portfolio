@@ -26,7 +26,7 @@ export default function Hello() {
   useEffect(() => {
     setTimeout(() => {
       navigate('/home');
-    }, 2000);
+    }, 2150);
   }, []);
 
   return (
