@@ -7,17 +7,34 @@
   width: 100%;
 
   .bio-l-container {
-    border: 2px solid $dark-mode-fill;
+    align-items: center;
+    border: 2px solid $light-mode-fill;
     border-left: none;
     border-right: none;
     border-top: none;
+    display: flex;
     height: 75.25vh;
-    transition: 1s;
+    justify-content: center;
+    padding: 0 4em;
     width: 65%;
 
-    body.light-mode & {
-      border-color: $light-mode-fill;
+    &:not(.bio-text) {
       transition: 1s;
+      transition-property: border-color;
+    }
+
+    .bio-text {
+      font-size: 1.5em;
+      width: 115vh;
+    }
+
+    body.dark-mode & {
+      border-color: $dark-mode-fill;
+      transition: 1s;
+
+      &:not(.bio-text) {
+        transition-property: border-color;
+      }
     }
   }
 
@@ -57,26 +74,26 @@
     }
 
     .upper-r-containers, .bottom-r-containers {
-      background-color: $dark-mode-fill;
+      background-color: $light-mode-fill;
       display: flex;
       flex-flow: row;
       transition: 1s;
 
-      body.light-mode & {
-        background-color: $light-mode-fill;
+      body.dark-mode & {
+        background-color: $dark-mode-fill;
         transition: 1s;
       }
 
       & * {
-        background-color: $dark-mode-bg;
-        border: 2px solid $dark-mode-fill;
+        background-color: $light-mode-bg;
+        border: 2px solid $light-mode-fill;
         height: 37.5vh;
         transition: 1s;
         width: 37.5vh;
 
-        body.light-mode & {
-          background-color: $light-mode-bg;
-          border-color: $light-mode-fill;
+        body.dark-mode & {
+          background-color: $dark-mode-bg;
+          border-color: $dark-mode-fill;
           transition: 1s;
         }
       }
