@@ -79,7 +79,7 @@ export default function GoghHero() {
             animate={{
               y: 300,
               scale: 2.65,
-              filter: 'saturate(0.15)',
+              filter: 'saturate(0.15) brightness(0.85)',
               transition: {
                 duration: 1.5,
                 ease: [0.43, 0.13, 0.23, 0.96],
