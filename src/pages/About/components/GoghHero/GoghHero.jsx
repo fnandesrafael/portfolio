@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ThemeContext } from '../../../../context/ThemeProvider';
 import DarkGogh from '../../../../assets/images/the_starry_night.jpg';
 import LightGogh from '../../../../assets/images/green_wheat_field_with_cypress.jpg';
@@ -43,6 +43,9 @@ const secondNameVariant = {
 
 export default function GoghHero() {
   const { theme } = useContext(ThemeContext);
+  const { scrollYProgress } = useScroll();
+
+  const scrollMotion = useTransform(scrollYProgress, [0, 1], [2.65, 3]);
 
   return (
     <div className="hero-wrapper">
@@ -60,6 +63,7 @@ export default function GoghHero() {
           <motion.img
             className="gogh-paint"
             src={DarkGogh}
+            style={{ scale: scrollMotion }}
             initial={{ y: 0, scale: 3 }}
             animate={{
               y: 350,
@@ -75,11 +79,12 @@ export default function GoghHero() {
           <motion.img
             className="gogh-paint"
             src={LightGogh}
+            style={{ scale: scrollMotion }}
             initial={{ y: 0, scale: 3 }}
             animate={{
               y: 300,
               scale: 2.65,
-              filter: 'saturate(0.15)',
+              filter: 'saturate(0.15) brightness(0.85)',
               transition: {
                 duration: 1.5,
                 ease: [0.43, 0.13, 0.23, 0.96],

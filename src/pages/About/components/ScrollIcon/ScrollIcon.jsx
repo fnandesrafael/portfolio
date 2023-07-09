@@ -14,7 +14,7 @@ export default function ScrollIcon() {
         viewBox="0 0 19 34"
         fill="none"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 2.5, duration: 1 } }}
+        animate={{ opacity: 1, transition: { delay: 2, duration: 1 } }}
       >
         <rect
           x="1"

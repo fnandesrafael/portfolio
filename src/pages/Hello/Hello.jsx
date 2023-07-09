@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import './Hello.scss';
 
-const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!', '🔥'];
+const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
 
 export default function Hello() {
   const [greetingIndex, setGreetingIndex] = useState(0);
@@ -26,16 +26,16 @@ export default function Hello() {
   useEffect(() => {
     setTimeout(() => {
       navigate('/home');
-    }, 2500);
+    }, 2150);
   }, []);
 
   return (
     <motion.div
-      initial={{ y: 0 }}
-      exit={{ y: -1000 }}
+      initial={{ scaleY: 1 }}
+      exit={{ scaleY: 0 }}
       transition={{
         duration: 1,
-        ease: [0.75, 0.25, 0.75, 0.15],
+        ease: [0.22, 1, 0.36, 1],
       }}
       className="hello-wrapper"
     >

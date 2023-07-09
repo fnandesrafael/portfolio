@@ -40,7 +40,7 @@ const firstNameVariant = {
   },
   exit: {
     transition: {
-      delayChildren: 1,
+      delayChildren: 0,
       staggerChildren: 0.04,
       staggerDirection: -1,
     },
@@ -57,7 +57,7 @@ const secondNameVariant = {
   },
   exit: {
     transition: {
-      delayChildren: 1,
+      delayChildren: 0,
       staggerChildren: 0.04,
       staggerDirection: 1,
     },
