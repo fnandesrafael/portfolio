@@ -10,9 +10,10 @@
     border: 2px solid $dark-mode-fill;
     border-left: none;
     border-right: none;
+    border-top: none;
     height: 75.25vh;
     transition: 1s;
-    width: 70%;
+    width: 65%;
 
     body.light-mode & {
       border-color: $light-mode-fill;
@@ -25,16 +26,19 @@
     display: flex;
     flex-flow: column;
     height: 75vh;
+    width: 35%;
 
     .upper-r-containers {
       .upper-l {
         border-radius: 0 0 4em;
+        border-top: none;
       }
 
       .upper-r {
         border-left: none;
         border-radius: 0 0 0 4em;
         border-right: none;
+        border-top: none;
       }
     }
 
