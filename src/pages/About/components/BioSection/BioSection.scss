@@ -1,7 +1,81 @@
+@import '../../../../styles/_variables.scss';
+
 .bio-wrapper {
   display: flex;
-  border: 1px solid red;
-  height: 50vh;
-  margin-top: 119vh;
+  height: 100%;
+  margin-top: 119.25vh;
   width: 100%;
+
+  .bio-l-container {
+    border: 2px solid $dark-mode-fill;
+    border-left: none;
+    border-right: none;
+    height: 75.25vh;
+    transition: 1s;
+    width: 70%;
+
+    body.light-mode & {
+      border-color: $light-mode-fill;
+      transition: 1s;
+    }
+  }
+
+  .bio-r-container {
+    border-left: none;
+    display: flex;
+    flex-flow: column;
+    height: 75vh;
+
+    .upper-r-containers {
+      .upper-l {
+        border-radius: 0 0 4em 0;
+      }
+
+      .upper-r {
+        border-left: none;
+        border-radius: 0 0 0 4em;
+        border-right: none;
+      }
+    }
+
+    .bottom-r-containers {
+      .bottom-l {
+        border-radius: 0 4em 0 0;
+        border-top: none;
+      }
+
+      .bottom-r {
+        border-left: none;
+        border-radius: 4em 0 0 0;
+        border-right: none;
+        border-top: none;
+      }
+    }
+
+    .upper-r-containers, .bottom-r-containers {
+      background-color: $dark-mode-fill;
+      display: flex;
+      flex-flow: row;
+      transition: 1s;
+
+      body.light-mode & {
+        background-color: $light-mode-fill;
+        transition: 1s;
+      }
+
+      & * {
+        background-color: $dark-mode-bg;
+        border: 2px solid $dark-mode-fill;
+        height: 37.5vh;
+        transition: 1s;
+        width: 37.5vh;
+
+        body.light-mode & {
+          background-color: $light-mode-bg;
+          border-color: $light-mode-fill;
+          transition: 1s;
+        }
+      }
+    }
+  }
 }
