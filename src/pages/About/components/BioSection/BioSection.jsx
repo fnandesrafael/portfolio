@@ -6,6 +6,7 @@ export default function BioSection() {
   return (
     <div className="bio-wrapper">
       <div className="bio-l-container">
+        <p className="double-quote">&quot;</p>
         <p className="bio-text">
           I am a recently graduated web developer from Trybe, where I had the
           opportunity to learn and collaborate with amazing people and teams who

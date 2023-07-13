@@ -22,6 +22,14 @@
       transition-property: border-color;
     }
 
+    .double-quote {
+      font-size: 25em;
+      left: 1.5vw;
+      pointer-events: none;
+      position: absolute;
+      top: 25vh;
+    }
+
     .bio-text {
       font-size: 1.5em;
     }
@@ -45,8 +53,8 @@
 
     .upper-r-containers {
       .upper-l {
-        border-radius: 0 0 4em;
         border-bottom: none;
+        border-radius: 0 0 4em;
         border-top: none;
       }
 
@@ -85,8 +93,8 @@
       & * {
         background-color: $light-mode-bg;
         border: 2px solid $light-mode-fill;
-        transition: 1s;
         height: 100%;
+        transition: 1s;
         width: 100%;
 
         body.dark-mode & {
