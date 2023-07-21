@@ -23,6 +23,11 @@
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx"]
+      },
+      "alias": {
+        "map": [
+          ["@assets", "./src/assets"]
+        ]
       }
     }
   },
