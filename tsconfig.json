@@ -12,12 +12,15 @@
     "moduleResolution": "Bundler",
     "sourceMap": true,
     "outDir": "dist",
-    "jsx": "react-jsx",
+    "allowJs": true,
     "noEmit": true,
     "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"]
   },
   "include": ["src/**/*"],
   "ts-node": {
     "esm": true
   },
 }
+
