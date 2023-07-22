@@ -1,3 +1,3 @@
-import NotFound from './NotFound.tsx';
+import NotFound from './NotFound';
 
 export default NotFound;

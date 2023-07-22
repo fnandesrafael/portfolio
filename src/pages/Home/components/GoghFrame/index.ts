@@ -1,3 +1,3 @@
-import GoghFrame from './GoghFrame.tsx';
+import GoghFrame from './GoghFrame';
 
 export default GoghFrame;

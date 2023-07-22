@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { ThemeContext } from '@context/ThemeProvider.tsx';
-import About from '@pages/About/index.ts';
-import Hello from '@pages/Hello/index.ts';
-import Header from '@components/Header/index.ts';
-import Home from '@pages/Home/index.ts';
-import NotFound from '@pages/NotFound/index.ts';
+import { ThemeContext } from '@context/ThemeProvider';
+import About from '@pages/About';
+import Hello from '@pages/Hello';
+import Header from '@components/Header';
+import Home from '@pages/Home';
+import NotFound from '@pages/NotFound';
 
 import './App.scss';
 

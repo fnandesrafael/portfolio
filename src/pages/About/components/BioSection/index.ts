@@ -1,3 +1,3 @@
-import BioSection from './BioSection.tsx';
+import BioSection from './BioSection';
 
 export default BioSection;

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import { ThemeContext } from '@context/ThemeProvider.tsx';
-import MoonIcon from './MoonIcon.tsx';
-import SunIcon from './SunIcon.tsx';
+import { ThemeContext } from '@context/ThemeProvider';
+import MoonIcon from './MoonIcon';
+import SunIcon from './SunIcon';
 
 import './ThemeSwitcher.scss';
 

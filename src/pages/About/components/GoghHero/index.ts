@@ -1,3 +1,3 @@
-import GoghHero from './GoghHero.tsx';
+import GoghHero from './GoghHero';
 
 export default GoghHero;

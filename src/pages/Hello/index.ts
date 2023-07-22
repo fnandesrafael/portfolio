@@ -1,3 +1,3 @@
-import Hello from './Hello.tsx';
+import Hello from './Hello';
 
 export default Hello;
