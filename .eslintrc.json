@@ -25,6 +25,7 @@
     "import/extensions": ["error", "never", {
       "png": "always",
       "jpg": "always",
+      "jpeg": "always",
       "svg": "always"
     }],
     "no-promise-executor-return": "off"
