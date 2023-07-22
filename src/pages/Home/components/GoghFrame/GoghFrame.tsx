@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import DarkGogh from '@assets/images/the_starry_night.jpg';
 import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
-import { ThemeContext } from '../../../../context/ThemeProvider';
+import { ThemeContext } from '@context/ThemeProvider.tsx';
 
 import './GoghFrame.scss';
 
