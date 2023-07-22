@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { ThemeContext } from './context/ThemeProvider';
-import About from './pages/About';
-import Hello from './pages/Hello';
-import Header from './components/Header';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import { ThemeContext } from '@context/ThemeProvider';
+import About from '@pages/About';
+import Hello from '@pages/Hello';
+import Header from '@components/Header';
+import Home from '@pages/Home';
+import NotFound from '@pages/NotFound';
 
 import './App.scss';
 
@@ -25,9 +25,9 @@ export default function App() {
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route exact path="/" element={<Hello />} />
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
+          <Route path="/" element={<Hello />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

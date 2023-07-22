@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import { ThemeContext } from '../../context/ThemeProvider';
+import { ThemeContext } from '@context/ThemeProvider';
 import MoonIcon from './MoonIcon';
 import SunIcon from './SunIcon';
 

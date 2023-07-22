@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import GoghHero from './components/GoghHero';
-import ScrollIcon from './components/ScrollIcon/ScrollIcon';
-import BioSection from './components/BioSection/BioSection';
+import ScrollIcon from './components/ScrollIcon';
+import BioSection from './components/BioSection';
 
 import './About.scss';
 

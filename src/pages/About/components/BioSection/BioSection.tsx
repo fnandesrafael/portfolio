@@ -10,11 +10,12 @@ export default function BioSection() {
         <p className="bio-text">
           I am a recently graduated web developer from Trybe, where I had the
           opportunity to learn and collaborate with amazing people and teams who
-          helped me grow as a person and professional. My curiosity for computer
-          graphics, design, semiotics, aesthetics, and ludology inspires me to
-          create and design applications, exploring technologies that help me
-          convey meaningful narratives, while taking the development process in
-          a more artisanal way.
+          helped me grow as a person and professional. My curiosity about
+          computer graphics, design, semiotics, aesthetics, and ludology
+          inspires me to create and design my applications. As a developer, I
+          enjoy spending time exploring ways that help me convey meaningful
+          narratives while taking the development process in a more artisanal
+          way.
         </p>
       </div>
       <div className="bio-r-container">

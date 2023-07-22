@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../../../../context/ThemeProvider';
-import DarkGogh from '../../../../assets/images/the_starry_night.jpg';
-import LightGogh from '../../../../assets/images/green_wheat_field_with_cypress.jpg';
+import DarkGogh from '@assets/images/the_starry_night.jpg';
+import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
+import { ThemeContext } from '@context/ThemeProvider';
 
 import './GoghFrame.scss';
 
