@@ -47,7 +47,7 @@ const firstNameVariant = {
   },
 };
 
-const secondNameVariant = {
+const lastNameVariant = {
   animate: {
     transition: {
       delayChildren: 1,
@@ -66,10 +66,10 @@ const secondNameVariant = {
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
-  const [mouseMove, setMouseMove] = useState(false);
-  const mouseRef = useRef(null);
+  const [mouseMove, setMouseMove] = useState<boolean>(false);
+  const mouseRef = useRef<HTMLParagraphElement>(null);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: MouseEvent) => {
     setMouseMove(true);
 
     const follower = mouseRef.current;
@@ -129,7 +129,7 @@ export default function Home() {
           <motion.span variants={letterVariant}>e</motion.span>
           <motion.span variants={letterVariant}>l</motion.span>
         </motion.span>
-        <motion.span className="second-name" variants={secondNameVariant}>
+        <motion.span className="second-name" variants={lastNameVariant}>
           <motion.span variants={letterVariant}>F</motion.span>
           <motion.span variants={letterVariant}>e</motion.span>
           <motion.span variants={letterVariant}>r</motion.span>

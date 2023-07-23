@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import DarkGogh from '@assets/images/the_starry_night.jpg';
 import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
 import { ThemeContext } from '@context/ThemeProvider';
+import { EASE_SWEET } from '@constants/animations';
 
 import './GoghFrame.scss';
 
@@ -22,12 +23,12 @@ export default function GoghFrame() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
+              transition: { duration: 1.5, ease: EASE_SWEET },
             }}
             whileHover={{
               scale: 3,
             }}
-            transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
+            transition={{ duration: 1, ease: EASE_SWEET }}
           />
         ) : (
           <motion.img
@@ -38,12 +39,12 @@ export default function GoghFrame() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
+              transition: { duration: 1.5, ease: EASE_SWEET },
             }}
             whileHover={{
               scale: 3,
             }}
-            transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
+            transition={{ duration: 1, ease: EASE_SWEET }}
           />
         )}
       </Link>

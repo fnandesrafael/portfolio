@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { EASE_SLOW_OUT } from '@constants/animations';
 
 import './Hello.scss';
 
-const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
+const greetings = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
 
 export default function Hello() {
-  const [greetingIndex, setGreetingIndex] = useState(0);
+  const [greetingIndex, setGreetingIndex] = useState<number>(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function Hello() {
     setTimeout(() => {
       navigate('/home');
     }, 2150);
-  }, []);
+  }, [navigate]);
 
   return (
     <motion.div
@@ -35,7 +36,7 @@ export default function Hello() {
       exit={{ scaleY: 0 }}
       transition={{
         duration: 1,
-        ease: [0.22, 1, 0.36, 1],
+        ease: EASE_SLOW_OUT,
       }}
       className="hello-wrapper"
     >
@@ -48,7 +49,7 @@ export default function Hello() {
         }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
-        {GREETINGS[greetingIndex]}
+        {greetings[greetingIndex]}
       </motion.h1>
     </motion.div>
   );
