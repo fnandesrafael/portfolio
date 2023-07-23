@@ -6,7 +6,7 @@ import ThemeSwitcher from '@components/ThemeSwitcher';
 import './Header.scss';
 
 export default function Header() {
-  const [canShow, setCanShow] = useState(false);
+  const [canShow, setCanShow] = useState<boolean>(false);
 
   const location = useLocation();
 
@@ -18,7 +18,7 @@ export default function Header() {
     } else {
       setCanShow(true);
     }
-  }, []);
+  }, [location.pathname]);
 
   return canShow ? (
     <motion.header
