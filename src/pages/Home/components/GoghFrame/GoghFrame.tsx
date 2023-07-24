@@ -9,14 +9,14 @@ import { EASE_SWEET } from '@constants/animations';
 import './GoghFrame.scss';
 
 export default function GoghFrame() {
-  const { theme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <div className="paint-frame">
       <Link to="/about">
-        {theme === 'dark-mode' ? (
+        {isDarkMode ? (
           <motion.img
-            key={`${theme}-paint`}
+            key={isDarkMode ? 'dark-paing' : 'light-paint'}
             className="gogh-paint"
             src={DarkGogh}
             initial={{ y: -200, opacity: 0, scale: 2.4 }}
@@ -32,7 +32,7 @@ export default function GoghFrame() {
           />
         ) : (
           <motion.img
-            key={`${theme}-paint`}
+            key={isDarkMode ? 'dark-paing' : 'light-paint'}
             className="gogh-paint"
             src={LightGogh}
             initial={{ y: 200, opacity: 0, scale: 2.4 }}

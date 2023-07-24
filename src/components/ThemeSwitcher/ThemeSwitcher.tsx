@@ -7,23 +7,23 @@ import SunIcon from './SunIcon';
 import './ThemeSwitcher.scss';
 
 export default function ThemeSwitcher() {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
 
   const switchTheme = () => {
-    setTheme(theme === 'dark-mode' ? 'light-mode' : 'dark-mode');
+    setIsDarkMode((prevState) => !prevState);
   };
 
   return (
     <motion.div className="toggle-wrapper" whileHover={{ scale: 1.15 }}>
       <label className="toggle" htmlFor="checkbox">
-        {theme === 'dark-mode' ? <SunIcon /> : <MoonIcon />}
+        {isDarkMode ? <SunIcon /> : <MoonIcon />}
         <input
           className="toggle-input"
           type="checkbox"
           name=""
           id="checkbox"
           onChange={switchTheme}
-          checked={theme === 'light-mode'}
+          checked={isDarkMode}
         />
       </label>
     </motion.div>

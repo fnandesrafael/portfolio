@@ -65,7 +65,7 @@ const lastNameVariant = {
 };
 
 export default function Home() {
-  const { theme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
   const [mouseMove, setMouseMove] = useState<boolean>(false);
   const mouseRef = useRef<HTMLParagraphElement>(null);
 
@@ -107,9 +107,9 @@ export default function Home() {
         </motion.p>
       ) : null}
       <motion.img
-        key={`${theme}-badge`}
+        key={isDarkMode ? 'dark-badge' : 'light-badge'}
         className="badge"
-        src={theme === 'dark-mode' ? badgeDark : badgeLight}
+        src={isDarkMode ? badgeDark : badgeLight}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
         exit={{ opacity: 0, transition: { duration: 1 } }}

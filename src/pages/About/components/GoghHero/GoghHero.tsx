@@ -43,7 +43,7 @@ const lastNameVariant = {
 };
 
 export default function GoghHero() {
-  const { theme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
   const { scrollYProgress } = useScroll();
 
   const scrollMotion = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
@@ -60,7 +60,7 @@ export default function GoghHero() {
           width: '100%',
         }}
       >
-        {theme === 'dark-mode' ? (
+        {isDarkMode ? (
           <motion.img
             className="gogh-paint"
             src={DarkGogh}

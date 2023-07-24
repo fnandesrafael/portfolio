@@ -1,8 +1,8 @@
 import React, { ReactNode, createContext, useState } from 'react';
 
 type ThemeContextProps = {
-  theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 type ThemeProviderProps = {
@@ -12,12 +12,10 @@ type ThemeProviderProps = {
 export const ThemeContext = createContext<ThemeContextProps>(null);
 
 export default function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<string>(
-    JSON.parse(localStorage.getItem('theme')) || 'light-mode',
-  );
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );
