@@ -1,6 +1,6 @@
 import React from 'react';
 
-type ChildrenProps = {
+type ButtonProps = {
   props: {
     switchTheme: () => void;
     isDarkMode: boolean;
@@ -11,7 +11,7 @@ type ChildrenProps = {
 export default function Button({
   props: { switchTheme, isDarkMode },
   children,
-}: ChildrenProps) {
+}: ButtonProps) {
   return (
     <>
       {children}

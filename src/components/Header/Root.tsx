@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export default function Root({ children }: { children: React.ReactNode }) {
+type RootProps = {
+  children: React.ReactNode;
+};
+
+export default function Root({ children }: RootProps) {
   return (
     <motion.header
       className="fixed flex flex-row-reverse items-center h-16 w-screen z-10"
