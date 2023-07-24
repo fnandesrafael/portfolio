@@ -4,8 +4,6 @@ import { ThemeContext } from '@context/ThemeProvider';
 import MoonIcon from './MoonIcon';
 import SunIcon from './SunIcon';
 
-import './ThemeSwitcher.scss';
-
 export default function ThemeSwitcher() {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
 
@@ -14,18 +12,20 @@ export default function ThemeSwitcher() {
   };
 
   return (
-    <motion.div className="toggle-wrapper" whileHover={{ scale: 1.15 }}>
-      <label className="toggle" htmlFor="checkbox">
-        {isDarkMode ? <SunIcon /> : <MoonIcon />}
-        <input
-          className="toggle-input"
-          type="checkbox"
-          name=""
-          id="checkbox"
-          onChange={switchTheme}
-          checked={isDarkMode}
-        />
-      </label>
-    </motion.div>
+    <motion.label
+      className="flex flex-row justify-center items-center h-10 w-10 rounded-full bg-amber-300 cursor-pointer mt-5 mr-6"
+      htmlFor="checkbox"
+      whileHover={{ scale: 1.15 }}
+    >
+      {isDarkMode ? <SunIcon /> : <MoonIcon />}
+      <input
+        className="hidden"
+        type="checkbox"
+        name=""
+        id="checkbox"
+        onChange={switchTheme}
+        checked={isDarkMode}
+      />
+    </motion.label>
   );
 }

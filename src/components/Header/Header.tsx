@@ -3,26 +3,24 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import ThemeSwitcher from '@components/ThemeSwitcher';
 
-import './Header.scss';
-
 export default function Header() {
   const [canShow, setCanShow] = useState<boolean>(false);
 
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    if (location.pathname === '/') {
+    if (pathname === '/') {
       setTimeout(() => {
         setCanShow(true);
       }, 4000);
     } else {
       setCanShow(true);
     }
-  }, [location.pathname]);
+  }, [pathname]);
 
   return canShow ? (
     <motion.header
-      className="header-wrapper"
+      className="fixed flex flex-row-reverse items-center h-16 w-screen z-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
     >
