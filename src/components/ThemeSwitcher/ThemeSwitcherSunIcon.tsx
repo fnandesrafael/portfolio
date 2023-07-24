@@ -2,7 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-export default function SunIcon() {
+export default function ThemeSwitcherSunIcon() {
   return (
     <motion.svg
       className="h-6 w-6"
