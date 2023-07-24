@@ -2,7 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-export default function ThemeSwitcherMoonIcon() {
+export default function MoonIcon() {
   return (
     <motion.svg
       className="h-6 w-6"

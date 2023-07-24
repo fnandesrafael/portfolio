@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import ThemeSwitcher from '@components/ThemeSwitcher';
+import { Header } from '.';
 
-export default function Header() {
+export default function Composition() {
   const [canShow, setCanShow] = useState<boolean>(false);
 
   const { pathname } = useLocation();
@@ -19,12 +18,8 @@ export default function Header() {
   }, [pathname]);
 
   return canShow ? (
-    <motion.header
-      className="fixed flex flex-row-reverse items-center h-16 w-screen z-10"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
-    >
-      <ThemeSwitcher />
-    </motion.header>
+    <Header.Root>
+      <Header.ThemeSwitcher />
+    </Header.Root>
   ) : null;
 }

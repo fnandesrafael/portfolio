@@ -8,7 +8,7 @@ type ChildrenProps = {
   children: React.ReactNode;
 };
 
-export default function ThemeSwitcherButton({
+export default function Button({
   props: { switchTheme, isDarkMode },
   children,
 }: ChildrenProps) {
