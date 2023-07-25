@@ -16,13 +16,11 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.className = 'dark-mode';
-      localStorage.setItem('theme', JSON.stringify('dark-mode'));
-    } else {
-      document.body.className = 'light-mode';
-      localStorage.setItem('theme', JSON.stringify('light-mode'));
-    }
+    document.body.classList.toggle('dark', isDarkMode);
+    localStorage.setItem(
+      'theme',
+      JSON.stringify(isDarkMode ? 'dark' : 'light'),
+    );
   }, [isDarkMode]);
 
   return (
