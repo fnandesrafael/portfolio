@@ -29,7 +29,7 @@ export default function Hello() {
   }, [navigate]);
 
   return (
-    <motion.div
+    <motion.main
       initial={{ scaleY: 1 }}
       exit={{ scaleY: 0 }}
       transition={{
@@ -49,6 +49,6 @@ export default function Hello() {
       >
         {greetings[greetingIndex]}
       </motion.h1>
-    </motion.div>
+    </motion.main>
   );
 }
