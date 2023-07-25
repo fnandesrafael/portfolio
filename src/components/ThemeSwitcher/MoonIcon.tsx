@@ -7,8 +7,6 @@ export default function MoonIcon() {
     <motion.svg
       className="fill-gold h-7 w-7"
       viewBox="0 0 24 24"
-      width="50"
-      height="50"
       initial={{ rotate: 0 }}
       whileHover={{
         rotate: '360deg',
