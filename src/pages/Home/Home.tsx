@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import badgeLight from '@assets/images/badge_light.png';
 import badgeDark from '@assets/images/badge_dark.png';
 import { ThemeContext } from '@context/ThemeProvider';
+import { EASE_SWEET } from '@constants/animations';
 import GoghFrame from './components/GoghFrame';
 
 import './Home.scss';
+import MouseFollower from './components/MouseFollower/MouseFollower';
 
 const letterVariant = {
   initial: {
@@ -17,7 +19,7 @@ const letterVariant = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.43, 0.13, 0.23, 0.96],
+      ease: EASE_SWEET,
     },
   },
   exit: {
@@ -25,7 +27,7 @@ const letterVariant = {
     y: 100,
     transition: {
       duration: 0.8,
-      ease: [0.43, 0.13, 0.23, 0.96],
+      ease: EASE_SWEET,
     },
   },
 };
@@ -93,19 +95,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="home-wrapper">
-      {mouseMove ? (
-        <motion.p
-          key="mouse-follower"
-          ref={mouseRef}
-          className="mouse-follower"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.5, duration: 1 } }}
-          exit={{ opacity: 0, transition: { duration: 1 } }}
-        >
-          click on the frame and stay on it
-        </motion.p>
-      ) : null}
+    <main className="home-wrapper">
+      {mouseMove ? <MouseFollower props={{ mouseRef }} /> : null}
       <motion.img
         key={isDarkMode ? 'dark-badge' : 'light-badge'}
         className="badge"
@@ -141,6 +132,6 @@ export default function Home() {
           <motion.span variants={letterVariant}>s</motion.span>
         </motion.span>
       </motion.div>
-    </div>
+    </main>
   );
 }
