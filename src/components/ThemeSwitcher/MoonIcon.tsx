@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function MoonIcon() {
   return (
     <motion.svg
-      className="fill-gold h-6 w-6"
+      className="fill-gold h-7 w-7"
       viewBox="0 0 24 24"
       width="50"
       height="50"
