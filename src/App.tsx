@@ -19,7 +19,9 @@ export default function App() {
 
   return (
     <div className="app-wrapper">
-      <Header />
+      <Header.Root>
+        <Header.ThemeSwitcher />
+      </Header.Root>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Hello />} />

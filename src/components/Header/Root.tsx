@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 type RootProps = {
@@ -6,7 +7,21 @@ type RootProps = {
 };
 
 export default function Root({ children }: RootProps) {
-  return (
+  const [canShow, setCanShow] = useState<boolean>(false);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname === '/') {
+      setTimeout(() => {
+        setCanShow(true);
+      }, 4000);
+    } else {
+      setCanShow(true);
+    }
+  }, [pathname]);
+
+  return canShow ? (
     <motion.header
       className="fixed flex flex-row-reverse items-center h-16 w-screen z-10"
       initial={{ opacity: 0 }}
@@ -14,5 +29,5 @@ export default function Root({ children }: RootProps) {
     >
       {children}
     </motion.header>
-  );
+  ) : null;
 }
