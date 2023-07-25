@@ -8,8 +8,6 @@ import Header from '@components/Header';
 import Home from '@pages/Home';
 import NotFound from '@pages/NotFound';
 
-import './App.scss';
-
 export default function App() {
   const { isDarkMode } = useContext(ThemeContext);
 

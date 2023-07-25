@@ -1,3 +1,64 @@
+@import 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&display=swap';
+@import './styles/variables';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  height: 100vh;
+  position: relative;
+}
+
+body {
+  background-color: $light-mode-bg;
+  color: $light-mode-txt;
+  font-family: 'Bodoni Moda', serif;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .app-wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 110vh;
+    width: 100%;
+
+    &::after {
+      background-image: url('./assets/images/grunge_texture.png');
+      background-size: cover;
+      content: "";
+      height: 100%;
+      left: 0;
+      mix-blend-mode: luminosity;
+      opacity: 0.15;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -2;
+    }
+  }
+
+  &.dark {
+    background-color: $dark-mode-bg;
+    color: $dark-mode-txt;
+    transition: 1s;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+
+  &-track {
+    background-color: $dark-mode-bg;
+  }
+
+  &-thumb {
+    background-color: $dark-mode-txt;
+  }
+}

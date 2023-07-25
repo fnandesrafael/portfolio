@@ -7,7 +7,7 @@ type RootProps = {
 export default function Root({ children }: RootProps) {
   return (
     <motion.label
-      className="flex flex-row justify-center items-center h-10 w-10 rounded-full bg-amber-300 cursor-pointer mt-5 mr-6"
+      className="flex flex-row justify-center items-center h-10 w-10 rounded-full bg-charcoal dark:bg-gold cursor-pointer mt-5 mr-6"
       htmlFor="checkbox"
       whileHover={{ scale: 1.15 }}
     >
