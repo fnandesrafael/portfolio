@@ -17,10 +17,6 @@ export default function App() {
 
   useEffect(() => {
     document.body.classList.toggle('dark', isDarkMode);
-    localStorage.setItem(
-      'theme',
-      JSON.stringify(isDarkMode ? 'dark' : 'light'),
-    );
   }, [isDarkMode]);
 
   return (
