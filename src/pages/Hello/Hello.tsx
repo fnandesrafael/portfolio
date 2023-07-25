@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { EASE_SLOW_OUT } from '@constants/animations';
 
-import './Hello.scss';
-
 const greetings = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
 
 export default function Hello() {
@@ -38,11 +36,11 @@ export default function Hello() {
         duration: 1,
         ease: EASE_SLOW_OUT,
       }}
-      className="hello-wrapper"
+      className="flex flex-col items-center justify-center h-screen w-screen origin-top bg-zinc-950"
     >
       <motion.h1
         key={`greeting-${greetingIndex}`}
-        className="hello-greeting"
+        className="text-4xl text-white -translate-y-12"
         initial={{ opacity: 0 }}
         animate={{
           opacity: [0, 1, 1, 1, 0],
