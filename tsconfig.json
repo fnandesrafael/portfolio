@@ -5,7 +5,8 @@
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
       "@context/*": ["src/context/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@constants/*": ["src/constants/*"]
     },
     "module": "ESNext",
     "target": "ES2022",
@@ -18,7 +19,7 @@
     "jsx": "react-jsx",
     "lib": ["ES2022", "DOM", "DOM.Iterable"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "tailwind.config.js", "postcss.config.js"],
   "ts-node": {
     "esm": true
   },

@@ -1,3 +1,15 @@
-import ThemeSwitcher from './ThemeSwitcher';
+import Button from './Button';
+import MoonIcon from './MoonIcon';
+import Root from './Root';
+import SunIcon from './SunIcon';
 
-export default ThemeSwitcher;
+import Composition from './Composition';
+
+export const ThemeSwitcher = {
+  Button,
+  MoonIcon,
+  Root,
+  SunIcon,
+};
+
+export default Composition;

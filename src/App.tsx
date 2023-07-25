@@ -11,14 +11,19 @@ import NotFound from '@pages/NotFound';
 import './App.scss';
 
 export default function App() {
-  const { theme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   const location = useLocation();
 
   useEffect(() => {
-    document.body.className = theme;
-    localStorage.setItem('theme', JSON.stringify(theme));
-  }, [theme]);
+    if (isDarkMode) {
+      document.body.className = 'dark-mode';
+      localStorage.setItem('theme', JSON.stringify('dark-mode'));
+    } else {
+      document.body.className = 'light-mode';
+      localStorage.setItem('theme', JSON.stringify('light-mode'));
+    }
+  }, [isDarkMode]);
 
   return (
     <div className="app-wrapper">

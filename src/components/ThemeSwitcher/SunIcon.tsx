@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function SunIcon() {
   return (
     <motion.svg
-      className="toggle-sun"
+      className="h-6 w-6"
       viewBox="0 0 24 24"
       width="50"
       height="50"

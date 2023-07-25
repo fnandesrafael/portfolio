@@ -4,46 +4,47 @@ import { Link } from 'react-router-dom';
 import DarkGogh from '@assets/images/the_starry_night.jpg';
 import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
 import { ThemeContext } from '@context/ThemeProvider';
+import { EASE_SWEET } from '@constants/animations';
 
 import './GoghFrame.scss';
 
 export default function GoghFrame() {
-  const { theme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <div className="paint-frame">
       <Link to="/about">
-        {theme === 'dark-mode' ? (
+        {isDarkMode ? (
           <motion.img
-            key={`${theme}-paint`}
+            key={isDarkMode ? 'dark-paing' : 'light-paint'}
             className="gogh-paint"
             src={DarkGogh}
             initial={{ y: -200, opacity: 0, scale: 2.4 }}
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
+              transition: { duration: 1.5, ease: EASE_SWEET },
             }}
             whileHover={{
               scale: 3,
             }}
-            transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
+            transition={{ duration: 1, ease: EASE_SWEET }}
           />
         ) : (
           <motion.img
-            key={`${theme}-paint`}
+            key={isDarkMode ? 'dark-paing' : 'light-paint'}
             className="gogh-paint"
             src={LightGogh}
             initial={{ y: 200, opacity: 0, scale: 2.4 }}
             animate={{
               y: 0,
               opacity: 1,
-              transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
+              transition: { duration: 1.5, ease: EASE_SWEET },
             }}
             whileHover={{
               scale: 3,
             }}
-            transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
+            transition={{ duration: 1, ease: EASE_SWEET }}
           />
         )}
       </Link>

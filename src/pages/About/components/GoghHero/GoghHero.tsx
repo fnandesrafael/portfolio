@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import DarkGogh from '@assets/images/the_starry_night.jpg';
 import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
 import { ThemeContext } from '@context/ThemeProvider';
+import { EASE_SWEET } from '@constants/animations';
 
 import './GoghHero.scss';
 
@@ -31,7 +32,7 @@ const firstNameVariant = {
   },
 };
 
-const secondNameVariant = {
+const lastNameVariant = {
   animate: {
     transition: {
       delayChildren: 1,
@@ -42,7 +43,7 @@ const secondNameVariant = {
 };
 
 export default function GoghHero() {
-  const { theme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
   const { scrollYProgress } = useScroll();
 
   const scrollMotion = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
@@ -55,11 +56,11 @@ export default function GoghHero() {
           borderRadius: '10em 10em 0 0',
           height: '215vh',
           top: 75,
-          transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] },
+          transition: { duration: 1.5, ease: EASE_SWEET },
           width: '100%',
         }}
       >
-        {theme === 'dark-mode' ? (
+        {isDarkMode ? (
           <motion.img
             className="gogh-paint"
             src={DarkGogh}
@@ -71,7 +72,7 @@ export default function GoghHero() {
               filter: 'saturate(0.15)',
               transition: {
                 duration: 1.5,
-                ease: [0.43, 0.13, 0.23, 0.96],
+                ease: EASE_SWEET,
               },
             }}
           />
@@ -87,7 +88,7 @@ export default function GoghHero() {
               filter: 'saturate(0.15) brightness(0.85)',
               transition: {
                 duration: 1.5,
-                ease: [0.43, 0.13, 0.23, 0.96],
+                ease: EASE_SWEET,
               },
             }}
           />
@@ -102,7 +103,7 @@ export default function GoghHero() {
           <motion.span variants={letterVariant}>e</motion.span>
           <motion.span variants={letterVariant}>l</motion.span>
         </motion.span>
-        <motion.span className="second-name" variants={secondNameVariant}>
+        <motion.span className="second-name" variants={lastNameVariant}>
           <motion.span variants={letterVariant}>F</motion.span>
           <motion.span variants={letterVariant}>e</motion.span>
           <motion.span variants={letterVariant}>r</motion.span>

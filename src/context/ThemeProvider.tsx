@@ -1,14 +1,21 @@
-import React, { createContext, useState } from 'react';
+import React, { ReactNode, createContext, useState } from 'react';
 
-export const ThemeContext = createContext(null);
+type ThemeContextProps = {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export default function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem('theme')) || 'light-mode',
-  );
+type ThemeProviderProps = {
+  children: ReactNode;
+};
+
+export const ThemeContext = createContext<ThemeContextProps>(null);
+
+export default function ThemeProvider({ children }: ThemeProviderProps) {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );
