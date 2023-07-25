@@ -15,7 +15,11 @@ export default function Text({
   return (
     <motion.span variants={phraseVariants}>
       {letters.map((letter, index) => (
-        <motion.span key={index} variants={letterVariants}>
+        <motion.span
+          className="inline-block"
+          key={index}
+          variants={letterVariants}
+        >
           {letter}
         </motion.span>
       ))}
