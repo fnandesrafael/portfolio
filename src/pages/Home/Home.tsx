@@ -8,8 +8,6 @@ import Signature from '@components/Signature';
 import MouseFollower from '@components/MouseFollower';
 import GoghFrame from './components/GoghFrame';
 
-import './Home.scss';
-
 const letterVariants: Variants = {
   initial: {
     opacity: 0,
@@ -81,7 +79,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="home-wrapper">
+    <main className="flex flex-col items-center">
       <MouseFollower.Root>
         <MouseFollower.Element>
           <motion.p
@@ -97,10 +95,14 @@ export default function Home() {
 
       <motion.img
         key={isDarkMode ? 'dark-badge' : 'light-badge'}
-        className="badge"
+        className="absolute top-[7em] h-[28vh] mr-[15em] z-10 pointer-events-none"
         src={isDarkMode ? badgeDark : badgeLight}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1 } }}
+        animate={{
+          opacity: 1,
+          transition: { duration: 1 },
+        }}
+        whileInView={{ rotate: '360deg', transition: { duration: 60 } }}
         exit={{ opacity: 0, transition: { duration: 1 } }}
       />
 
