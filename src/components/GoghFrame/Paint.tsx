@@ -6,11 +6,11 @@ type PaintProps = {
     styles: string;
     key: string;
     src: string;
-    animations: {
-      initial: object;
-      animate: object;
-      whileHover: object;
-      transition: object;
+    animations?: {
+      initial?: object;
+      animate?: object;
+      whileHover?: object;
+      transition?: object;
     };
   };
 };

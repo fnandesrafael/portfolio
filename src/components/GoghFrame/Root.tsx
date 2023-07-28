@@ -5,7 +5,7 @@ type RootProps = {
   props: {
     styles: string;
   };
-  children: React.ReactNode;
+  children: React.ReactElement;
 };
 
 export default function Root({ props: { styles }, children }: RootProps) {
