@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
+import { EASE_SWEET } from '@constants/animations';
 import { ThemeContext } from '@context/ThemeProvider';
 import darkPaint from '@assets/images/the_starry_night.jpg';
 import lightPaint from '@assets/images/green_wheat_field_with_cypress.jpg';
-import { EASE_SWEET } from '@constants/animations';
-import { GoghFrame } from './index';
+import GoghFrame from '@components/GoghFrame';
 
 import './GoghFrame.scss';
 
