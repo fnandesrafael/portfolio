@@ -6,7 +6,7 @@ import badgeLight from '@assets/images/badge_light.png';
 import badgeDark from '@assets/images/badge_dark.png';
 import Signature from '@components/Signature';
 import MouseFollower from '@components/MouseFollower';
-import GoghFrame from './components/GoghFrame';
+import GoghFrame from './components/GoghFrame/Composition';
 
 const letterVariants: Variants = {
   initial: {

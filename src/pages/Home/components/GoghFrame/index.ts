@@ -1,3 +1,11 @@
-import GoghFrame from './GoghFrame';
+import Root from './Root';
+import Paint from './Paint';
 
-export default GoghFrame;
+import Composition from './Composition';
+
+export const GoghFrame = {
+  Root,
+  Paint,
+};
+
+export default Composition;
