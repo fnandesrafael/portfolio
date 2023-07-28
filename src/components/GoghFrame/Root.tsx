@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 type RootProps = {
+  props: {
+    styles: string;
+  };
   children: React.ReactNode;
 };
 
-export default function Root({ children }: RootProps) {
+export default function Root({ props: { styles }, children }: RootProps) {
   return (
-    <div className="paint-frame">
+    <div className={styles}>
       <Link to="/about">{children}</Link>
     </div>
   );

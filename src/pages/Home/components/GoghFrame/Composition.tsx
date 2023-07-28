@@ -5,8 +5,6 @@ import darkPaint from '@assets/images/the_starry_night.jpg';
 import lightPaint from '@assets/images/green_wheat_field_with_cypress.jpg';
 import GoghFrame from '@components/GoghFrame';
 
-import './GoghFrame.scss';
-
 const darkPaintAnimations = {
   initial: { y: -200, opacity: 0, scale: 2.4 },
   animate: {
@@ -37,10 +35,16 @@ export default function Composition() {
   const { isDarkMode } = useContext(ThemeContext);
 
   return (
-    <GoghFrame.Root>
+    <GoghFrame.Root
+      props={{
+        styles:
+          'flex absolute left-[50%] top-[45%] translate-x-[-50%] translate-y-[-50%] content-center h-[50vh] w-[30vh] overflow-hidden rounded-t-full',
+      }}
+    >
       {isDarkMode ? (
         <GoghFrame.Paint
           props={{
+            styles: 'h-[65vh] object-cover',
             key: 'dark-paint',
             src: darkPaint,
             animations: darkPaintAnimations,
@@ -49,6 +53,7 @@ export default function Composition() {
       ) : (
         <GoghFrame.Paint
           props={{
+            styles: 'h-[65vh] object-cover',
             key: 'light-paint',
             src: lightPaint,
             animations: lightPaintAnimations,

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 type PaintProps = {
   props: {
+    styles: string;
     key: string;
     src: string;
     animations: {
@@ -16,6 +17,7 @@ type PaintProps = {
 
 export default function Paint({
   props: {
+    styles,
     key,
     src,
     animations: { initial, animate, whileHover, transition },
@@ -24,7 +26,7 @@ export default function Paint({
   return (
     <motion.img
       key={key}
-      className="gogh-paint"
+      className={styles}
       src={src}
       initial={initial}
       animate={animate}
