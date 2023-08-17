@@ -1,3 +1,15 @@
-import ThemeSwitcher from './ThemeSwitcher';
+import Root from './fragments/Root';
+import Toggle from './fragments/Toggle';
+import MoonIcon from './fragments/MoonIcon';
+import SunIcon from './fragments/SunIcon';
 
-export default ThemeSwitcher;
+import Composition from './Composition';
+
+export const ThemeSwitcher = {
+  Root,
+  Toggle,
+  MoonIcon,
+  SunIcon,
+};
+
+export default Composition;

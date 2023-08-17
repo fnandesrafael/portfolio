@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import DarkGogh from '@assets/images/the_starry_night.jpg';
 import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
-import { ThemeContext } from '@context/ThemeProvider';
+import { ThemeContext } from 'styled-components';
 
 import './GoghFrame.scss';
 
@@ -13,7 +13,7 @@ export default function GoghFrame() {
   return (
     <div className="paint-frame">
       <Link to="/about">
-        {theme === 'dark-mode' ? (
+        {theme === 'dark' ? (
           <motion.img
             key={`${theme}-paint`}
             className="gogh-paint"
