@@ -44,7 +44,7 @@ export const AppWrapper = styled.div`
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: -2;
+    z-index: -10;
   }
 `;
 
