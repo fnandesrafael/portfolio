@@ -3,16 +3,19 @@ import styled, { createGlobalStyle } from 'styled-components';
 import grungeTexture from './assets/images/grunge_texture.png';
 
 export const Overall = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   #root {
     height: 100vh;
-    position: relative;
   }
 
   body {
     background-color: #B3B0AA;
     color: #131313;
     font-family: 'Bodoni Moda', serif;
-    margin: 0;
     scroll-behavior: smooth;
 
     a {
