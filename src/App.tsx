@@ -8,7 +8,7 @@ import Header from '@components/Header';
 import Home from '@pages/Home';
 import NotFound from '@pages/NotFound';
 
-import './App.scss';
+import * as S from './global.styles';
 
 export default function App() {
   const { theme } = useContext(ThemeContext);
@@ -21,7 +21,7 @@ export default function App() {
   }, [theme]);
 
   return (
-    <div className="app-wrapper">
+    <S.AppWrapper>
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -31,6 +31,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
-    </div>
+    </S.AppWrapper>
   );
 }
