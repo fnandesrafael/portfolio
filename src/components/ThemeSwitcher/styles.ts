@@ -13,7 +13,7 @@ export const SwitcherWrapper = styled(motion.div)`
 
 export const ToggleElement = styled.label`
   align-items: center;
-  background-color: ${(props) => props.theme.colors.secundary};
+  background-color: ${(props) => props.theme.colors.background};
   border-radius: 100%;
   cursor: pointer;
   display: flex;
@@ -30,5 +30,5 @@ export const IconElement = styled(motion.svg)`
   height: 1.75em;
   padding: 0.5em;
   width: 1.75em;
-  fill: ${(props) => props.theme.colors.primary};
+  fill: ${(props) => props.theme.colors.highlight};
 `;
