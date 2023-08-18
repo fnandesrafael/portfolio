@@ -13,8 +13,6 @@ export const Overall = createGlobalStyle`
   }
 
   body {
-    background-color: #B3B0AA;
-    color: #131313;
     font-family: 'Bodoni Moda', serif;
     scroll-behavior: smooth;
 
@@ -30,9 +28,12 @@ export const Overall = createGlobalStyle`
 `;
 
 export const AppWrapper = styled.div`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.textPrimary};
   display: flex;
   flex-flow: column;
   height: 110vh;
+  transition: 0.8s;
   width: 100%;
 
   &::after {
@@ -47,7 +48,7 @@ export const AppWrapper = styled.div`
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: -10;
+    z-index: 0;
   }
 `;
 

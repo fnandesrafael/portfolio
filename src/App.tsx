@@ -17,6 +17,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <S.Overall />
+
       <S.AppWrapper>
         <Header.Root>
           <Header.ThemeSwitcher props={{ switchTheme }} />

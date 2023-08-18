@@ -6,6 +6,7 @@ export const HelloContainer = styled(motion.div)`
   height: 110vh;
   transform-origin: top;
   width: 100%;
+  z-index: 10;
 `;
 
 export const GreetingElement = styled(motion.h1)`
