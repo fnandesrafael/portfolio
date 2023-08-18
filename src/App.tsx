@@ -21,6 +21,7 @@ export default function App() {
         <Header.Root>
           <Header.ThemeSwitcher props={{ switchTheme }} />
         </Header.Root>
+
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Hello />} />

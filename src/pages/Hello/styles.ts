@@ -10,10 +10,10 @@ export const HelloContainer = styled(motion.div)`
 
 export const GreetingElement = styled(motion.h1)`
   color: ${(props) => props.theme.colors.textSecundary};
-  font-size: 2.5em;
+  font-size: 2.25em;
   font-weight: 100;
   left: 50%;
   position: absolute;
   top: 42%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -25%);
 `;
