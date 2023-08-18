@@ -6,6 +6,7 @@ import { ThemeContext } from 'styled-components';
 import { MouseFollower } from '@components/MouseFollower';
 import GoghFrame from './components/GoghFrame';
 
+import * as S from './styles';
 import './Home.scss';
 
 const letterVariant = {
@@ -66,7 +67,7 @@ const secondNameVariant = {
 };
 
 export default function Home() {
-  const { theme } = useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
 
   useEffect(() => {
     document.body.style.cssText = `overflow: hidden; touch-action: none;`;
@@ -84,15 +85,22 @@ export default function Home() {
         </MouseFollower.Follower>
       </MouseFollower.Root>
 
-      <motion.img
-        key={`${theme}-badge`}
-        className="badge"
-        src={theme === 'dark-mode' ? badgeDark : badgeLight}
+      <S.BadgeElement
+        key={`${theme.title}-badge`}
+        src={theme.title === 'dark' ? badgeDark : badgeLight}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
+        whileInView={{ transform: 'rotate(360deg)' }}
+        transition={{
+          duration: 60,
+          loop: Infinity,
+          ease: 'linear',
+        }}
         exit={{ opacity: 0, transition: { duration: 1 } }}
       />
+
       <GoghFrame />
+
       <motion.div
         className="home-name"
         initial="initial"
