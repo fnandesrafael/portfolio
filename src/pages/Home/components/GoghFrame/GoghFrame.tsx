@@ -8,14 +8,14 @@ import { ThemeContext } from 'styled-components';
 import './GoghFrame.scss';
 
 export default function GoghFrame() {
-  const { theme } = useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
 
   return (
     <div className="paint-frame">
       <Link to="/about">
-        {theme === 'dark' ? (
+        {theme.title === 'dark' ? (
           <motion.img
-            key={`${theme}-paint`}
+            key={`${theme.title}-paint`}
             className="gogh-paint"
             src={DarkGogh}
             initial={{ y: -200, opacity: 0, scale: 2.4 }}
@@ -31,7 +31,7 @@ export default function GoghFrame() {
           />
         ) : (
           <motion.img
-            key={`${theme}-paint`}
+            key={`${theme.title}-paint`}
             className="gogh-paint"
             src={LightGogh}
             initial={{ y: 200, opacity: 0, scale: 2.4 }}

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import DarkGogh from '@assets/images/the_starry_night.jpg';
 import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
-import { ThemeContext } from '@context/ThemeProvider';
+import { ThemeContext } from 'styled-components';
 
 import './GoghHero.scss';
 
@@ -42,7 +42,7 @@ const secondNameVariant = {
 };
 
 export default function GoghHero() {
-  const { theme } = useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
   const { scrollYProgress } = useScroll();
 
   const scrollMotion = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
@@ -59,7 +59,7 @@ export default function GoghHero() {
           width: '100%',
         }}
       >
-        {theme === 'dark-mode' ? (
+        {theme.title === 'dark' ? (
           <motion.img
             className="gogh-paint"
             src={DarkGogh}
