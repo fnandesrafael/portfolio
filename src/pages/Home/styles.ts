@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+export const PageWrapper = styled.main`
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+`;
+
 export const BadgeElement = styled(motion.img)`
   height: 28vh;
   margin-right: 15rem;
@@ -10,5 +16,3 @@ export const BadgeElement = styled(motion.img)`
   transform-origin: center;
   z-index: 1;
 `;
-
-export default BadgeElement;
