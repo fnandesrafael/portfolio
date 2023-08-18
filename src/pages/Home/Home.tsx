@@ -80,9 +80,9 @@ export default function Home() {
   return (
     <div className="home-wrapper">
       <MouseFollower.Root>
-        <MouseFollower.Follower>
+        <MouseFollower.Text>
           click on the frame and stay on it
-        </MouseFollower.Follower>
+        </MouseFollower.Text>
       </MouseFollower.Root>
 
       <S.BadgeElement

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const FollowerElement = styled(motion.span)`
+export const TextElement = styled(motion.span)`
   color: white;
   font-size: 1em;
   left: 0;
@@ -15,4 +15,4 @@ export const FollowerElement = styled(motion.span)`
   z-index: 10;
 `;
 
-export default FollowerElement;
+export default TextElement;

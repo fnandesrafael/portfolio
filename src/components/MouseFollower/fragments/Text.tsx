@@ -7,11 +7,11 @@ type FollowerProps = {
   children: string;
 };
 
-export default function Follower({ children }: FollowerProps) {
+export default function Text({ children }: FollowerProps) {
   const { mouseRef } = useMouseMove();
 
   return (
-    <S.FollowerElement
+    <S.TextElement
       key="mouse-follower"
       ref={mouseRef}
       initial={{ opacity: 0 }}
@@ -19,6 +19,6 @@ export default function Follower({ children }: FollowerProps) {
       exit={{ opacity: 0, transition: { duration: 1 } }}
     >
       <p>{children}</p>
-    </S.FollowerElement>
+    </S.TextElement>
   );
 }
