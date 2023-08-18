@@ -83,6 +83,7 @@ export default function Composition() {
       <Signature.Text props={{ wordVariants: firstNameVariant, letterVariant }}>
         Rafael
       </Signature.Text>
+
       <Signature.Text
         props={{ wordVariants: secondNameVariant, letterVariant }}
       >
