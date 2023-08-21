@@ -3,7 +3,7 @@ import { ThemeContext } from 'styled-components';
 import darkPaint from '@assets/images/the_starry_night.jpg';
 import lightPaint from '@assets/images/green_wheat_field_with_cypress.jpg';
 import { GoghFrame } from '@components/GoghFrame';
-import ScrollIcon from './components/ScrollIcon';
+import { ScrollIcon } from '@components/ScrollIcon';
 import BioSection from './components/BioSection';
 
 import * as S from './styles';
@@ -82,7 +82,9 @@ export default function About() {
         )}
       </GoghFrame.Root>
 
-      <ScrollIcon />
+      <ScrollIcon.Root>
+        <ScrollIcon.Icon />
+      </ScrollIcon.Root>
 
       <BioSection />
     </S.PageWrapper>
