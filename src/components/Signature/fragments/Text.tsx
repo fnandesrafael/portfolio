@@ -1,6 +1,5 @@
 import React from 'react';
 import { Variants, motion } from 'framer-motion';
-import { v4 as uuid } from 'uuid';
 
 type TextProps = {
   props: {
@@ -17,8 +16,8 @@ export default function Text({
   return (
     <>
       <motion.span variants={wordVariants}>
-        {children.split('').map((letter) => (
-          <motion.span key={uuid()} variants={letterVariant}>
+        {children.split('').map((letter, index) => (
+          <motion.span key={index} variants={letterVariant}>
             {letter}
           </motion.span>
         ))}
