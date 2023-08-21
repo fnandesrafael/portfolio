@@ -42,7 +42,7 @@ const firstNameVariant: Variants = {
   },
 };
 
-const secondNameVariant: Variants = {
+const lastNameVariant: Variants = {
   animate: {
     transition: {
       delayChildren: 1,
@@ -84,9 +84,7 @@ export default function Composition() {
         Rafael
       </Signature.Text>
 
-      <Signature.Text
-        props={{ wordVariants: secondNameVariant, letterVariant }}
-      >
+      <Signature.Text props={{ wordVariants: lastNameVariant, letterVariant }}>
         Fernandes
       </Signature.Text>
     </Signature.Root>

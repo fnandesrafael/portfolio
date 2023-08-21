@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from 'styled-components';
-import badgeLight from '@assets/images/badge_light.png';
-import badgeDark from '@assets/images/badge_dark.png';
+import darkBadge from '@assets/images/dark_badge.png';
+import lightBadge from '@assets/images/light_badge.png';
 import { MouseFollower } from '@components/MouseFollower';
 import GoghFrame from './components/GoghFrame';
 import Signature from './components/Signature';
@@ -28,15 +28,16 @@ export default function Home() {
       </MouseFollower.Root>
 
       <S.BadgeElement
-        key={`${theme.title}-badge`}
-        src={theme.title === 'dark' ? badgeDark : badgeLight}
+        src={theme.title === 'dark' ? darkBadge : lightBadge}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
-        whileInView={{ transform: 'rotate(360deg)' }}
-        transition={{
-          duration: 60,
-          loop: Infinity,
-          ease: 'linear',
+        whileInView={{
+          transform: 'rotate(360deg)',
+          transition: {
+            duration: 60,
+            loop: Infinity,
+            ease: 'linear',
+          },
         }}
         exit={{ opacity: 0, transition: { duration: 1 } }}
       />
