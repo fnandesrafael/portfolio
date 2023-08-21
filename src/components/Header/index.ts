@@ -1,11 +1,9 @@
 import ThemeSwitcher from '@components/ThemeSwitcher';
-import Root from './Root';
-
-import Composition from './Composition';
+import Root from './fragments/Root';
 
 export const Header = {
   Root,
   ThemeSwitcher,
 };
 
-export default Composition;
+export default Header;

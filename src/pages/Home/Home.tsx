@@ -1,13 +1,18 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import badgeLight from '@assets/images/badge_light.png';
-import badgeDark from '@assets/images/badge_dark.png';
-import { ThemeContext } from '@context/ThemeProvider';
-import GoghFrame from './components/GoghFrame';
+import React, { useContext, useEffect } from 'react';
+import { ThemeContext } from 'styled-components';
+import { Variants } from 'framer-motion';
+import darkBadge from '@assets/images/dark_badge.png';
+import lightBadge from '@assets/images/light_badge.png';
+import darkPaint from '@assets/images/the_starry_night.jpg';
+import lightPaint from '@assets/images/green_wheat_field_with_cypress.jpg';
+import { EASE_SWEET } from '@constants/animations/eases';
+import { MouseFollower } from '@components/MouseFollower';
+import { GoghFrame } from '@components/GoghFrame';
+import { Signature } from '@components/Signature';
 
-import './Home.scss';
+import * as S from './styles';
 
-const letterVariant = {
+const letterVariant: Variants = {
   initial: {
     opacity: 0,
     y: 100,
@@ -30,7 +35,7 @@ const letterVariant = {
   },
 };
 
-const firstNameVariant = {
+const firstNameVariant: Variants = {
   animate: {
     transition: {
       delayChildren: 1,
@@ -47,7 +52,7 @@ const firstNameVariant = {
   },
 };
 
-const lastNameVariant = {
+const lastNameVariant: Variants = {
   animate: {
     transition: {
       delayChildren: 1,
@@ -65,82 +70,112 @@ const lastNameVariant = {
 };
 
 export default function Home() {
-  const { isDarkMode } = useContext(ThemeContext);
-  const [mouseMove, setMouseMove] = useState<boolean>(false);
-  const mouseRef = useRef<HTMLParagraphElement>(null);
-
-  const handleMouseMove = (e: MouseEvent) => {
-    setMouseMove(true);
-
-    const follower = mouseRef.current;
-
-    if (follower) {
-      const x = e.clientX;
-      const y = e.clientY;
-
-      follower.style.cssText = `top: ${y}px; left: ${x}px;`;
-    }
-  };
+  const theme = useContext(ThemeContext);
 
   useEffect(() => {
     document.body.style.cssText = `overflow: hidden; touch-action: none;`;
-    document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
       document.body.style.cssText = `overflow: auto; touch-action: auto`;
     };
   }, []);
 
   return (
-    <div className="home-wrapper">
-      {mouseMove ? (
-        <motion.p
-          key="mouse-follower"
-          ref={mouseRef}
-          className="mouse-follower"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.5, duration: 1 } }}
-          exit={{ opacity: 0, transition: { duration: 1 } }}
-        >
+    <S.PageWrapper>
+      <MouseFollower.Root>
+        <MouseFollower.Text>
           click on the frame and stay on it
-        </motion.p>
-      ) : null}
-      <motion.img
-        key={isDarkMode ? 'dark-badge' : 'light-badge'}
-        className="badge"
-        src={isDarkMode ? badgeDark : badgeLight}
+        </MouseFollower.Text>
+      </MouseFollower.Root>
+
+      <S.BadgeElement
+        src={theme.title === 'dark' ? darkBadge : lightBadge}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
+        whileInView={{
+          transform: 'rotate(360deg)',
+          transition: {
+            duration: 60,
+            loop: Infinity,
+            ease: 'linear',
+          },
+        }}
         exit={{ opacity: 0, transition: { duration: 1 } }}
       />
-      <GoghFrame />
-      <motion.div
-        className="home-name"
-        initial="initial"
-        animate="animate"
-        exit="exit"
+
+      <GoghFrame.Root props={{ hasLink: true, path: '/about' }}>
+        {theme.title === 'dark' ? (
+          <GoghFrame.Paint
+            key="dark-paint"
+            props={{
+              src: darkPaint,
+              motionValues: {
+                initial: { y: -200, opacity: 0, scale: 2.4 },
+                animate: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { duration: 1.5, ease: EASE_SWEET },
+                },
+                whileHover: {
+                  scale: 3,
+                },
+                transition: { duration: 1, ease: EASE_SWEET },
+              },
+            }}
+          />
+        ) : (
+          <GoghFrame.Paint
+            key="light-paint"
+            props={{
+              src: lightPaint,
+              motionValues: {
+                initial: { y: 200, opacity: 0, scale: 2.4 },
+                animate: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { duration: 1.5, ease: EASE_SWEET },
+                },
+                whileHover: {
+                  scale: 3,
+                },
+                transition: { duration: 1, ease: EASE_SWEET },
+              },
+            }}
+          />
+        )}
+      </GoghFrame.Root>
+
+      <Signature.Root
+        props={{
+          styles: {
+            display: 'flex',
+            fontSize: '6.42vw',
+            fontStyle: 'normal',
+            fontWeight: '100',
+            justifyContent: 'space-around',
+            left: '-0.42em',
+            letterSpacing: '0.5em',
+            pointerEvents: 'none',
+            position: 'absolute',
+            textAlign: 'start',
+            top: 'calc(100% - 7.25vw)',
+            whiteSpace: 'nowrap',
+            width: '108.75%',
+          },
+        }}
       >
-        <motion.span className="first-name" variants={firstNameVariant}>
-          <motion.span variants={letterVariant}>R</motion.span>
-          <motion.span variants={letterVariant}>a</motion.span>
-          <motion.span variants={letterVariant}>f</motion.span>
-          <motion.span variants={letterVariant}>a</motion.span>
-          <motion.span variants={letterVariant}>e</motion.span>
-          <motion.span variants={letterVariant}>l</motion.span>
-        </motion.span>
-        <motion.span className="second-name" variants={lastNameVariant}>
-          <motion.span variants={letterVariant}>F</motion.span>
-          <motion.span variants={letterVariant}>e</motion.span>
-          <motion.span variants={letterVariant}>r</motion.span>
-          <motion.span variants={letterVariant}>n</motion.span>
-          <motion.span variants={letterVariant}>a</motion.span>
-          <motion.span variants={letterVariant}>n</motion.span>
-          <motion.span variants={letterVariant}>d</motion.span>
-          <motion.span variants={letterVariant}>e</motion.span>
-          <motion.span variants={letterVariant}>s</motion.span>
-        </motion.span>
-      </motion.div>
-    </div>
+        <Signature.Text
+          props={{ wordVariants: firstNameVariant, letterVariant }}
+        >
+          Rafael
+        </Signature.Text>
+
+        <Signature.Text
+          props={{ wordVariants: lastNameVariant, letterVariant }}
+        >
+          Fernandes
+        </Signature.Text>
+      </Signature.Root>
+    </S.PageWrapper>
   );
 }

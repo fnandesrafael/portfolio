@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
 
-import './NotFound.scss';
+import * as S from './styles';
 
 export default function NotFound() {
   useEffect(() => {
@@ -9,14 +8,14 @@ export default function NotFound() {
   }, []);
 
   return (
-    <div className="not-found-wrapper">
-      <motion.h1
+    <S.NotFoundWrapper>
+      <S.ErrorElement
         className="not-found-code"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
       >
         404
-      </motion.h1>
-    </div>
+      </S.ErrorElement>
+    </S.NotFoundWrapper>
   );
 }

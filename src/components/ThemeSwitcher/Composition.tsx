@@ -1,19 +1,27 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '@context/ThemeProvider';
+import { ThemeContext } from 'styled-components';
 import { ThemeSwitcher } from '.';
 
-export default function Composition() {
-  const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
-
-  const switchTheme = () => {
-    setIsDarkMode((prevState) => !prevState);
+type ThemeSwitcherProps = {
+  props: {
+    switchTheme: () => void;
   };
+};
+
+export default function Composition({
+  props: { switchTheme },
+}: ThemeSwitcherProps) {
+  const theme = useContext(ThemeContext);
 
   return (
     <ThemeSwitcher.Root>
-      <ThemeSwitcher.Button props={{ switchTheme, isDarkMode }}>
-        {isDarkMode ? <ThemeSwitcher.SunIcon /> : <ThemeSwitcher.MoonIcon />}
-      </ThemeSwitcher.Button>
+      <ThemeSwitcher.Toggle props={{ switchTheme }}>
+        {theme.title === 'dark' ? (
+          <ThemeSwitcher.SunIcon />
+        ) : (
+          <ThemeSwitcher.MoonIcon />
+        )}
+      </ThemeSwitcher.Toggle>
     </ThemeSwitcher.Root>
   );
 }
