@@ -1,15 +1,18 @@
 import React, { useContext, useEffect } from 'react';
+import { useScroll, useTransform } from 'framer-motion';
 import { ThemeContext } from 'styled-components';
 import darkPaint from '@assets/images/the_starry_night.jpg';
 import lightPaint from '@assets/images/green_wheat_field_with_cypress.jpg';
 import { GoghFrame } from '@components/GoghFrame';
 import { ScrollIcon } from '@components/ScrollIcon';
-import BioSection from './components/BioSection';
 
 import * as S from './styles';
 
 export default function About() {
   const theme = useContext(ThemeContext);
+  const { scrollYProgress } = useScroll();
+
+  const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
 
   useEffect(() => {
     document.body.style.cssText = 'overflow: hidden';
@@ -59,6 +62,7 @@ export default function About() {
                   },
                 },
               },
+              scrollPosition,
             }}
           />
         ) : (
@@ -77,6 +81,7 @@ export default function About() {
                   },
                 },
               },
+              scrollPosition,
             }}
           />
         )}
@@ -85,8 +90,6 @@ export default function About() {
       <ScrollIcon.Root>
         <ScrollIcon.Icon />
       </ScrollIcon.Root>
-
-      <BioSection />
     </S.PageWrapper>
   );
 }
