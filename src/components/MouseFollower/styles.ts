@@ -12,7 +12,7 @@ export const TextElement = styled(motion.span)`
   position: fixed;
   top: 0;
   width: 8vw;
-  z-index: 10;
+  z-index: calc(Infinity);
 `;
 
 export default TextElement;
