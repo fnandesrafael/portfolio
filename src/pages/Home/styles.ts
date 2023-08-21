@@ -14,5 +14,5 @@ export const BadgeElement = styled(motion.img)`
   position: absolute;
   top: 7rem;
   transform-origin: center;
-  z-index: 1;
+  z-index: 20;
 `;

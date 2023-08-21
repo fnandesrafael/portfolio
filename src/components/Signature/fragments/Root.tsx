@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
-import { MotionStyle } from 'framer-motion';
 import * as S from '../styles';
 
 type RootProps = {
-  props: { styles: MotionStyle };
+  props: { styles: CSSProperties };
   children: React.ReactNode;
 };
 

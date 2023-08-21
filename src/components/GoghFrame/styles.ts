@@ -12,6 +12,7 @@ export const FrameWrapper = styled.div`
   top: 45%;
   transform: translate(-50%, -50%);
   width: 30vh;
+  z-index: 10;
 `;
 
 export const PaintElement = styled(motion.img)`
