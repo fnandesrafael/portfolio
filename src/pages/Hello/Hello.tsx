@@ -4,7 +4,7 @@ import { EASE_OUT } from '@constants/animations/eases';
 
 import * as S from './styles';
 
-const GREETINGS = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
+const greetings = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
 
 export default function Hello() {
   const [greetingIndex, setGreetingIndex] = useState(0);
@@ -46,7 +46,7 @@ export default function Hello() {
         }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
-        {GREETINGS[greetingIndex]}
+        {greetings[greetingIndex]}
       </S.GreetingElement>
     </S.HelloContainer>
   );
