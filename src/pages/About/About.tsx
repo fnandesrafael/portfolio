@@ -3,7 +3,7 @@ import GoghHero from './components/GoghHero';
 import ScrollIcon from './components/ScrollIcon';
 import BioSection from './components/BioSection';
 
-import './About.scss';
+import * as S from './styles';
 
 export default function About() {
   useEffect(() => {
@@ -19,10 +19,12 @@ export default function About() {
   }, []);
 
   return (
-    <div className="about-wrapper">
+    <S.PageWrapper>
       <GoghHero />
+
       <ScrollIcon />
+
       <BioSection />
-    </div>
+    </S.PageWrapper>
   );
 }
