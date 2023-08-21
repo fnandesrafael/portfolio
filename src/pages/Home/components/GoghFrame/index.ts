@@ -1,3 +1,3 @@
-import GoghFrame from './GoghFrame';
+import GoghFrame from './Composition';
 
 export default GoghFrame;
