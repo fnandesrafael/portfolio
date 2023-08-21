@@ -5,6 +5,7 @@ import LightGogh from '@assets/images/green_wheat_field_with_cypress.jpg';
 import { ThemeContext } from 'styled-components';
 
 import './GoghHero.scss';
+import './GoghFrame.scss';
 
 const letterVariant = {
   initial: {
