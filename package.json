@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint:styles": "npx stylelint './src/**/*.{scss,css}'",
+    "lint:styles": "npx stylelint './src/**/{styles.ts,*.styles.ts}'",
     "preview": "vite preview"
   },
   "dependencies": {

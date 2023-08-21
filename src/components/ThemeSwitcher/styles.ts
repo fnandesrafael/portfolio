@@ -27,8 +27,8 @@ export const ToggleElement = styled.label`
 `;
 
 export const IconElement = styled(motion.svg)`
+  fill: ${(props) => props.theme.colors.highlight};
   height: 1.75em;
   padding: 0.5em;
   width: 1.75em;
-  fill: ${(props) => props.theme.colors.highlight};
 `;

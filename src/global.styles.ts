@@ -37,7 +37,7 @@ export const AppWrapper = styled.div`
   width: 100%;
 
   &::after {
-    background-image: url(${grungeTexture});
+    background-image: ${`url(${grungeTexture})`};
     background-size: cover;
     content: '';
     height: 100%;
