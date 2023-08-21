@@ -1,12 +1,16 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const NotFoundWrapper = styled.div`
-  h1 {
-    left: 50%;
-    position: absolute;
-    top: 45%;
-    transform: translate(-50%, -50%);
-  }
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  height: 85%;
+  justify-content: center;
+`;
+
+export const ErrorElement = styled(motion.h1)`
+  font-size: 2rem;
 `;
 
 export default NotFoundWrapper;
