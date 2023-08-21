@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { EASE_OUT } from '@constants/animations/eases';
 
 import * as S from './styles';
 
@@ -34,7 +35,7 @@ export default function Hello() {
       exit={{ scaleY: 0 }}
       transition={{
         duration: 1,
-        ease: [0.22, 1, 0.36, 1],
+        ease: EASE_OUT,
       }}
     >
       <S.GreetingElement
