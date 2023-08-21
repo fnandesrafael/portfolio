@@ -1,18 +1,15 @@
 import React from 'react';
+import { MotionProps } from 'framer-motion';
 
 import * as S from '../styles';
 
 type PaintProps = {
   props: {
     src: string;
-    initial?: object;
-    animate?: object;
-    exit?: object;
-    transition?: object;
-    whileHover?: object;
+    motionValues?: MotionProps;
   };
 };
 
-export default function Paint({ props }: PaintProps) {
-  return <S.PaintElement {...props} />;
+export default function Paint({ props: { src, motionValues } }: PaintProps) {
+  return <S.PaintElement src={src} {...motionValues} />;
 }

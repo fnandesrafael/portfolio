@@ -109,16 +109,18 @@ export default function Home() {
             key="dark-paint"
             props={{
               src: darkPaint,
-              initial: { y: -200, opacity: 0, scale: 2.4 },
-              animate: {
-                y: 0,
-                opacity: 1,
-                transition: { duration: 1.5, ease: EASE_SWEET },
+              motionValues: {
+                initial: { y: -200, opacity: 0, scale: 2.4 },
+                animate: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { duration: 1.5, ease: EASE_SWEET },
+                },
+                whileHover: {
+                  scale: 3,
+                },
+                transition: { duration: 1, ease: EASE_SWEET },
               },
-              whileHover: {
-                scale: 3,
-              },
-              transition: { duration: 1, ease: EASE_SWEET },
             }}
           />
         ) : (
@@ -126,16 +128,18 @@ export default function Home() {
             key="light-paint"
             props={{
               src: lightPaint,
-              initial: { y: 200, opacity: 0, scale: 2.4 },
-              animate: {
-                y: 0,
-                opacity: 1,
-                transition: { duration: 1.5, ease: EASE_SWEET },
+              motionValues: {
+                initial: { y: 200, opacity: 0, scale: 2.4 },
+                animate: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { duration: 1.5, ease: EASE_SWEET },
+                },
+                whileHover: {
+                  scale: 3,
+                },
+                transition: { duration: 1, ease: EASE_SWEET },
               },
-              whileHover: {
-                scale: 3,
-              },
-              transition: { duration: 1, ease: EASE_SWEET },
             }}
           />
         )}

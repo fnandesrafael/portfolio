@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const FrameWrapper = styled.div`
+export const FrameWrapper = styled(motion.div)`
   border-radius: 10em 10em 0 0;
   display: flex;
   height: 50vh;
