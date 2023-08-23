@@ -29,9 +29,9 @@ export const ResumeContainer = styled.div<CustomMarginProps>`
 `;
 
 export const QuoteElement = styled(motion.svg)`
-  left: 1.5rem;
+  left: 2rem;
   position: absolute;
-  top: -2rem;
+  top: -1rem;
   width: 10rem;
 
   path {
@@ -42,6 +42,7 @@ export const QuoteElement = styled(motion.svg)`
 
 export const ResumeElement = styled.p`
   font-size: 1.5rem;
+  margin-top: 2rem;
   padding: 2rem;
   width: 85%;
 `;
