@@ -40,7 +40,7 @@ export const QuoteElement = styled(motion.svg)`
   }
 `;
 
-export const ResumeElement = styled.p`
+export const ResumeText = styled.p`
   font-size: 1.5rem;
   margin-top: 2rem;
   padding: 2rem;

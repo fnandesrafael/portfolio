@@ -9,7 +9,7 @@ export default function BioSection() {
       <S.ResumeContainer $margin="0 2px 2px 0">
         <Quote />
 
-        <S.ResumeElement>
+        <S.ResumeText>
           I am a recently graduated web developer from Trybe, where I had the
           opportunity to learn and collaborate with amazing people and teams who
           helped me grow as a person and professional. My curiosity about
@@ -18,7 +18,7 @@ export default function BioSection() {
           enjoy spending time exploring ways that help me convey meaningful
           narratives while taking the development process in a more artisanal
           way.
-        </S.ResumeElement>
+        </S.ResumeText>
       </S.ResumeContainer>
 
       <S.SquaresWrapper>
