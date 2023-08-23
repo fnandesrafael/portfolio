@@ -19,7 +19,7 @@ export const SectionWrapper = styled.section`
 `;
 
 export const ResumeContainer = styled.div<CustomMarginProps>`
-  align-items: left;
+  align-items: center;
   background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-flow: column;
@@ -29,10 +29,10 @@ export const ResumeContainer = styled.div<CustomMarginProps>`
 `;
 
 export const QuoteElement = styled(motion.svg)`
-  left: 2rem;
+  left: 1.5rem;
   position: absolute;
   top: -2rem;
-  width: 12rem;
+  width: 10rem;
 
   path {
     fill: ${(props) => props.theme.colors.background};
@@ -43,6 +43,7 @@ export const QuoteElement = styled(motion.svg)`
 export const ResumeElement = styled.p`
   font-size: 1.5rem;
   padding: 2rem;
+  width: 85%;
 `;
 
 export const SquaresWrapper = styled.div`
