@@ -2,7 +2,6 @@ import React from 'react';
 import Quote from './components/Quote';
 
 import * as S from './styles';
-import './BioSection.scss';
 
 export default function BioSection() {
   return (
