@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const SectionWrapper = styled.section`
   background-color: ${(props) => props.theme.colors.background};
@@ -21,7 +22,7 @@ export const LeftContainer = styled.div`
   width: 65%;
 `;
 
-export const QuoteElement = styled.svg`
+export const QuoteElement = styled(motion.svg)`
   left: 2rem;
   position: absolute;
   top: -2rem;
