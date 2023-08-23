@@ -83,9 +83,9 @@ export default function Home() {
   return (
     <S.PageWrapper>
       <MouseFollower.Root>
-        <MouseFollower.Text>
+        <MouseFollower.Element>
           click on the frame and stay on it
-        </MouseFollower.Text>
+        </MouseFollower.Element>
       </MouseFollower.Root>
 
       <S.BadgeElement

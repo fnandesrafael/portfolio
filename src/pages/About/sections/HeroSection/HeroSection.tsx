@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { Variants, useScroll, useTransform } from 'framer-motion';
 import { ThemeContext } from 'styled-components';
+import { EASE_SWEET } from '@constants/animations';
 import darkPaint from '@assets/images/the_starry_night.jpg';
 import lightPaint from '@assets/images/green_wheat_field_with_cypress.jpg';
 import { GoghFrame } from '@components/GoghFrame';
 import { ScrollIcon } from '@components/ScrollIcon';
 import { Signature } from '@components/Signature';
 
-import { EASE_SWEET } from '@constants/animations';
 import * as S from './styles';
 
 const letterVariant: Variants = {

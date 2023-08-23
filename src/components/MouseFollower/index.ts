@@ -1,9 +1,9 @@
 import Root from './fragments/Root';
-import Text from './fragments/Text';
+import Element from './fragments/Element';
 
 export const MouseFollower = {
   Root,
-  Text,
+  Element,
 };
 
 export default MouseFollower;
