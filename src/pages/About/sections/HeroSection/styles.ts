@@ -15,7 +15,7 @@ export const TextWrapper = styled.div`
   left: 2rem;
   padding: 2rem;
   position: absolute;
-  top: 6rem;
+  top: 8rem;
   transition: 1s;
   z-index: 10;
 `;
