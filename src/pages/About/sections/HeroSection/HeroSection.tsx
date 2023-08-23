@@ -21,13 +21,6 @@ const letterVariant: Variants = {
       ease: EASE_SWEET,
     },
   },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 1,
-      ease: EASE_SWEET,
-    },
-  },
 };
 
 const firstNameVariant: Variants = {
@@ -38,26 +31,12 @@ const firstNameVariant: Variants = {
       staggerDirection: 1,
     },
   },
-  exit: {
-    transition: {
-      delayChildren: 0,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
 };
 
 const lastNameVariant: Variants = {
   animate: {
     transition: {
       delayChildren: 1,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
-  exit: {
-    transition: {
-      delayChildren: 0,
       staggerChildren: 0.04,
       staggerDirection: 1,
     },
@@ -163,10 +142,6 @@ export default function HeroSection() {
           animate={{
             opacity: 1,
             transition: { delay: 1.5, duration: 1, ease: EASE_SWEET },
-          }}
-          exit={{
-            opacity: 0,
-            transition: { delay: 0, duration: 1, ease: EASE_SWEET },
           }}
         >
           Frontend Web Developer & Aspiring UX Designer

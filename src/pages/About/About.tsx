@@ -39,7 +39,6 @@ export default function About() {
                 ease: 'linear',
               },
             }}
-            exit={{ opacity: 0, transition: { duration: 1 } }}
           />
         </MouseFollower.Element>
       </MouseFollower.Root>
