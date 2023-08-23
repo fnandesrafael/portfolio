@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+type CustomMarginProps = {
+  $margin?: string;
+};
+
+type SquareElementProps = {
+  $radius?: string;
+} & CustomMarginProps;
+
 export const SectionWrapper = styled.section`
   background-color: ${(props) => props.theme.colors.background};
   display: flex;
@@ -10,15 +18,13 @@ export const SectionWrapper = styled.section`
   z-index: 10;
 `;
 
-export const LeftContainer = styled.div`
+export const ResumeContainer = styled.div<CustomMarginProps>`
   align-items: left;
   background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin: 2px;
-  margin-left: 0;
-  margin-top: 0;
+  margin: ${(props) => props.$margin};
   width: 65%;
 `;
 
@@ -37,4 +43,25 @@ export const QuoteElement = styled(motion.svg)`
 export const ResumeElement = styled.p`
   font-size: 1.5rem;
   padding: 2rem;
+`;
+
+export const SquaresWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  width: 35%;
+`;
+
+export const RowWrapper = styled.div<CustomMarginProps>`
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  margin: ${(props) => props.$margin};
+`;
+
+export const SquareElement = styled.div<SquareElementProps>`
+  background-color: ${(props) => props.theme.colors.primary};
+  border-radius: ${(props) => props.$radius};
+  height: 100%;
+  margin: ${(props) => props.$margin};
+  width: 100%;
 `;

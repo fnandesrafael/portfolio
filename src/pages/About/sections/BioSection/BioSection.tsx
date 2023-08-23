@@ -7,8 +7,9 @@ import './BioSection.scss';
 export default function BioSection() {
   return (
     <S.SectionWrapper>
-      <S.LeftContainer>
+      <S.ResumeContainer $margin="0 2px 2px 0">
         <Quote />
+
         <S.ResumeElement>
           I am a recently graduated web developer from Trybe, where I had the
           opportunity to learn and collaborate with amazing people and teams who
@@ -19,17 +20,19 @@ export default function BioSection() {
           narratives while taking the development process in a more artisanal
           way.
         </S.ResumeElement>
-      </S.LeftContainer>
-      <div className="bio-r-container">
-        <div className="upper-r-containers">
-          <div className="upper-l" />
-          <div className="upper-r" />
-        </div>
-        <div className="bottom-r-containers">
-          <div className="bottom-l" />
-          <div className="bottom-r" />
-        </div>
-      </div>
+      </S.ResumeContainer>
+
+      <S.SquaresWrapper>
+        <S.RowWrapper $margin="0 0 2px 0 ">
+          <S.SquareElement $margin="0 2px 0 0" $radius="0 0 2rem 0" />
+          <S.SquareElement $radius="0 0 0 2rem" />
+        </S.RowWrapper>
+
+        <S.RowWrapper $margin="0 0 2px 0">
+          <S.SquareElement $margin="0 2px 0 0" $radius="0 2rem 0 0" />
+          <S.SquareElement $radius="2rem 0 0 0" />
+        </S.RowWrapper>
+      </S.SquaresWrapper>
     </S.SectionWrapper>
   );
 }

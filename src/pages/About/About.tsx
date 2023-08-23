@@ -12,6 +12,7 @@ export default function About() {
   const theme = useContext(ThemeContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.body.style.cssText = 'overflow: hidden';
 
     const scrollLock = setTimeout(() => {
