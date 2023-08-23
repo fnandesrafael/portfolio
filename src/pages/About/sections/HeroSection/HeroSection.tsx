@@ -13,21 +13,18 @@ import * as S from './styles';
 const letterVariant: Variants = {
   initial: {
     opacity: 0,
-    y: -200,
   },
   animate: {
     opacity: 1,
-    y: 0,
     transition: {
-      duration: 0.8,
+      duration: 2,
       ease: EASE_SWEET,
     },
   },
   exit: {
     opacity: 0,
-    y: -200,
     transition: {
-      duration: 0.8,
+      duration: 1,
       ease: EASE_SWEET,
     },
   },
