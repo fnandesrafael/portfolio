@@ -17,8 +17,8 @@ export const Element = styled(motion.span)<ElementProps>`
   z-index: calc(infinity);
 
   p {
-    font-size: 1em;
     color: white;
+    font-size: 1em;
   }
 `;
 
