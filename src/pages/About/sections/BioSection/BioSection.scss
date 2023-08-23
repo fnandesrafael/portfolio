@@ -1,13 +1,11 @@
-@import '../../../../styles/_variables.scss';
-
 .bio-wrapper {
   display: flex;
   height: 75vh;
-  margin-top: 119.25vh;
+  z-index: 20;
 
   .bio-l-container {
     align-items: center;
-    border: 2px solid $light-mode-fill;
+    border: 2px solid red;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -35,7 +33,7 @@
     }
 
     body.dark-mode & {
-      border-color: $dark-mode-fill;
+      border-color: red;
       transition: 1s;
 
       &:not(.bio-text) {
@@ -79,27 +77,27 @@
     }
 
     .upper-r-containers, .bottom-r-containers {
-      background-color: $light-mode-fill;
+      background-color: red;
       display: flex;
       flex-flow: row;
       height: 100%;
       transition: 1s;
 
       body.dark-mode & {
-        background-color: $dark-mode-fill;
+        background-color: red;
         transition: 1s;
       }
 
       & * {
-        background-color: $light-mode-bg;
-        border: 2px solid $light-mode-fill;
+        background-color: red;
+        border: 2px solid red;
         height: 100%;
         transition: 1s;
         width: 100%;
 
         body.dark-mode & {
-          background-color: $dark-mode-bg;
-          border-color: $dark-mode-fill;
+          background-color: red;
+          border-color: red;
           transition: 1s;
         }
       }

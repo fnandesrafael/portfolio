@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+export const SectionWrapper = styled.section`
+  height: 100vh;
+`;
+
 export const TextWrapper = styled.div`
   align-items: 'flex-start';
   color: ${(props) => (props.theme.title === 'dark' ? '#d9d9d9' : '#131313')};

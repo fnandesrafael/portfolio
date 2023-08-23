@@ -71,7 +71,7 @@ export default function HeroSection() {
   const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
 
   return (
-    <>
+    <S.SectionWrapper>
       <GoghFrame.Root
         props={{
           hasLink: false,
@@ -172,6 +172,6 @@ export default function HeroSection() {
           Frontend Web Developer & Aspiring UX Designer
         </S.SubHeading>
       </S.TextWrapper>
-    </>
+    </S.SectionWrapper>
   );
 }

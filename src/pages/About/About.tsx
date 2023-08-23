@@ -6,6 +6,7 @@ import MouseFollower from '@components/MouseFollower';
 import HeroSection from './sections/HeroSection';
 
 import * as S from './styles';
+import BioSection from './sections/BioSection';
 
 export default function About() {
   const theme = useContext(ThemeContext);
@@ -44,6 +45,8 @@ export default function About() {
       </MouseFollower.Root>
 
       <HeroSection />
+
+      <BioSection />
     </S.PageWrapper>
   );
 }
