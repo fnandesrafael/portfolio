@@ -1,47 +1,4 @@
-.bio-wrapper {
-  display: flex;
-  height: 75vh;
-  z-index: 20;
-
-  .bio-l-container {
-    align-items: center;
-    border: 2px solid red;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    display: flex;
-    height: 100.25%;
-    justify-content: center;
-    padding: 0 4vw;
-    width: 65%;
-
-    &:not(.bio-text) {
-      transition: 1s;
-      transition-property: border-color;
-    }
-
-    .double-quote {
-      font-size: 25em;
-      left: 1.5vw;
-      pointer-events: none;
-      position: absolute;
-      top: 25vh;
-    }
-
-    .bio-text {
-      font-size: 1.5em;
-    }
-
-    body.dark-mode & {
-      border-color: red;
-      transition: 1s;
-
-      &:not(.bio-text) {
-        transition-property: border-color;
-      }
-    }
-  }
-
+section {
   .bio-r-container {
     border-left: none;
     display: flex;

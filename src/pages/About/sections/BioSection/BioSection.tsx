@@ -1,13 +1,15 @@
 import React from 'react';
+import Quote from './components/Quote';
 
+import * as S from './styles';
 import './BioSection.scss';
 
 export default function BioSection() {
   return (
-    <div className="bio-wrapper">
-      <div className="bio-l-container">
-        <p className="double-quote">&quot;</p>
-        <p className="bio-text">
+    <S.SectionWrapper>
+      <S.LeftContainer>
+        <Quote />
+        <S.ResumeElement>
           I am a recently graduated web developer from Trybe, where I had the
           opportunity to learn and collaborate with amazing people and teams who
           helped me grow as a person and professional. My curiosity about
@@ -16,8 +18,8 @@ export default function BioSection() {
           enjoy spending time exploring ways that help me convey meaningful
           narratives while taking the development process in a more artisanal
           way.
-        </p>
-      </div>
+        </S.ResumeElement>
+      </S.LeftContainer>
       <div className="bio-r-container">
         <div className="upper-r-containers">
           <div className="upper-l" />
@@ -28,6 +30,6 @@ export default function BioSection() {
           <div className="bottom-r" />
         </div>
       </div>
-    </div>
+    </S.SectionWrapper>
   );
 }

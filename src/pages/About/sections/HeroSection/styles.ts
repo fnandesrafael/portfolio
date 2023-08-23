@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 export const SectionWrapper = styled.section`
   height: 100vh;
+  z-index: 10;
 `;
 
 export const TextWrapper = styled.div`
