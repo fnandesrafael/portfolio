@@ -9,7 +9,7 @@ export const PageWrapper = styled.main`
 
 export const BadgeElement = styled(motion.img)`
   height: 8rem;
-  margin-left: -5.25rem;
+  margin-left: -3.5rem;
   margin-top: -3.5rem;
 `;
 
