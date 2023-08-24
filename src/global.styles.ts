@@ -15,6 +15,8 @@ export const Overall = createGlobalStyle`
   body {
     font-family: 'Bodoni Moda', serif;
     scroll-behavior: smooth;
+    background-color: ${({ theme }) => theme.colors.primary};
+    transition: 0.8s background-color;
 
     a {
       color: inherit;
@@ -33,7 +35,7 @@ export const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
   height: 110vh;
-  transition: 0.8s;
+  transition: 0.8s background-color color;
   width: 100%;
 
   &::after {
