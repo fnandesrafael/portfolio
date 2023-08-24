@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <S.PageWrapper>
       <MouseFollower.Root>
-        <MouseFollower.Element>
+        <MouseFollower.Element props={{ blend: true }}>
           click on the frame and stay on it
         </MouseFollower.Element>
       </MouseFollower.Root>
