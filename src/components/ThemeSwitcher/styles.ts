@@ -5,21 +5,21 @@ export const SwitcherWrapper = styled(motion.div)`
   align-items: center;
   display: flex;
   flex-flow: row;
-  height: 2em;
+  height: 2rem;
   justify-content: space-around;
-  margin: 0.5em;
-  width: 2em;
+  margin: 0.5rem;
+  width: 2rem;
 `;
 
 export const ToggleElement = styled.label`
   align-items: center;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: 100%;
   cursor: pointer;
   display: flex;
-  height: 2.5em;
+  height: 2.5rem;
   justify-content: center;
-  width: 2.5em;
+  width: 2.5rem;
 
   input {
     display: none;
@@ -27,8 +27,8 @@ export const ToggleElement = styled.label`
 `;
 
 export const IconElement = styled(motion.svg)`
-  fill: ${(props) => props.theme.colors.highlight};
-  height: 1.75em;
-  padding: 0.5em;
-  width: 1.75em;
+  fill: ${({ theme }) => theme.colors.highlight};
+  height: 2rem;
+  padding: 0.5rem;
+  width: 2rem;
 `;
