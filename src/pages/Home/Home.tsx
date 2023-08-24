@@ -73,6 +73,7 @@ export default function Home() {
   const theme = useContext(ThemeContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.body.style.cssText = `overflow: hidden; touch-action: none;`;
 
     return () => {

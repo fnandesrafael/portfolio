@@ -4,6 +4,7 @@ import * as S from './styles';
 
 export default function NotFound() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.body.style.cssText = 'overflow: hidden';
   }, []);
 
