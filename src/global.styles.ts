@@ -13,9 +13,9 @@ export const Overall = createGlobalStyle`
   }
 
   body {
+    background-color: ${({ theme }) => theme.colors.primary};
     font-family: 'Bodoni Moda', serif;
     scroll-behavior: smooth;
-    background-color: ${({ theme }) => theme.colors.primary};
     transition: 0.8s background-color;
 
     a {
