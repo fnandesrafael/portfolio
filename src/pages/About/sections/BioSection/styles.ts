@@ -18,7 +18,7 @@ export const SectionWrapper = styled.section`
   z-index: 10;
 `;
 
-export const ResumeContainer = styled.div<CustomMarginProps>`
+export const BioContainer = styled.div<CustomMarginProps>`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
@@ -40,7 +40,7 @@ export const QuoteElement = styled(motion.svg)`
   }
 `;
 
-export const ResumeText = styled.p`
+export const BioText = styled.p`
   font-size: 1.5rem;
   margin-top: 2rem;
   padding: 2rem;
