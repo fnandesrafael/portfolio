@@ -2,12 +2,12 @@ import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
+import useTheme from '@hooks/useTheme';
 import { Header } from '@components/Header';
 import Hello from '@pages/Hello';
 import Home from '@pages/Home';
-import About from '@pages/About/About';
+import About from '@pages/About';
 import NotFound from '@pages/NotFound';
-import useTheme from '@hooks/useTheme';
 
 import * as S from './global.styles';
 
