@@ -6,3 +6,5 @@ export const SignatureWrapper = styled(motion.div)`
     display: inline-block;
   }
 `;
+
+export default SignatureWrapper;
