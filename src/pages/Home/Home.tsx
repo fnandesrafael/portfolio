@@ -73,6 +73,7 @@ export default function Home() {
   const theme = useContext(ThemeContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.body.style.cssText = `overflow: hidden; touch-action: none;`;
 
     return () => {
@@ -83,7 +84,7 @@ export default function Home() {
   return (
     <S.PageWrapper>
       <MouseFollower.Root>
-        <MouseFollower.Element>
+        <MouseFollower.Element props={{ blend: true }}>
           click on the frame and stay on it
         </MouseFollower.Element>
       </MouseFollower.Root>

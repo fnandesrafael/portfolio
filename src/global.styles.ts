@@ -13,8 +13,10 @@ export const Overall = createGlobalStyle`
   }
 
   body {
+    background-color: ${({ theme }) => theme.colors.primary};
     font-family: 'Bodoni Moda', serif;
     scroll-behavior: smooth;
+    transition: 0.8s background-color;
 
     a {
       color: inherit;
@@ -28,12 +30,12 @@ export const Overall = createGlobalStyle`
 `;
 
 export const AppWrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.textPrimary};
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   display: flex;
   flex-flow: column;
   height: 110vh;
-  transition: 0.8s;
+  transition: 0.8s background-color;
   width: 100%;
 
   &::after {

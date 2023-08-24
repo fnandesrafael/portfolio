@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const HelloContainer = styled(motion.div)`
-  background-color: ${(props) => props.theme.colors.secundary};
+  background-color: ${({ theme }) => theme.colors.secundary};
   height: 110vh;
   transform-origin: top;
   width: 100%;
@@ -10,8 +10,8 @@ export const HelloContainer = styled(motion.div)`
 `;
 
 export const GreetingElement = styled(motion.h1)`
-  color: ${(props) => props.theme.colors.textSecundary};
-  font-size: 2.25em;
+  color: ${({ theme }) => theme.colors.textSecundary};
+  font-size: 2rem;
   font-weight: 100;
   left: 50%;
   position: absolute;

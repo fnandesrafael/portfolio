@@ -24,6 +24,7 @@ export default function Hello() {
   }, []);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       navigate('/home');
     }, 2150);

@@ -6,10 +6,10 @@ import * as S from './styles';
 export default function BioSection() {
   return (
     <S.SectionWrapper>
-      <S.ResumeContainer $margin="0 2px 2px 0">
+      <S.BioContainer $margin="0 2px 2px 0">
         <Quote />
 
-        <S.ResumeText>
+        <S.BioText>
           I am a recently graduated web developer from Trybe, where I had the
           opportunity to learn and collaborate with amazing people and teams who
           helped me grow as a person and professional. My curiosity about
@@ -18,8 +18,8 @@ export default function BioSection() {
           enjoy spending time exploring ways that help me convey meaningful
           narratives while taking the development process in a more artisanal
           way.
-        </S.ResumeText>
-      </S.ResumeContainer>
+        </S.BioText>
+      </S.BioContainer>
 
       <S.SquaresWrapper>
         <S.RowWrapper $margin="0 0 2px 0 ">

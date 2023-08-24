@@ -8,7 +8,7 @@ export const SectionWrapper = styled.section`
 
 export const TextWrapper = styled.div`
   align-items: 'flex-start';
-  color: ${(props) => (props.theme.title === 'dark' ? '#d9d9d9' : '#131313')};
+  color: ${({ theme }) => (theme.title === 'dark' ? '#d9d9d9' : '#131313')};
   display: flex;
   flex-flow: column;
   gap: 0.75rem;

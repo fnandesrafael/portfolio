@@ -10,7 +10,7 @@ type SquareElementProps = {
 } & CustomMarginProps;
 
 export const SectionWrapper = styled.section`
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   height: 36rem;
   position: relative;
@@ -18,13 +18,14 @@ export const SectionWrapper = styled.section`
   z-index: 10;
 `;
 
-export const ResumeContainer = styled.div<CustomMarginProps>`
+export const BioContainer = styled.div<CustomMarginProps>`
   align-items: center;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin: ${(props) => props.$margin};
+  margin: ${({ $margin }) => $margin};
+  transition: 0.8s background-color;
   width: 65%;
 `;
 
@@ -35,12 +36,12 @@ export const QuoteElement = styled(motion.svg)`
   width: 10rem;
 
   path {
-    fill: ${(props) => props.theme.colors.background};
+    fill: ${({ theme }) => theme.colors.background};
     transition: 0.8s;
   }
 `;
 
-export const ResumeText = styled.p`
+export const BioText = styled.p`
   font-size: 1.5rem;
   margin-top: 2rem;
   padding: 2rem;
@@ -57,13 +58,14 @@ export const RowWrapper = styled.div<CustomMarginProps>`
   display: flex;
   flex-flow: row;
   height: 100%;
-  margin: ${(props) => props.$margin};
+  margin: ${({ $margin }) => $margin};
 `;
 
 export const SquareElement = styled.div<SquareElementProps>`
-  background-color: ${(props) => props.theme.colors.primary};
-  border-radius: ${(props) => props.$radius};
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ $radius }) => $radius};
   height: 100%;
-  margin: ${(props) => props.$margin};
+  margin: ${({ $margin }) => $margin};
+  transition: 0.8s background-color;
   width: 100%;
 `;

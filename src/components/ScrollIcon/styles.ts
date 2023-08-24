@@ -5,7 +5,7 @@ export const ScrollWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-around;
-  left: 50% /*95%*/;
+  left: 50%;
   position: absolute;
   top: 85%;
   z-index: 10;

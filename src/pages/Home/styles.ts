@@ -5,6 +5,7 @@ export const PageWrapper = styled.main`
   align-items: center;
   display: flex;
   flex-flow: column;
+  transition: 0.8s color;
 `;
 
 export const BadgeElement = styled(motion.img)`
