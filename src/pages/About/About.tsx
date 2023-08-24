@@ -6,11 +6,13 @@ import MouseFollower from '@components/MouseFollower';
 import HeroSection from './sections/HeroSection';
 
 import * as S from './styles';
+import BioSection from './sections/BioSection';
 
 export default function About() {
   const theme = useContext(ThemeContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.body.style.cssText = 'overflow: hidden';
 
     const scrollLock = setTimeout(() => {
@@ -38,12 +40,13 @@ export default function About() {
                 ease: 'linear',
               },
             }}
-            exit={{ opacity: 0, transition: { duration: 1 } }}
           />
         </MouseFollower.Element>
       </MouseFollower.Root>
 
       <HeroSection />
+
+      <BioSection />
     </S.PageWrapper>
   );
 }

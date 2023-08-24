@@ -13,21 +13,11 @@ import * as S from './styles';
 const letterVariant: Variants = {
   initial: {
     opacity: 0,
-    y: -200,
   },
   animate: {
     opacity: 1,
-    y: 0,
     transition: {
-      duration: 0.8,
-      ease: EASE_SWEET,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -200,
-    transition: {
-      duration: 0.8,
+      duration: 2,
       ease: EASE_SWEET,
     },
   },
@@ -37,13 +27,6 @@ const firstNameVariant: Variants = {
   animate: {
     transition: {
       delayChildren: 1,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
-  exit: {
-    transition: {
-      delayChildren: 0,
       staggerChildren: 0.04,
       staggerDirection: 1,
     },
@@ -58,13 +41,6 @@ const lastNameVariant: Variants = {
       staggerDirection: 1,
     },
   },
-  exit: {
-    transition: {
-      delayChildren: 0,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
 };
 
 export default function HeroSection() {
@@ -74,7 +50,7 @@ export default function HeroSection() {
   const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
 
   return (
-    <>
+    <S.SectionWrapper>
       <GoghFrame.Root
         props={{
           hasLink: false,
@@ -167,14 +143,10 @@ export default function HeroSection() {
             opacity: 1,
             transition: { delay: 1.5, duration: 1, ease: EASE_SWEET },
           }}
-          exit={{
-            opacity: 0,
-            transition: { delay: 0, duration: 1, ease: EASE_SWEET },
-          }}
         >
           Frontend Web Developer & Aspiring UX Designer
         </S.SubHeading>
       </S.TextWrapper>
-    </>
+    </S.SectionWrapper>
   );
 }

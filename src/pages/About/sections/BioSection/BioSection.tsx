@@ -1,13 +1,15 @@
 import React from 'react';
+import Quote from './components/Quote';
 
-import './BioSection.scss';
+import * as S from './styles';
 
 export default function BioSection() {
   return (
-    <div className="bio-wrapper">
-      <div className="bio-l-container">
-        <p className="double-quote">&quot;</p>
-        <p className="bio-text">
+    <S.SectionWrapper>
+      <S.ResumeContainer $margin="0 2px 2px 0">
+        <Quote />
+
+        <S.ResumeText>
           I am a recently graduated web developer from Trybe, where I had the
           opportunity to learn and collaborate with amazing people and teams who
           helped me grow as a person and professional. My curiosity about
@@ -16,18 +18,20 @@ export default function BioSection() {
           enjoy spending time exploring ways that help me convey meaningful
           narratives while taking the development process in a more artisanal
           way.
-        </p>
-      </div>
-      <div className="bio-r-container">
-        <div className="upper-r-containers">
-          <div className="upper-l" />
-          <div className="upper-r" />
-        </div>
-        <div className="bottom-r-containers">
-          <div className="bottom-l" />
-          <div className="bottom-r" />
-        </div>
-      </div>
-    </div>
+        </S.ResumeText>
+      </S.ResumeContainer>
+
+      <S.SquaresWrapper>
+        <S.RowWrapper $margin="0 0 2px 0 ">
+          <S.SquareElement $margin="0 2px 0 0" $radius="0 0 2rem 0" />
+          <S.SquareElement $radius="0 0 0 2rem" />
+        </S.RowWrapper>
+
+        <S.RowWrapper $margin="0 0 2px 0">
+          <S.SquareElement $margin="0 2px 0 0" $radius="0 2rem 0 0" />
+          <S.SquareElement $radius="2rem 0 0 0" />
+        </S.RowWrapper>
+      </S.SquaresWrapper>
+    </S.SectionWrapper>
   );
 }

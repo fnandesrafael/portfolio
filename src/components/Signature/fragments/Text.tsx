@@ -3,8 +3,8 @@ import { Variants, motion } from 'framer-motion';
 
 type TextProps = {
   props: {
-    wordVariants: Variants;
-    letterVariant: Variants;
+    wordVariants?: Variants;
+    letterVariant?: Variants;
   };
   children: string;
 };
