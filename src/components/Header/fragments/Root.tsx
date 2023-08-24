@@ -12,12 +12,12 @@ export default function Root({ children }: RootProps) {
 
   return (
     canShow && (
-      <S.Header
+      <S.HeaderWrapper
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
       >
         {children}
-      </S.Header>
+      </S.HeaderWrapper>
     )
   );
 }
