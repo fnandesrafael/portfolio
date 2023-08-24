@@ -46,9 +46,6 @@ export default function About() {
 
       <Navigation.Root>
         <Navigation.NavLink props={{ page: '/home' }}>Home</Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/about' }}>
-          About
-        </Navigation.NavLink>
         <Navigation.NavLink props={{ page: '/resume' }}>
           Resume
         </Navigation.NavLink>
