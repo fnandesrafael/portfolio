@@ -9,6 +9,7 @@ export const SlideInElement = styled(motion.div)`
   top: 0;
   transform-origin: top;
   width: 100%;
+  z-index: 30;
 `;
 
 export const SlideOutElement = styled(motion.div)`
@@ -19,4 +20,5 @@ export const SlideOutElement = styled(motion.div)`
   top: 0;
   transform-origin: bottom;
   width: 100%;
+  z-index: 30;
 `;

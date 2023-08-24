@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect } from 'react';
 import badge from '@assets/images/white_badge.png';
+import Transitioner from '@components/Transitioner';
 import { Navigation } from '@components/Navigation';
 import MouseFollower from '@components/MouseFollower';
 import HeroSection from './sections/HeroSection';
@@ -25,34 +26,38 @@ export default function About() {
   }, []);
 
   return (
-    <S.PageWrapper>
-      <MouseFollower.Root>
-        <MouseFollower.Element props={{ blend: true }}>
-          <S.BadgeElement
-            src={badge}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 1 } }}
-            whileInView={{
-              transform: 'rotate(360deg)',
-              transition: {
-                duration: 20,
-                loop: Infinity,
-                ease: 'linear',
-              },
-            }}
-          />
-        </MouseFollower.Element>
-      </MouseFollower.Root>
+    <Transitioner slideOut>
+      <S.PageWrapper>
+        <MouseFollower.Root>
+          <MouseFollower.Element props={{ blend: true }}>
+            <S.BadgeElement
+              src={badge}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 1 } }}
+              whileInView={{
+                transform: 'rotate(360deg)',
+                transition: {
+                  duration: 20,
+                  loop: Infinity,
+                  ease: 'linear',
+                },
+              }}
+            />
+          </MouseFollower.Element>
+        </MouseFollower.Root>
 
-      <HeroSection />
-      <BioSection />
+        <HeroSection />
+        <BioSection />
 
-      <Navigation.Root>
-        <Navigation.NavLink props={{ page: '/home' }}>Home</Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/resume' }}>
-          Resume
-        </Navigation.NavLink>
-      </Navigation.Root>
-    </S.PageWrapper>
+        <Navigation.Root>
+          <Navigation.NavLink props={{ page: '/home' }}>
+            Home
+          </Navigation.NavLink>
+          <Navigation.NavLink props={{ page: '/resume' }}>
+            Resume
+          </Navigation.NavLink>
+        </Navigation.Root>
+      </S.PageWrapper>
+    </Transitioner>
   );
 }
