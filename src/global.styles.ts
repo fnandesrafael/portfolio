@@ -35,7 +35,7 @@ export const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
   height: 110vh;
-  transition: 0.8s background-color color;
+  transition: 0.8s background-color;
   width: 100%;
 
   &::after {

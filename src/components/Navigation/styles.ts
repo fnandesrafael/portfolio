@@ -14,11 +14,11 @@ export const NavText = styled(motion.h1)`
   font-size: 12rem;
   font-weight: 400;
   line-height: 125%;
-  transition: 0.8s color;
+  transition: 0.4s color;
   width: min-content;
 
   &:hover {
     color: ${({ theme }) => theme.colors.textTerciary};
-    transition: 0.8s color;
+    transition: 0.4s color !important;
   }
 `;
