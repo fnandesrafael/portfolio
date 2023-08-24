@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import badge from '@assets/images/white_badge.png';
 import { Navigation } from '@components/Navigation';
 import MouseFollower from '@components/MouseFollower';
@@ -8,8 +8,11 @@ import BioSection from './sections/BioSection';
 import * as S from './styles';
 
 export default function About() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     document.body.style.cssText = 'overflow: hidden';
 
     const scrollLock = setTimeout(() => {

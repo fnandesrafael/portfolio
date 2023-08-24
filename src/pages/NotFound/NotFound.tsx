@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 
 import Navigation from '@components/Navigation';
 import * as S from './styles';
 
 export default function NotFound() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 

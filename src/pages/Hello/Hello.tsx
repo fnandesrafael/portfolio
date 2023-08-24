@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { EASE_OUT } from '@constants/animations/eases';
 
@@ -9,6 +9,10 @@ const greetings = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
 export default function Hello() {
   const [greetingIndex, setGreetingIndex] = useState(0);
   const navigate = useNavigate();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     document.body.style.cssText = 'overflow: hidden';
@@ -24,7 +28,6 @@ export default function Hello() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     setTimeout(() => {
       navigate('/home');
     }, 2150);
