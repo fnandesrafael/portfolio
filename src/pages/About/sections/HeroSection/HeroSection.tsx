@@ -60,9 +60,9 @@ export default function HeroSection() {
               display: 'flex',
             },
             animate: {
-              borderRadius: '10em 10em 0 0',
-              height: '215vh',
-              top: 75,
+              borderRadius: '10rem 10rem 0 0',
+              height: '72rem',
+              top: 72,
               transition: { duration: 1.5, ease: EASE_SWEET },
               width: '100%',
             },
@@ -74,7 +74,7 @@ export default function HeroSection() {
             props={{
               src: darkPaint,
               motionValues: {
-                initial: { y: 0, scale: 3, marginTop: '15vh' },
+                initial: { y: 0, scale: 3, marginTop: '12rem' },
                 animate: {
                   y: 350,
                   scale: 2.65,
@@ -93,7 +93,7 @@ export default function HeroSection() {
             props={{
               src: lightPaint,
               motionValues: {
-                initial: { y: 0, scale: 3, marginTop: '15vh' },
+                initial: { y: 0, scale: 3, marginTop: '12rem' },
                 animate: {
                   y: 300,
                   scale: 2.65,
