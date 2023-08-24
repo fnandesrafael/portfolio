@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
-export const NavigationWrapper = styled(motion.footer)`
+export const NavigationWrapper = styled.footer`
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -10,7 +9,7 @@ export const NavigationWrapper = styled(motion.footer)`
   width: 100%;
 `;
 
-export const NavText = styled(motion.h1)`
+export const NavText = styled.h1`
   font-size: 12rem;
   font-weight: 400;
   line-height: 125%;
