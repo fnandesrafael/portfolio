@@ -9,7 +9,7 @@ export default function NotFound() {
   }, []);
 
   return (
-    <S.NotFoundWrapper>
+    <S.PageWrapper>
       <S.ErrorElement
         className="not-found-code"
         initial={{ opacity: 0 }}
@@ -17,6 +17,6 @@ export default function NotFound() {
       >
         404
       </S.ErrorElement>
-    </S.NotFoundWrapper>
+    </S.PageWrapper>
   );
 }

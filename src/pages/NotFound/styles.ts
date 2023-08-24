@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const NotFoundWrapper = styled.div`
+export const PageWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-flow: column;
@@ -12,5 +12,3 @@ export const NotFoundWrapper = styled.div`
 export const ErrorElement = styled(motion.h1)`
   font-size: 2rem;
 `;
-
-export default NotFoundWrapper;
