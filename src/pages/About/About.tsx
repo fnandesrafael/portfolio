@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import badge from '@assets/images/white_badge.png';
+import { Navigation } from '@components/Navigation';
 import MouseFollower from '@components/MouseFollower';
 import HeroSection from './sections/HeroSection';
+import BioSection from './sections/BioSection';
 
 import * as S from './styles';
-import BioSection from './sections/BioSection';
 
 export default function About() {
   useEffect(() => {
@@ -41,8 +42,17 @@ export default function About() {
       </MouseFollower.Root>
 
       <HeroSection />
-
       <BioSection />
+
+      <Navigation.Root>
+        <Navigation.NavLink props={{ page: '/home' }}>Home</Navigation.NavLink>
+        <Navigation.NavLink props={{ page: '/about' }}>
+          About
+        </Navigation.NavLink>
+        <Navigation.NavLink props={{ page: '/resume' }}>
+          Resume
+        </Navigation.NavLink>
+      </Navigation.Root>
     </S.PageWrapper>
   );
 }

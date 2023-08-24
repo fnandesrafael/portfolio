@@ -25,6 +25,7 @@ export const BioContainer = styled.div<CustomMarginProps>`
   flex-flow: column;
   justify-content: center;
   margin: ${({ $margin }) => $margin};
+  transition: 0.8s background-color;
   width: 65%;
 `;
 
@@ -65,5 +66,6 @@ export const SquareElement = styled.div<SquareElementProps>`
   border-radius: ${({ $radius }) => $radius};
   height: 100%;
   margin: ${({ $margin }) => $margin};
+  transition: 0.8s background-color;
   width: 100%;
 `;
