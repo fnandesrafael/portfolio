@@ -9,7 +9,6 @@ import Home from '@pages/Home';
 import About from '@pages/About';
 import NotFound from '@pages/NotFound';
 
-import HistoryProvider from '@context/HistoryContext';
 import * as S from './global.styles';
 
 export default function App() {
@@ -25,16 +24,14 @@ export default function App() {
           <Header.ThemeSwitcher props={{ switchTheme }} />
         </Header.Root>
 
-        <HistoryProvider>
-          <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<Hello />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </AnimatePresence>
-        </HistoryProvider>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Hello />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AnimatePresence>
       </S.AppWrapper>
     </ThemeProvider>
   );
