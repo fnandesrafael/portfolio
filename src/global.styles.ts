@@ -15,14 +15,14 @@ export const Overall = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.primary};
     font-family: 'Bodoni Moda', serif;
-    scroll-behavior: smooth;
     position: relative;
+    scroll-behavior: smooth;
     transition: 0.8s background-color;
 
     &::after {
       background-image: ${`url(${grungeTexture})`};
-      background-size: cover;
       background-repeat: repeat-y;
+      background-size: cover;
       content: '';
       height: 100%;
       left: 0;
