@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 type CustomMarginProps = {
@@ -7,6 +7,13 @@ type CustomMarginProps = {
 
 type SquareElementProps = {
   $radius?: string;
+  $hasLine?: {
+    rising: boolean;
+    width: string;
+    degrees: string;
+  };
+  $hasLineDown?: boolean;
+  $degrees?: number;
 } & CustomMarginProps;
 
 export const SectionWrapper = styled.section`
@@ -68,6 +75,29 @@ export const SquareElement = styled.div<SquareElementProps>`
   border-radius: ${({ $radius }) => $radius};
   height: 100%;
   margin: ${({ $margin }) => $margin};
+  position: relative;
   transition: 0.8s background-color;
   width: 100%;
+
+  ${({ $hasLine }) =>
+    $hasLine &&
+    css`
+      &::before {
+        content: '';
+        position: absolute;
+
+        ${$hasLine.rising &&
+        css`
+          bottom: 0;
+        `}
+
+        left: 0;
+        width: ${$hasLine.width};
+        height: 2px;
+        background-color: ${({ theme }) => theme.colors.background};
+        transform: translateY(100%) rotate(${$hasLine.degrees});
+        transform-origin: left bottom;
+        transition: 0.8s background-color;
+      }
+    `}
 `;
