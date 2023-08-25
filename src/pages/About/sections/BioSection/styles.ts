@@ -83,8 +83,9 @@ export const SquareElement = styled.div<SquareElementProps>`
     $hasLine &&
     css`
       &::before {
+        background-color: ${({ theme }) => theme.colors.background};
         content: '';
-        position: absolute;
+        height: 2px;
 
         ${$hasLine.rising &&
         css`
@@ -92,12 +93,11 @@ export const SquareElement = styled.div<SquareElementProps>`
         `}
 
         left: 0;
-        width: ${$hasLine.width};
-        height: 2px;
-        background-color: ${({ theme }) => theme.colors.background};
+        position: absolute;
         transform: translateY(100%) rotate(${$hasLine.degrees});
         transform-origin: left bottom;
         transition: 0.8s background-color;
+        width: ${$hasLine.width};
       }
     `}
 `;
