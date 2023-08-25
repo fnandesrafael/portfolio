@@ -42,6 +42,7 @@ export const QuoteElement = styled(motion.svg)`
 `;
 
 export const BioText = styled.p`
+  color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
   font-size: 1.5rem;
   margin-top: 2rem;
   padding: 2rem;

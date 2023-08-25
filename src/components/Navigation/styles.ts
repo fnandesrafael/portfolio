@@ -18,6 +18,6 @@ export const NavText = styled.h1`
 
   &:hover {
     color: ${({ theme }) => theme.colors.textTerciary};
-    transition: 0.4s color !important;
+    transition: 0.4s color;
   }
 `;

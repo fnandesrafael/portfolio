@@ -28,6 +28,12 @@ export default function NotFound() {
         <Navigation.NavLink props={{ page: '/resume' }}>
           Resume
         </Navigation.NavLink>
+        <Navigation.NavLink props={{ page: '/stacks' }}>
+          Stacks
+        </Navigation.NavLink>
+        <Navigation.NavLink props={{ page: '/projects' }}>
+          Projects
+        </Navigation.NavLink>
       </Navigation.Root>
     </S.PageWrapper>
   );

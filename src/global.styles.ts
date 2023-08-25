@@ -27,7 +27,7 @@ export const Overall = createGlobalStyle`
       height: 100%;
       left: 0;
       mix-blend-mode: luminosity;
-      opacity: 0.1;
+      opacity: 0.15;
       pointer-events: none;
       position: fixed;
       top: 0;
