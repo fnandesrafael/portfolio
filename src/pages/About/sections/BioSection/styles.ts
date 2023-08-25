@@ -46,6 +46,7 @@ export const BioText = styled.p`
   margin-top: 2rem;
   padding: 2rem;
   width: 85%;
+  transition: 0.8s color;
 `;
 
 export const SquaresWrapper = styled.div`
