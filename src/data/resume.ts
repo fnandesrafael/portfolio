@@ -1,12 +1,12 @@
 const resumeData = {
   educations: [
     {
-      title: 'Digital Game Development',
+      title: 'Digital Game Developmenr',
       location: 'at State Technical School Cícero Dias',
       period: '2017 - 2019',
     },
     {
-      title: 'Fullstack Web Development',
+      title: 'Fullstack Web Developmer',
       location: 'at Trybe',
       period: '2017 - 2019',
     },
