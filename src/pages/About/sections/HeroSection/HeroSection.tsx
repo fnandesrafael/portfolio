@@ -47,7 +47,7 @@ export default function HeroSection() {
   const theme = useContext(ThemeContext);
   const { scrollYProgress } = useScroll();
 
-  const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
+  const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 5]);
 
   return (
     <S.SectionWrapper>
