@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import { Navigation } from '@components/Navigation';
+import { Navigator } from '@components/Navigator';
 
 import * as S from './styles';
 
@@ -9,32 +9,32 @@ export default function NotFound() {
   }, []);
 
   return (
-    <S.PageWrapper>
-      <S.ErrorWrapper>
-        <S.ErrorElement
-          className="not-found-code"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1 } }}
-        >
-          404
-        </S.ErrorElement>
-      </S.ErrorWrapper>
+    <>
+      <S.PageWrapper>
+        <S.ErrorWrapper>
+          <S.ErrorElement
+            className="not-found-code"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+          >
+            404
+          </S.ErrorElement>
+        </S.ErrorWrapper>
+      </S.PageWrapper>
 
-      <Navigation.Root>
-        <Navigation.NavLink props={{ page: '/home' }}>Home</Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/about' }}>
-          About
-        </Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/resume' }}>
+      <Navigator.Root>
+        <Navigator.NavLink props={{ page: '/home' }}>Home</Navigator.NavLink>
+        <Navigator.NavLink props={{ page: '/about' }}>About</Navigator.NavLink>
+        <Navigator.NavLink props={{ page: '/resume' }}>
           Resume
-        </Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/stacks' }}>
+        </Navigator.NavLink>
+        <Navigator.NavLink props={{ page: '/stacks' }}>
           Stacks
-        </Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/projects' }}>
+        </Navigator.NavLink>
+        <Navigator.NavLink props={{ page: '/projects' }}>
           Projects
-        </Navigation.NavLink>
-      </Navigation.Root>
-    </S.PageWrapper>
+        </Navigator.NavLink>
+      </Navigator.Root>
+    </>
   );
 }
