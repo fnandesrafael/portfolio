@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import resumeData from '@data/resume';
-
+import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
 
 import * as S from './styles';
@@ -12,7 +12,11 @@ export default function Resume() {
 
   return (
     <>
-      <S.PageWrapper>
+      <S.PageWrapper
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: EASE_SWEET }}
+      >
         <S.RowContainer />
 
         <S.PageHeading>Resume</S.PageHeading>

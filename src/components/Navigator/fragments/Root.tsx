@@ -11,7 +11,7 @@ export default function Root({ children }: RootProps) {
   return (
     <S.NavigationWrapper
       exit={{ opacity: 0 }}
-      transition={{ duration: 1, ease: EASE_SWEET }}
+      transition={{ duration: 0.8, ease: EASE_SWEET }}
     >
       {children}
     </S.NavigationWrapper>

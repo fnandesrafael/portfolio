@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const PageWrapper = styled.main`
+export const PageWrapper = styled(motion.main)`
   display: flex;
   flex-flow: row;
   transition: 0.8s color;
