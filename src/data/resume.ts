@@ -6,7 +6,7 @@ const resumeData = {
       period: '2017 - 2019',
     },
     {
-      title: 'Fullstack Web Developmer',
+      title: 'Fullstack Web Developer',
       location: 'at Trybe',
       period: '2017 - 2019',
     },
