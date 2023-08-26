@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import resumeData from '@data/resume';
 
-import Navigation from '@components/Navigation';
+import { Navigator } from '@components/Navigator';
 
 import * as S from './styles';
 
@@ -41,18 +41,17 @@ export default function Resume() {
           </section>
         </S.ResumeContainer>
       </S.PageWrapper>
-      <Navigation.Root>
-        <Navigation.NavLink props={{ page: '/home' }}>Home</Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/about' }}>
-          About
-        </Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/stacks' }}>
+
+      <Navigator.Root>
+        <Navigator.NavLink props={{ page: '/home' }}>Home</Navigator.NavLink>
+        <Navigator.NavLink props={{ page: '/about' }}>About</Navigator.NavLink>
+        <Navigator.NavLink props={{ page: '/stacks' }}>
           Stacks
-        </Navigation.NavLink>
-        <Navigation.NavLink props={{ page: '/projects' }}>
+        </Navigator.NavLink>
+        <Navigator.NavLink props={{ page: '/projects' }}>
           Projects
-        </Navigation.NavLink>
-      </Navigation.Root>
+        </Navigator.NavLink>
+      </Navigator.Root>
     </>
   );
 }

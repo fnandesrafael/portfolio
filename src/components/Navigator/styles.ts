@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const NavigationWrapper = styled.footer`
+export const NavigationWrapper = styled(motion.footer)`
   display: flex;
   flex-direction: column;
   gap: 0;

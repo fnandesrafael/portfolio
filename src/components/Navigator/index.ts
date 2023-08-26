@@ -1,9 +1,9 @@
 import Root from './fragments/Root';
 import NavLink from './fragments/NavLink';
 
-export const Navigation = {
+export const Navigator = {
   Root,
   NavLink,
 };
 
-export default Navigation;
+export default Navigator;
