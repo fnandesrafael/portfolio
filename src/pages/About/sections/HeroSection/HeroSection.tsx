@@ -47,7 +47,7 @@ export default function HeroSection() {
   const theme = useContext(ThemeContext);
   const { scrollYProgress } = useScroll();
 
-  const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 3.25]);
+  const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 5]);
 
   return (
     <S.SectionWrapper>
@@ -78,7 +78,7 @@ export default function HeroSection() {
                 animate: {
                   y: 350,
                   scale: 2.65,
-                  filter: 'saturate(0.15)',
+                  filter: 'saturate(0.5)',
                   transition: {
                     duration: 1.5,
                     ease: EASE_SWEET,
@@ -97,7 +97,7 @@ export default function HeroSection() {
                 animate: {
                   y: 300,
                   scale: 2.65,
-                  filter: 'saturate(0.15) brightness(0.85)',
+                  filter: 'saturate(0.5)',
                   transition: {
                     duration: 1.5,
                     ease: EASE_SWEET,

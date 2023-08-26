@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useLayoutEffect } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Variants } from 'framer-motion';
 import darkBadge from '@assets/images/dark_badge.png';
@@ -72,8 +72,11 @@ const lastNameVariant: Variants = {
 export default function Home() {
   const theme = useContext(ThemeContext);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     document.body.style.cssText = `overflow: hidden; touch-action: none;`;
 
     return () => {
@@ -84,7 +87,7 @@ export default function Home() {
   return (
     <S.PageWrapper>
       <MouseFollower.Root>
-        <MouseFollower.Element props={{ blend: true }}>
+        <MouseFollower.Element props={{ blend: true, hasExit: true }}>
           click on the frame and stay on it
         </MouseFollower.Element>
       </MouseFollower.Root>

@@ -15,8 +15,25 @@ export const Overall = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.primary};
     font-family: 'Bodoni Moda', serif;
+    position: relative;
     scroll-behavior: smooth;
     transition: 0.8s background-color;
+
+    &::after {
+      background-image: ${`url(${grungeTexture})`};
+      background-repeat: repeat-y;
+      background-size: cover;
+      content: '';
+      height: 100%;
+      left: 0;
+      mix-blend-mode: luminosity;
+      opacity: 0.15;
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
 
     a {
       color: inherit;
@@ -34,24 +51,8 @@ export const AppWrapper = styled.div`
   color: ${({ theme }) => theme.colors.textPrimary};
   display: flex;
   flex-flow: column;
-  height: 110vh;
   transition: 0.8s background-color;
   width: 100%;
-
-  &::after {
-    background-image: ${`url(${grungeTexture})`};
-    background-size: cover;
-    content: '';
-    height: 100%;
-    left: 0;
-    mix-blend-mode: luminosity;
-    opacity: 0.15;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-  }
 `;
 
 export default Overall;
