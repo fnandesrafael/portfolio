@@ -8,7 +8,7 @@ const resumeData = {
     {
       title: 'Fullstack Web Developer',
       location: 'at Trybe',
-      period: '2017 - 2019',
+      period: '2022 - 2022',
     },
   ],
   jobs: [
