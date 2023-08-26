@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
+import resumeData from '@data/resume';
 
 import Navigation from '@components/Navigation';
 
 import * as S from './styles';
 
 export default function Resume() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <S.PageWrapper>
@@ -15,20 +20,24 @@ export default function Resume() {
         <S.ResumeContainer>
           <section>
             <S.ResumeHeading>Education</S.ResumeHeading>
-            <S.ResumeInfo>
-              <h3>2002 - 2023</h3>
-              <h2>Vida Intelectual</h2>
-              <h5>at República do Brasil</h5>
-            </S.ResumeInfo>
+            {resumeData.educations.map((education) => (
+              <S.ResumeInfo>
+                <h3>{education.period}</h3>
+                <h2>{education.title}</h2>
+                <h5>{education.location}</h5>
+              </S.ResumeInfo>
+            ))}
           </section>
 
           <section>
             <S.ResumeHeading>Jobs</S.ResumeHeading>
-            <S.ResumeInfo>
-              <h3>2002 - 2023</h3>
-              <h2>Vida Intelectual</h2>
-              <h5>at República do Brasil</h5>
-            </S.ResumeInfo>
+            {resumeData.jobs.map((job) => (
+              <S.ResumeInfo>
+                <h3>{job.period}</h3>
+                <h2>{job.title}</h2>
+                <h5>{job.location}</h5>
+              </S.ResumeInfo>
+            ))}
           </section>
         </S.ResumeContainer>
       </S.PageWrapper>

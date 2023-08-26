@@ -8,6 +8,7 @@
       "@assets/*": ["src/assets/*"],
       "@hooks/*": ["src/hooks/*"],
       "@constants/*": ["src/constants/*"],
+      "@data/*": ["src/data/*"]
     },
     "module": "ESNext",
     "target": "ES2022",
