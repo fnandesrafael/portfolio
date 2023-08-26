@@ -15,7 +15,7 @@ type ThemeProps = {
 };
 
 const useTheme = () => {
-  const [theme, setTheme] = useState<ThemeProps>(dark);
+  const [theme, setTheme] = useState<ThemeProps>(light);
 
   const switchTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);
