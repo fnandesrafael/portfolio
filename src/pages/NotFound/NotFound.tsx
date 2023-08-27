@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react';
+import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
 
 import * as S from './styles';
@@ -10,7 +11,11 @@ export default function NotFound() {
 
   return (
     <>
-      <S.PageWrapper>
+      <S.PageWrapper
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: EASE_SWEET }}
+      >
         <S.ErrorWrapper>
           <S.ErrorElement
             className="not-found-code"

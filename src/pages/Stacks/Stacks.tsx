@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react';
+import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
 import stacks from '@assets/images/stacks.png';
 
@@ -11,7 +12,12 @@ export default function Stacks() {
 
   return (
     <>
-      <S.PageWrapper>
+      <S.PageWrapper
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1, ease: EASE_SWEET }}
+      >
         <S.StacksElement src={stacks} alt="" />
       </S.PageWrapper>
 

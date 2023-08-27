@@ -15,6 +15,7 @@ export default function Resume() {
       <S.PageWrapper
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 1, ease: EASE_SWEET }}
       >
         <S.RowContainer />
@@ -24,8 +25,8 @@ export default function Resume() {
         <S.ResumeContainer>
           <section>
             <S.ResumeHeading>Education</S.ResumeHeading>
-            {resumeData.educations.map((education) => (
-              <S.ResumeInfo>
+            {resumeData.educations.map((education, index) => (
+              <S.ResumeInfo key={index}>
                 <h3>{education.period}</h3>
                 <h2>{education.title}</h2>
                 <h5>{education.location}</h5>
@@ -35,8 +36,8 @@ export default function Resume() {
 
           <section>
             <S.ResumeHeading>Jobs</S.ResumeHeading>
-            {resumeData.jobs.map((job) => (
-              <S.ResumeInfo>
+            {resumeData.jobs.map((job, index) => (
+              <S.ResumeInfo key={index}>
                 <h3>{job.period}</h3>
                 <h2>{job.title}</h2>
                 <h5>{job.location}</h5>
