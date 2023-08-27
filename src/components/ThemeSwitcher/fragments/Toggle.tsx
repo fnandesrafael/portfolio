@@ -4,16 +4,11 @@ import { ThemeContext } from 'styled-components';
 import * as S from '../styles';
 
 type ToggleProps = {
-  props: {
-    switchTheme: () => void;
-  };
+  switchTheme: () => void;
   children: React.ReactNode;
 };
 
-export default function Toggle({
-  props: { switchTheme },
-  children,
-}: ToggleProps) {
+export default function Toggle({ switchTheme, children }: ToggleProps) {
   const theme = useContext(ThemeContext);
 
   return (

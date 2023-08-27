@@ -23,7 +23,7 @@ export default function App() {
 
       <S.AppWrapper>
         <Header.Root>
-          <Header.ThemeSwitcher props={{ switchTheme }} />
+          <Header.ThemeSwitcher switchTheme={switchTheme} />
         </Header.Root>
 
         <AnimatePresence mode="wait">
