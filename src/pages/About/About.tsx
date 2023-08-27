@@ -28,7 +28,7 @@ export default function About() {
     <>
       <S.PageWrapper>
         <MouseFollower.Root>
-          <MouseFollower.Element props={{ blend: true }}>
+          <MouseFollower.Element blended>
             <S.BadgeElement
               src={badge}
               initial={{ opacity: 0 }}
