@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const useHeaderPresence = () => {
-  const [canShow, setCanShow] = useState(false);
+  const [canShow, setCanShow] = useState<boolean>(false);
 
   const location = useLocation();
 
