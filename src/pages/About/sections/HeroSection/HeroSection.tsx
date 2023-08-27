@@ -52,60 +52,54 @@ export default function HeroSection() {
   return (
     <S.SectionWrapper>
       <GoghFrame.Root
-        props={{
-          hasLink: false,
-          motionValues: {
-            initial: {
-              alignItems: 'center',
-              display: 'flex',
-            },
-            animate: {
-              borderRadius: '10rem 10rem 0 0',
-              height: '82rem',
-              top: 72,
-              transition: { duration: 1.5, ease: EASE_SWEET },
-              width: '100%',
-            },
+        hasLink
+        motionValues={{
+          initial: {
+            alignItems: 'center',
+            display: 'flex',
+          },
+          animate: {
+            borderRadius: '10rem 10rem 0 0',
+            height: '82rem',
+            top: 72,
+            transition: { duration: 1.5, ease: EASE_SWEET },
+            width: '100%',
           },
         }}
       >
         {theme.title === 'dark' ? (
           <GoghFrame.Paint
-            props={{
-              src: darkPaint,
-              motionValues: {
-                initial: { y: 0, scale: 3, marginTop: '12rem' },
-                animate: {
-                  y: 350,
-                  scale: 2.65,
-                  filter: 'saturate(0.5)',
-                  transition: {
-                    duration: 1.5,
-                    ease: EASE_SWEET,
-                  },
+            src={darkPaint}
+            motionValues={{
+              initial: { y: 0, scale: 3, marginTop: '12rem' },
+              animate: {
+                y: 350,
+                scale: 2.65,
+                filter: 'saturate(0.5)',
+                transition: {
+                  duration: 1.5,
+                  ease: EASE_SWEET,
                 },
               },
-              scrollPosition,
             }}
+            scrollPosition={scrollPosition}
           />
         ) : (
           <GoghFrame.Paint
-            props={{
-              src: lightPaint,
-              motionValues: {
-                initial: { y: 0, scale: 3, marginTop: '12rem' },
-                animate: {
-                  y: 300,
-                  scale: 2.65,
-                  filter: 'saturate(0.5)',
-                  transition: {
-                    duration: 1.5,
-                    ease: EASE_SWEET,
-                  },
+            src={lightPaint}
+            motionValues={{
+              initial: { y: 0, scale: 3, marginTop: '12rem' },
+              animate: {
+                y: 300,
+                scale: 2.65,
+                filter: 'saturate(0.5)',
+                transition: {
+                  duration: 1.5,
+                  ease: EASE_SWEET,
                 },
               },
-              scrollPosition,
             }}
+            scrollPosition={scrollPosition}
           />
         )}
       </GoghFrame.Root>

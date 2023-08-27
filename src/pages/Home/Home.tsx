@@ -107,43 +107,39 @@ export default function Home() {
         exit={{ opacity: 0, transition: { duration: 1 } }}
       />
 
-      <GoghFrame.Root props={{ hasLink: true, path: '/about' }}>
+      <GoghFrame.Root hasLink path="/about">
         {theme.title === 'dark' ? (
           <GoghFrame.Paint
             key="dark-paint"
-            props={{
-              src: darkPaint,
-              motionValues: {
-                initial: { y: -200, opacity: 0, scale: 2.4 },
-                animate: {
-                  y: 0,
-                  opacity: 1,
-                  transition: { duration: 1.5, ease: EASE_SWEET },
-                },
-                whileHover: {
-                  scale: 3,
-                },
-                transition: { duration: 1, ease: EASE_SWEET },
+            src={darkPaint}
+            motionValues={{
+              initial: { y: -200, opacity: 0, scale: 2.4 },
+              animate: {
+                y: 0,
+                opacity: 1,
+                transition: { duration: 1.5, ease: EASE_SWEET },
               },
+              whileHover: {
+                scale: 3,
+              },
+              transition: { duration: 1, ease: EASE_SWEET },
             }}
           />
         ) : (
           <GoghFrame.Paint
             key="light-paint"
-            props={{
-              src: lightPaint,
-              motionValues: {
-                initial: { y: 200, opacity: 0, scale: 2.4 },
-                animate: {
-                  y: 0,
-                  opacity: 1,
-                  transition: { duration: 1.5, ease: EASE_SWEET },
-                },
-                whileHover: {
-                  scale: 3,
-                },
-                transition: { duration: 1, ease: EASE_SWEET },
+            src={lightPaint}
+            motionValues={{
+              initial: { y: 200, opacity: 0, scale: 2.4 },
+              animate: {
+                y: 0,
+                opacity: 1,
+                transition: { duration: 1.5, ease: EASE_SWEET },
               },
+              whileHover: {
+                scale: 3,
+              },
+              transition: { duration: 1, ease: EASE_SWEET },
             }}
           />
         )}

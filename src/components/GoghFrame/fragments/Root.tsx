@@ -5,16 +5,16 @@ import { MotionProps } from 'framer-motion';
 import * as S from '../styles';
 
 type RootProps = {
-  props: {
-    hasLink?: boolean;
-    path?: string;
-    motionValues?: MotionProps;
-  };
+  hasLink?: boolean;
+  path?: string;
+  motionValues?: MotionProps;
   children: React.ReactNode;
 };
 
 export default function Root({
-  props: { hasLink, path, motionValues },
+  hasLink,
+  path,
+  motionValues,
   children,
 }: RootProps) {
   return (
