@@ -7,8 +7,8 @@ export const PageWrapper = styled(motion.main)`
   flex-flow: column;
 `;
 
-export const StacksElement = styled.img`
+export const StacksElement = styled(motion.img)`
   padding: 4rem;
-  pointer-events: none;
+  height: 60rem;
   width: 60rem;
 `;
