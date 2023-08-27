@@ -3,11 +3,11 @@ import React, { CSSProperties } from 'react';
 import * as S from '../styles';
 
 type RootProps = {
-  props: { styles: CSSProperties };
+  styles: CSSProperties;
   children: React.ReactNode;
 };
 
-export default function Root({ props: { styles }, children }: RootProps) {
+export default function Root({ styles, children }: RootProps) {
   return (
     <S.SignatureWrapper
       style={styles}

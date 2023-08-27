@@ -110,22 +110,22 @@ export default function HeroSection() {
 
       <S.TextWrapper>
         <Signature.Root
-          props={{
-            styles: {
-              fontSize: '6.5rem',
-              lineHeight: '125%',
-              letterSpacing: '2rem',
-              width: '64rem',
-            },
+          styles={{
+            fontSize: '6.5rem',
+            lineHeight: '125%',
+            letterSpacing: '2rem',
+            width: '64rem',
           }}
         >
           <Signature.Text
-            props={{ wordVariants: firstNameVariant, letterVariant }}
+            wordVariants={firstNameVariant}
+            letterVariant={letterVariant}
           >
             Rafael
           </Signature.Text>
           <Signature.Text
-            props={{ wordVariants: lastNameVariant, letterVariant }}
+            wordVariants={lastNameVariant}
+            letterVariant={letterVariant}
           >
             Fernandes
           </Signature.Text>
