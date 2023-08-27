@@ -5,21 +5,16 @@ import * as S from '../styles';
 
 type FollowerProps = {
   children: JSX.Element | string;
-  props?: {
-    blend?: boolean;
-    hasExit?: boolean;
-  };
+  blended: boolean;
+  hasExit?: boolean;
 };
 
-export default function Element({
-  props: { blend, hasExit },
-  children,
-}: FollowerProps) {
+export default function Element({ blended, hasExit, children }: FollowerProps) {
   const { mouseRef } = useMouseMove();
 
   return (
     <S.Element
-      $blend={blend}
+      $blend={blended}
       key="mouse-follower"
       ref={mouseRef}
       initial={{ opacity: 0 }}

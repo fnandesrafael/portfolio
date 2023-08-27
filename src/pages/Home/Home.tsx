@@ -87,7 +87,7 @@ export default function Home() {
   return (
     <S.PageWrapper>
       <MouseFollower.Root>
-        <MouseFollower.Element props={{ blend: true, hasExit: true }}>
+        <MouseFollower.Element blended hasExit>
           click on the frame and stay on it
         </MouseFollower.Element>
       </MouseFollower.Root>
@@ -107,75 +107,71 @@ export default function Home() {
         exit={{ opacity: 0, transition: { duration: 1 } }}
       />
 
-      <GoghFrame.Root props={{ hasLink: true, path: '/about' }}>
+      <GoghFrame.Root hasLink path="/about">
         {theme.title === 'dark' ? (
           <GoghFrame.Paint
             key="dark-paint"
-            props={{
-              src: darkPaint,
-              motionValues: {
-                initial: { y: -200, opacity: 0, scale: 2.4 },
-                animate: {
-                  y: 0,
-                  opacity: 1,
-                  transition: { duration: 1.5, ease: EASE_SWEET },
-                },
-                whileHover: {
-                  scale: 3,
-                },
-                transition: { duration: 1, ease: EASE_SWEET },
+            src={darkPaint}
+            motionValues={{
+              initial: { y: -200, opacity: 0, scale: 2.4 },
+              animate: {
+                y: 0,
+                opacity: 1,
+                transition: { duration: 1.5, ease: EASE_SWEET },
               },
+              whileHover: {
+                scale: 3,
+              },
+              transition: { duration: 1, ease: EASE_SWEET },
             }}
           />
         ) : (
           <GoghFrame.Paint
             key="light-paint"
-            props={{
-              src: lightPaint,
-              motionValues: {
-                initial: { y: 200, opacity: 0, scale: 2.4 },
-                animate: {
-                  y: 0,
-                  opacity: 1,
-                  transition: { duration: 1.5, ease: EASE_SWEET },
-                },
-                whileHover: {
-                  scale: 3,
-                },
-                transition: { duration: 1, ease: EASE_SWEET },
+            src={lightPaint}
+            motionValues={{
+              initial: { y: 200, opacity: 0, scale: 2.4 },
+              animate: {
+                y: 0,
+                opacity: 1,
+                transition: { duration: 1.5, ease: EASE_SWEET },
               },
+              whileHover: {
+                scale: 3,
+              },
+              transition: { duration: 1, ease: EASE_SWEET },
             }}
           />
         )}
       </GoghFrame.Root>
 
       <Signature.Root
-        props={{
-          styles: {
-            display: 'flex',
-            fontSize: '6.42vw',
-            fontStyle: 'normal',
-            fontWeight: '100',
-            justifyContent: 'space-around',
-            left: '-0.42em',
-            letterSpacing: '0.5em',
-            pointerEvents: 'none',
-            position: 'absolute',
-            textAlign: 'start',
-            top: 'calc(100% - 7.25vw)',
-            whiteSpace: 'nowrap',
-            width: '108.75%',
-          },
+        styles={{
+          display: 'flex',
+          fontSize: '6.42vw',
+          fontStyle: 'normal',
+          fontWeight: '100',
+          justifyContent: 'space-around',
+          left: '-0.42em',
+          letterSpacing: '0.5em',
+          pointerEvents: 'none',
+          position: 'absolute',
+          textAlign: 'start',
+          top: 'calc(100% - 7.25vw)',
+          whiteSpace: 'nowrap',
+          width: '108.75%',
         }}
       >
         <Signature.Text
-          props={{ wordVariants: firstNameVariant, letterVariant }}
+          wordVariants={firstNameVariant}
+          letterVariant={letterVariant}
         >
           Rafael
         </Signature.Text>
 
         <Signature.Text
-          props={{ wordVariants: lastNameVariant, letterVariant }}
+          wordVariants={lastNameVariant}
+          letterVariant={letterVariant}
         >
           Fernandes
         </Signature.Text>

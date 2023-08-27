@@ -1,4 +1,17 @@
-const resumeData = {
+type ResumeDataProps = {
+  educations: Array<{
+    title: string;
+    location: string;
+    period: string;
+  }>;
+  jobs: Array<{
+    title: string;
+    location: string;
+    period: string;
+  }>;
+};
+
+const resumeData: ResumeDataProps = {
   educations: [
     {
       title: 'Digital Game Developer',

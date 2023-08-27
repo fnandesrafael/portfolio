@@ -3,19 +3,15 @@ import { ThemeContext } from 'styled-components';
 import { ThemeSwitcher } from '.';
 
 type ThemeSwitcherProps = {
-  props: {
-    switchTheme: () => void;
-  };
+  switchTheme: () => void;
 };
 
-export default function Composition({
-  props: { switchTheme },
-}: ThemeSwitcherProps) {
+export default function Composition({ switchTheme }: ThemeSwitcherProps) {
   const theme = useContext(ThemeContext);
 
   return (
     <ThemeSwitcher.Root>
-      <ThemeSwitcher.Toggle props={{ switchTheme }}>
+      <ThemeSwitcher.Toggle switchTheme={switchTheme}>
         {theme.title === 'dark' ? (
           <ThemeSwitcher.SunIcon />
         ) : (

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const PageWrapper = styled.div`
+export const PageWrapper = styled(motion.main)`
   display: flex;
   flex-flow: column;
 `;

@@ -28,7 +28,7 @@ export default function About() {
     <>
       <S.PageWrapper>
         <MouseFollower.Root>
-          <MouseFollower.Element props={{ blend: true }}>
+          <MouseFollower.Element blended>
             <S.BadgeElement
               src={badge}
               initial={{ opacity: 0 }}
@@ -50,16 +50,10 @@ export default function About() {
       </S.PageWrapper>
 
       <Navigator.Root>
-        <Navigator.NavLink props={{ page: '/home' }}>Home</Navigator.NavLink>
-        <Navigator.NavLink props={{ page: '/resume' }}>
-          Resume
-        </Navigator.NavLink>
-        <Navigator.NavLink props={{ page: '/stacks' }}>
-          Stacks
-        </Navigator.NavLink>
-        <Navigator.NavLink props={{ page: '/projects' }}>
-          Projects
-        </Navigator.NavLink>
+        <Navigator.NavLink page="/home">Home</Navigator.NavLink>
+        <Navigator.NavLink page="/resume">Resume</Navigator.NavLink>
+        <Navigator.NavLink page="/stacks">Stacks</Navigator.NavLink>
+        <Navigator.NavLink page="/projects">Projects</Navigator.NavLink>
       </Navigator.Root>
     </>
   );

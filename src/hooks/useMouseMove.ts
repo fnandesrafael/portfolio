@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const useMouseMove = () => {
-  const [mouseMove, setMouseMove] = useState(false);
+  const [mouseMove, setMouseMove] = useState<boolean>(false);
   const mouseRef = useRef(null);
 
   const handleMouseMove = (e) => {

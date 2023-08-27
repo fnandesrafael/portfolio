@@ -2,15 +2,14 @@ import React from 'react';
 import { Variants, motion } from 'framer-motion';
 
 type TextProps = {
-  props: {
-    wordVariants?: Variants;
-    letterVariant?: Variants;
-  };
+  wordVariants?: Variants;
+  letterVariant?: Variants;
   children: string;
 };
 
 export default function Text({
-  props: { letterVariant, wordVariants },
+  letterVariant,
+  wordVariants,
   children,
 }: TextProps) {
   return (

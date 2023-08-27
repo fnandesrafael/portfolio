@@ -15,6 +15,7 @@ export default function Resume() {
       <S.PageWrapper
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 1, ease: EASE_SWEET }}
       >
         <S.RowContainer />
@@ -24,8 +25,8 @@ export default function Resume() {
         <S.ResumeContainer>
           <section>
             <S.ResumeHeading>Education</S.ResumeHeading>
-            {resumeData.educations.map((education) => (
-              <S.ResumeInfo>
+            {resumeData.educations.map((education, index) => (
+              <S.ResumeInfo key={index}>
                 <h3>{education.period}</h3>
                 <h2>{education.title}</h2>
                 <h5>{education.location}</h5>
@@ -35,8 +36,8 @@ export default function Resume() {
 
           <section>
             <S.ResumeHeading>Jobs</S.ResumeHeading>
-            {resumeData.jobs.map((job) => (
-              <S.ResumeInfo>
+            {resumeData.jobs.map((job, index) => (
+              <S.ResumeInfo key={index}>
                 <h3>{job.period}</h3>
                 <h2>{job.title}</h2>
                 <h5>{job.location}</h5>
@@ -47,14 +48,10 @@ export default function Resume() {
       </S.PageWrapper>
 
       <Navigator.Root>
-        <Navigator.NavLink props={{ page: '/home' }}>Home</Navigator.NavLink>
-        <Navigator.NavLink props={{ page: '/about' }}>About</Navigator.NavLink>
-        <Navigator.NavLink props={{ page: '/stacks' }}>
-          Stacks
-        </Navigator.NavLink>
-        <Navigator.NavLink props={{ page: '/projects' }}>
-          Projects
-        </Navigator.NavLink>
+        <Navigator.NavLink page="/home">Home</Navigator.NavLink>
+        <Navigator.NavLink page="/about">About</Navigator.NavLink>
+        <Navigator.NavLink page="/stacks">Stacks</Navigator.NavLink>
+        <Navigator.NavLink page="/projects">Projects</Navigator.NavLink>
       </Navigator.Root>
     </>
   );
