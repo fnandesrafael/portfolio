@@ -17,7 +17,7 @@ export default function Stacks() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1, ease: EASE_SWEET }}
       >
-        <S.StacksElement src={null} alt="" />
+        <S.StacksWrapper src={null} alt="" />
       </S.PageWrapper>
 
       <Navigator.Root>
