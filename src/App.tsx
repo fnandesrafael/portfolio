@@ -8,6 +8,7 @@ import Hello from '@pages/Hello';
 import Home from '@pages/Home';
 import About from '@pages/About';
 import Resume from '@pages/Resume';
+import Stacks from '@pages/Stacks';
 import NotFound from '@pages/NotFound';
 
 import * as S from './global.styles';
@@ -30,8 +31,9 @@ export default function App() {
             <Route path="/" element={<Hello />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/stacks" element={<Stacks />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </S.AppWrapper>
