@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import stacksData from '@data/stacks';
 import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
@@ -6,9 +6,16 @@ import { Navigator } from '@components/Navigator';
 import * as S from './styles';
 
 export default function Stacks() {
+  const [nextZIndex, setNextZIndex] = useState(10);
+
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleZIndex = (e) => {
+    setNextZIndex((prevZIndex) => prevZIndex + 1);
+    e.target.style.zIndex = nextZIndex;
+  };
 
   return (
     <>
@@ -26,6 +33,7 @@ export default function Stacks() {
               drag
               dragMomentum={false}
               whileDrag={{ scale: 1.1, cursor: 'pointer' }}
+              onDragStart={handleZIndex}
               $scale={stack.scale}
               $left={stack.left}
               $top={stack.top}

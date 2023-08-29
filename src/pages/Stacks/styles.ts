@@ -14,9 +14,10 @@ export const PageWrapper = styled(motion.main)`
 `;
 
 export const StacksWrapper = styled(motion.div)`
-  border: 1px solid;
+  /* border: 1px solid; */
   border-color: ${({ theme }) => theme.colors.background};
   height: 60rem;
+  margin-top: 4rem;
   padding: 4rem;
   position: relative;
   width: 60rem;
