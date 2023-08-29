@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react';
+import stacksData from '@data/stacks';
 import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
 
@@ -17,7 +18,20 @@ export default function Stacks() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1, ease: EASE_SWEET }}
       >
-        <S.StacksWrapper src={null} alt="" />
+        <S.StacksWrapper>
+          {stacksData.map((stack) => (
+            <S.StackElement
+              key={stack.id}
+              src={stack.frame}
+              drag
+              dragMomentum={false}
+              whileDrag={{ scale: 1.1, cursor: 'pointer' }}
+              $scale={stack.scale}
+              $left={stack.left}
+              $top={stack.top}
+            />
+          ))}
+        </S.StacksWrapper>
       </S.PageWrapper>
 
       <Navigator.Root>
