@@ -25,6 +25,8 @@ export default function Stacks() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1, ease: EASE_SWEET }}
       >
+        <S.PageHeading>Stacks</S.PageHeading>
+
         <S.StacksWrapper>
           {stacksData.map((stack) => (
             <S.StackElement

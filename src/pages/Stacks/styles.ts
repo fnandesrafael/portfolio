@@ -13,14 +13,24 @@ export const PageWrapper = styled(motion.main)`
   flex-flow: column;
 `;
 
+export const PageHeading = styled.h1`
+  display: flex;
+  font-size: 31rem;
+  font-weight: 400;
+  left: -4rem;
+  opacity: 0.025;
+  pointer-events: none;
+  position: absolute;
+  top: -12rem;
+  z-index: 0;
+`;
+
 export const StacksWrapper = styled(motion.div)`
-  /* border: 1px solid; */
-  border-color: ${({ theme }) => theme.colors.background};
-  height: 60rem;
-  margin-top: 4rem;
+  height: 42rem;
+  margin-top: 6rem;
   padding: 4rem;
   position: relative;
-  width: 60rem;
+  width: 56rem;
 `;
 
 export const StackElement = styled(motion.img)<StackElementProps>`
@@ -28,4 +38,12 @@ export const StackElement = styled(motion.img)<StackElementProps>`
   left: ${({ $left }) => $left}rem;
   position: absolute;
   top: ${({ $top }) => $top}rem;
+  transform-origin: center;
+  transition: 0.2s scale;
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.025;
+    transition: 0.2s scale;
+  }
 `;
