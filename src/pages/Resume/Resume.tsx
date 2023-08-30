@@ -8,6 +8,12 @@ import * as S from './styles';
 export default function Resume() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
+
+    document.body.style.cssText = 'overflow-x: hidden';
+
+    return () => {
+      document.body.style.cssText = 'overflow-x: hidden';
+    };
   }, []);
 
   return (
