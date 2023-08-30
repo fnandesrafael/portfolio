@@ -14,17 +14,17 @@ type ResumeDataProps = {
 const resumeData: ResumeDataProps = {
   educations: [
     {
-      title: 'Digital Game Developer',
+      title: 'Digital Game Development',
       location: 'at State Technical School Cícero Dias',
       period: '2017 - 2019',
     },
     {
-      title: 'Fullstack Web Developer',
+      title: 'Fullstack Web Development',
       location: 'at Trybe',
       period: '2021 - 2022',
     },
     {
-      title: 'Google UX Design Professional Certificate',
+      title: 'Google UX Designer Certificate',
       location: 'at Coursera',
       period: '2023 - Current',
     },
