@@ -20,7 +20,7 @@ export default function Stacks() {
   }, []);
 
   const handleZIndex = (e) => {
-    setFrontIndex((prevZIndex) => prevZIndex + 1);
+    setFrontIndex((prevState) => prevState + 1);
     e.target.style.zIndex = frontIndex;
   };
 

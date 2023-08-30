@@ -71,7 +71,7 @@ export default function HeroSection() {
           <GoghFrame.Paint
             src={darkPaint}
             motionValues={{
-              initial: { y: 0, scale: 3, marginTop: '12rem' },
+              initial: { y: 0, scale: 3, marginTop: '12.5rem' },
               animate: {
                 y: 350,
                 scale: 2.65,
@@ -88,7 +88,7 @@ export default function HeroSection() {
           <GoghFrame.Paint
             src={lightPaint}
             motionValues={{
-              initial: { y: 0, scale: 3, marginTop: '12rem' },
+              initial: { y: 0, scale: 3, marginTop: '12.5rem' },
               animate: {
                 y: 300,
                 scale: 2.65,
