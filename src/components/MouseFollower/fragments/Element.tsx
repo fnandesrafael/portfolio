@@ -5,7 +5,7 @@ import * as S from '../styles';
 
 type FollowerProps = {
   children: JSX.Element | string;
-  blended: boolean;
+  blended?: boolean;
   hasExit?: boolean;
 };
 

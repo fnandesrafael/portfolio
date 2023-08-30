@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import stacksData from '@data/stacks';
 import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
+import { MouseFollower } from '@components/MouseFollower';
 
 import * as S from './styles';
 
@@ -32,6 +33,12 @@ export default function Stacks() {
         transition={{ duration: 1, ease: EASE_SWEET }}
       >
         <S.PageHeading>Stacks</S.PageHeading>
+
+        <MouseFollower.Root>
+          <MouseFollower.Element blended hasExit>
+            drag and move any frame
+          </MouseFollower.Element>
+        </MouseFollower.Root>
 
         <S.StacksWrapper>
           {stacksData.map((stack) => (
