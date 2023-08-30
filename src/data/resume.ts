@@ -23,6 +23,11 @@ const resumeData: ResumeDataProps = {
       location: 'at Trybe',
       period: '2021 - 2022',
     },
+    {
+      title: 'Google UX Design Professional Certificate',
+      location: 'at Coursera',
+      period: '2023 - Current',
+    },
   ],
   jobs: [
     {
