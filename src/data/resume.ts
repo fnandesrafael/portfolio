@@ -24,7 +24,7 @@ const resumeData: ResumeDataProps = {
       period: '2021 - 2022',
     },
     {
-      title: 'Google UX Designer Certificate',
+      title: 'Google UX Design Certificate',
       location: 'at Coursera',
       period: '2023 - Current',
     },
