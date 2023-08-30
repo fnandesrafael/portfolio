@@ -6,15 +6,21 @@ import { Navigator } from '@components/Navigator';
 import * as S from './styles';
 
 export default function Stacks() {
-  const [nextZIndex, setNextZIndex] = useState(10);
+  const [frontIndex, setFrontIndex] = useState(10);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
+
+    document.body.style.cssText = 'overflow-x: hidden';
+
+    return () => {
+      document.body.style.cssText = 'overflow-x: auto';
+    };
   }, []);
 
   const handleZIndex = (e) => {
-    setNextZIndex((prevZIndex) => prevZIndex + 1);
-    e.target.style.zIndex = nextZIndex;
+    setFrontIndex((prevZIndex) => prevZIndex + 1);
+    e.target.style.zIndex = frontIndex;
   };
 
   return (
