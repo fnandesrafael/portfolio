@@ -85,7 +85,7 @@ export default function Home() {
   }, []);
 
   return (
-    <S.PageWrapper>
+    <S.PageWrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <MouseFollower.Root>
         <MouseFollower.Element blended hasExit>
           click on the frame and stay on it
