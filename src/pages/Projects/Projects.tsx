@@ -18,7 +18,6 @@ export default function NotFound() {
       >
         <S.ErrorWrapper>
           <S.ErrorElement
-            className="not-found-code"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1 } }}
           >
