@@ -10,6 +10,7 @@ import Home from '@pages/Home';
 import About from '@pages/About';
 import Resume from '@pages/Resume';
 import Stacks from '@pages/Stacks';
+import Projects from '@pages/Projects';
 import NotFound from '@pages/NotFound';
 
 import * as S from './global.styles';
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/stacks" element={<Stacks />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
