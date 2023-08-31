@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
 import useTheme from '@hooks/useTheme';
 import { Header } from '@components/Header';
+import { ThemeSwitcher } from '@components/ThemeSwitcher';
 import Hello from '@pages/Hello';
 import Home from '@pages/Home';
 import About from '@pages/About';
@@ -23,7 +24,11 @@ export default function App() {
 
       <S.AppWrapper>
         <Header.Root>
-          <Header.ThemeSwitcher switchTheme={switchTheme} />
+          <ThemeSwitcher.Root>
+            <ThemeSwitcher.Toggle switchTheme={switchTheme}>
+              <ThemeSwitcher.Icon />
+            </ThemeSwitcher.Toggle>
+          </ThemeSwitcher.Root>
         </Header.Root>
 
         <AnimatePresence mode="wait">
