@@ -23,14 +23,14 @@ export default function SoftSection() {
 
       <S.RightWrapper>
         <S.Column $width={53.5} $margin="0 2px 0 0">
-          <S.Square $height={20} $radius="0 0 2rem 0" $margin="0 0 2px 0" />
-          <S.Square $height={60} $radius="0 2rem 0 0" />
+          <S.Square $height={20} $radius="0 4rem 0 0" $margin="0 0 2px 0" />
+          <S.Square $height={60} />
           <S.Square $height={20} $margin="2px 0 2px 0" />
         </S.Column>
 
         <S.Column $width={47}>
-          <S.Square $height={20} $radius="0 0 0 2rem" $margin="0 0 2px 0" />
-          <S.Square $height={60} $radius="2rem 0 0 0" />
+          <S.Square $height={20} $radius="4rem 0 0 0" $margin="0 0 2px 0" />
+          <S.Square $height={60} />
           <S.Square $height={20} $margin="2px 0 2px 0" />
         </S.Column>
       </S.RightWrapper>

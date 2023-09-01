@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-type CustomMarginProps = {
-  $margin?: string;
-};
-
 type SquareProps = {
   $hasLine?: {
     rising: boolean;
@@ -24,9 +20,10 @@ export const SectionWrapper = styled.section`
   z-index: 10;
 `;
 
-export const BioContainer = styled.div<CustomMarginProps>`
+export const BioContainer = styled.div<SquareProps>`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ $radius }) => $radius};
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -62,7 +59,7 @@ export const SquaresWrapper = styled.div`
   width: 35%;
 `;
 
-export const RowWrapper = styled.div<CustomMarginProps>`
+export const RowWrapper = styled.div<SquareProps>`
   display: flex;
   flex-flow: row;
   height: 100%;

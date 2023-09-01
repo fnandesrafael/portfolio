@@ -6,7 +6,7 @@ import * as S from './styles';
 export default function BioSection() {
   return (
     <S.SectionWrapper>
-      <S.BioContainer $margin="0 2px 2px 0">
+      <S.BioContainer $margin="0 2px 2px 0" $radius="0 0 4rem 0">
         <Quote />
 
         <S.BioText>
@@ -23,13 +23,13 @@ export default function BioSection() {
 
       <S.SquaresWrapper>
         <S.RowWrapper $margin="0 0 2px 0 ">
-          <S.Square $margin="0 2px 0 0" $radius="0 0 2rem 0" />
-          <S.Square $radius="0 0 0 2rem" />
+          <S.Square $margin="0 2px 0 0" $radius="0 0 4rem 0" />
+          <S.Square $radius="0 0 0 4rem" />
         </S.RowWrapper>
 
         <S.RowWrapper $margin="0 0 2px 0">
-          <S.Square $margin="0 2px 0 0" $radius="0 2rem 0 0" />
-          <S.Square $radius="2rem 0 0 0" />
+          <S.Square $margin="0 2px 0 0" $radius="0 4rem 0 4rem" />
+          <S.Square $radius="4rem 0 0 0" />
         </S.RowWrapper>
       </S.SquaresWrapper>
     </S.SectionWrapper>
