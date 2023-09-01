@@ -1,7 +1,7 @@
 import React from 'react';
+import { EASE_SWEET } from '@constants/animations';
 import augustine from '@assets/images/paints/augustine.png';
 
-import { EASE_SWEET } from '@constants/animations';
 import * as S from './styles';
 
 export default function SoftSection() {
