@@ -23,13 +23,13 @@ export default function TechSection() {
       </S.LeftWrapper>
 
       <S.RightWrapper $width="75%">
-        <S.Column $width="20%">
+        <S.Column $width="25%">
           <S.Square $height="75%" $radius="0 0 0 4rem" />
 
           <S.Square $height="25%" $margin="2px 0 2px 0" $radius="4rem 0 0 0" />
         </S.Column>
 
-        <S.Column $width="80%" $margin="0 0 0 2px">
+        <S.Column $width="75%" $margin="0 0 0 2px">
           <S.PaintWrapper>
             <S.Heading>Tecnologies</S.Heading>
             <S.PaintElement
