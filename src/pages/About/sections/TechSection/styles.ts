@@ -69,7 +69,7 @@ export const PaintElement = styled(motion.img)`
 
 export const Heading = styled.h1`
   color: #fff;
-  font-size: 14rem;
+  font-size: 15rem;
   font-weight: 400;
   line-height: 14rem;
   mix-blend-mode: difference;
@@ -86,5 +86,6 @@ export const Paragraph = styled.p`
   color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
   font-size: 1.5rem;
   padding: 2rem;
+  text-align: end;
   transition: 0.8s color;
 `;
