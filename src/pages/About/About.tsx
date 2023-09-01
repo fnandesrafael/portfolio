@@ -6,6 +6,7 @@ import HeroSection from './sections/HeroSection';
 import BioSection from './sections/BioSection';
 
 import * as S from './styles';
+import SoftSection from './sections/SoftSection';
 
 export default function About() {
   useLayoutEffect(() => {
@@ -47,6 +48,7 @@ export default function About() {
 
         <HeroSection />
         <BioSection />
+        <SoftSection />
       </S.PageWrapper>
 
       <Navigator.Root>
