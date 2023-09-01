@@ -38,8 +38,9 @@ export default function About() {
               whileInView={{
                 transform: 'rotate(360deg)',
                 transition: {
-                  duration: 20,
-                  loop: Infinity,
+                  duration: 30,
+                  repeat: Infinity,
+                  repeatDelay: 0,
                   ease: 'linear',
                 },
               }}

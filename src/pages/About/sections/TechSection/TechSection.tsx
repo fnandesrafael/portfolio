@@ -31,7 +31,7 @@ export default function TechSection() {
 
         <S.Column $width="75%" $margin="0 0 0 2px">
           <S.PaintWrapper>
-            <S.Heading>Tecnologies</S.Heading>
+            <S.Heading>Technologies</S.Heading>
             <S.PaintElement
               src={chevalier}
               whileHover={{

@@ -78,7 +78,7 @@ export const Heading = styled.h1`
   padding-top: 3.5rem;
   pointer-events: none;
   position: absolute;
-  width: 37%;
+  width: 42%;
   word-wrap: break-word;
   z-index: 20;
 `;

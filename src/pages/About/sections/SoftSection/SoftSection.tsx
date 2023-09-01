@@ -50,7 +50,8 @@ export default function SoftSection() {
                 transform: 'rotate(360deg)',
                 transition: {
                   duration: 60,
-                  loop: Infinity,
+                  repeat: Infinity,
+                  repeatDelay: 0,
                   ease: 'linear',
                 },
               }}
