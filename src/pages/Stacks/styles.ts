@@ -26,9 +26,11 @@ export const PageHeading = styled.h1`
 `;
 
 export const StacksWrapper = styled(motion.div)`
-  height: 52rem;
+  height: 46rem;
   margin-top: 6rem;
+  margin-left: 2.8rem;
   padding: 4rem;
+  padding-bottom: 0;
   position: relative;
   width: 56rem;
 `;
