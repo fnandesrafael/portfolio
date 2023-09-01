@@ -23,13 +23,13 @@ export default function BioSection() {
 
       <S.SquaresWrapper>
         <S.RowWrapper $margin="0 0 2px 0 ">
-          <S.SquareElement $margin="0 2px 0 0" $radius="0 0 2rem 0" />
-          <S.SquareElement $radius="0 0 0 2rem" />
+          <S.Square $margin="0 2px 0 0" $radius="0 0 2rem 0" />
+          <S.Square $radius="0 0 0 2rem" />
         </S.RowWrapper>
 
         <S.RowWrapper $margin="0 0 2px 0">
-          <S.SquareElement $margin="0 2px 0 0" $radius="0 2rem 0 0" />
-          <S.SquareElement
+          <S.Square $margin="0 2px 0 0" $radius="0 2rem 0 0" />
+          <S.Square
             $radius="2rem 0 0 0"
             $hasLine={{ rising: true, width: '26rem', degrees: '-50deg' }}
           />
