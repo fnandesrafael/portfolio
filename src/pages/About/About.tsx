@@ -27,7 +27,7 @@ export default function About() {
 
   return (
     <>
-      <S.PageWrapper>
+      <S.PageWrapper exit={{ opacity: 0 }} transition={{ duration: 1 }}>
         <MouseFollower.Root>
           <MouseFollower.Element hasExit blended>
             <S.BadgeElement
