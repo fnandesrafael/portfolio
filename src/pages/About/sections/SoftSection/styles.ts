@@ -26,10 +26,6 @@ export const SectionWrapper = styled(motion.section)`
   width: 100%;
 `;
 
-/**
- * Left Wrapper
- */
-
 export const LeftWrapper = styled(motion.div)`
   display: flex;
   flex-flow: column;
@@ -50,10 +46,6 @@ export const PaintElement = styled(motion.img)`
   object-fit: cover;
   width: 100%;
 `;
-
-/**
- * Right Wrapper
- */
 
 export const RightWrapper = styled(motion.div)`
   display: flex;
