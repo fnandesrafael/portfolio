@@ -71,9 +71,13 @@ export const Column = styled(motion.div)<ColumnProps>`
 `;
 
 export const Square = styled(motion.div)<SquareProps>`
+  align-items: center;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
+  display: flex;
+  flex-flow: column;
   height: ${({ $height }) => $height}%;
+  justify-content: center;
   margin: ${({ $margin }) => $margin};
   transition: 0.8s background-color;
   width: 100%;
@@ -99,4 +103,12 @@ export const Square = styled(motion.div)<SquareProps>`
         width: ${$hasLine.width};
       }
     `}
+`;
+
+export const Paragraph = styled.p`
+  color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
+  font-size: 1.5rem;
+  padding: 2rem;
+  transition: 0.8s color;
+  width: 90%;
 `;

@@ -24,7 +24,15 @@ export default function SoftSection() {
       <S.RightWrapper>
         <S.Column $width={53.5} $margin="0 2px 0 0">
           <S.Square $height={20} $radius="0 4rem 0 0" $margin="0 0 2px 0" />
-          <S.Square $height={60} />
+          <S.Square $height={60}>
+            <S.Paragraph>
+              As a professional, I have experience in{' '}
+              <b>agile environments and methodologies</b>, organizing and
+              executing tasks with <b>Kanban</b> and <b>Scrum</b>. I also have
+              proficiency in <b>communication</b>, <b>collaboration</b>,{' '}
+              <b>creativity</b>, and <b>self-leadership</b>.
+            </S.Paragraph>
+          </S.Square>
           <S.Square $height={20} $margin="2px 0 2px 0" />
         </S.Column>
 
