@@ -18,7 +18,7 @@ export default function SoftSection() {
           />
         </S.PaintWrapper>
 
-        <S.Square $height={20} />
+        <S.Square $height={20} $margin="2px 0 2px 0" />
       </S.LeftWrapper>
 
       <S.RightWrapper>

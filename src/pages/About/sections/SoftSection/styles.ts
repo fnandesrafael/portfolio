@@ -3,15 +3,16 @@ import { motion } from 'framer-motion';
 
 type SquareProps = {
   $height: number;
+  $margin?: string;
   $radius?: string;
 };
 
 type ColumnProps = {
+  $margin?: string;
   $width: number;
 };
 
 export const SectionWrapper = styled(motion.section)`
-  border: 2px solid red;
   background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   flex-flow: row;
@@ -25,10 +26,10 @@ export const SectionWrapper = styled(motion.section)`
  */
 
 export const LeftWrapper = styled(motion.div)`
-  border: 2px solid red;
   display: flex;
   flex-flow: column;
   height: 100%;
+  margin: 0 2px 0 0;
   width: 25%;
 `;
 
@@ -50,7 +51,6 @@ export const PaintElement = styled(motion.img)`
  */
 
 export const RightWrapper = styled(motion.div)`
-  border: 2px solid red;
   display: flex;
   flex-flow: row;
   height: 100%;
@@ -58,16 +58,18 @@ export const RightWrapper = styled(motion.div)`
 `;
 
 export const Column = styled(motion.div)<ColumnProps>`
-  border: 2px solid red;
   display: flex;
   flex-flow: column;
   height: 100%;
+  margin: ${({ $margin }) => $margin};
   width: ${({ $width }) => $width}%;
 `;
 
 export const Square = styled(motion.div)<SquareProps>`
-  border: 2px solid red;
+  background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
   height: ${({ $height }) => $height}%;
+  margin: ${({ $margin }) => $margin};
+  transition: 0.6s background-color;
   width: 100%;
 `;
