@@ -84,8 +84,8 @@ export const Heading = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-  color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
   background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
   font-size: 1.5rem;
   padding: 1rem;
   text-align: end;
