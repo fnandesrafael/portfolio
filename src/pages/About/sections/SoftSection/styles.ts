@@ -112,3 +112,7 @@ export const Paragraph = styled.p`
   transition: 0.8s color;
   width: 90%;
 `;
+
+export const BadgeElement = styled(motion.img)`
+  height: 16rem;
+`;
