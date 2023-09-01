@@ -12,7 +12,7 @@ export const SectionWrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   flex-flow: row;
-  height: 48rem;
+  height: 52rem;
   transition: 0.8s background-color;
   width: 100%;
 `;
@@ -28,7 +28,10 @@ export const LeftWrapper = styled.div<SquareProps>`
 export const Square = styled.div<SquareProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
+  display: flex;
+  flex-flow: column;
   height: ${({ $height }) => $height};
+  justify-content: center;
   margin: ${({ $margin }) => $margin};
   transition: 0.8s background-color;
   width: 100%;
@@ -64,9 +67,10 @@ export const PaintElement = styled(motion.img)`
   width: 100%;
 `;
 
-export const Paragraph = styled.p`
+export const Heading = styled.h1`
   color: #fff;
   font-size: 14rem;
+  font-weight: 400;
   line-height: 14rem;
   mix-blend-mode: difference;
   opacity: 0.75;
@@ -76,4 +80,11 @@ export const Paragraph = styled.p`
   width: 37%;
   word-wrap: break-word;
   z-index: 20;
+`;
+
+export const Paragraph = styled.p`
+  color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
+  font-size: 1.5rem;
+  padding: 2rem;
+  transition: 0.8s color;
 `;
