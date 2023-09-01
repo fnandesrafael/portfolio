@@ -4,9 +4,10 @@ import { Navigator } from '@components/Navigator';
 import MouseFollower from '@components/MouseFollower';
 import HeroSection from './sections/HeroSection';
 import BioSection from './sections/BioSection';
+import SoftSection from './sections/SoftSection';
+import TechSection from './sections/TechSection';
 
 import * as S from './styles';
-import SoftSection from './sections/SoftSection';
 
 export default function About() {
   useLayoutEffect(() => {
@@ -49,6 +50,7 @@ export default function About() {
         <HeroSection />
         <BioSection />
         <SoftSection />
+        <TechSection />
       </S.PageWrapper>
 
       <Navigator.Root>
