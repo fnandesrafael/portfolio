@@ -21,7 +21,7 @@ export default function NotFound() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1 } }}
           >
-            404
+            Work In Progress
           </S.ErrorElement>
         </S.ErrorWrapper>
       </S.PageWrapper>
@@ -31,7 +31,6 @@ export default function NotFound() {
         <Navigator.NavLink page="/about">About</Navigator.NavLink>
         <Navigator.NavLink page="/resume">Resume</Navigator.NavLink>
         <Navigator.NavLink page="/stacks">Stacks</Navigator.NavLink>
-        <Navigator.NavLink page="/projects">Projects</Navigator.NavLink>
       </Navigator.Root>
     </>
   );
