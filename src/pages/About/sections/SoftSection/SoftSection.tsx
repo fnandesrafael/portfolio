@@ -18,7 +18,7 @@ export default function SoftSection() {
           />
         </S.PaintWrapper>
 
-        <div></div>
+        <S.Square $height={20} />
       </S.LeftWrapper>
 
       <S.RightWrapper>
@@ -27,6 +27,7 @@ export default function SoftSection() {
           <S.Square $height={60} $radius="0 2rem 0 0" />
           <S.Square $height={20} />
         </S.Column>
+
         <S.Column $width={47}>
           <S.Square $height={20} $radius="0 0 0 2rem" />
           <S.Square $height={60} $radius="2rem 0 0 0" />

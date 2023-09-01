@@ -12,9 +12,11 @@ type ColumnProps = {
 
 export const SectionWrapper = styled(motion.section)`
   border: 2px solid red;
+  background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   flex-flow: row;
   height: 36rem;
+  transition: 0.4s background-color;
   width: 100%;
 `;
 
@@ -69,5 +71,3 @@ export const Square = styled(motion.div)<SquareProps>`
   height: ${({ $height }) => $height}%;
   width: 100%;
 `;
-
-export default SectionWrapper;
