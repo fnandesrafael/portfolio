@@ -3,6 +3,7 @@ import styled from 'styled-components';
 type SquareProps = {
   $height?: string;
   $margin?: string;
+  $radius?: string;
   $width?: string;
 };
 
@@ -24,6 +25,7 @@ export const LeftWrapper = styled.div<SquareProps>`
 
 export const Square = styled.div<SquareProps>`
   background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ $radius }) => $radius};
   height: ${({ $height }) => $height};
   margin: ${({ $margin }) => $margin};
   width: 100%;
