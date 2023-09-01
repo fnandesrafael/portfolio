@@ -1,7 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 type SquareProps = {
+  $hasLine?: {
+    rising: boolean;
+    width: string;
+    degrees: string;
+  };
   $height: number;
   $margin?: string;
   $radius?: string;
@@ -72,4 +77,26 @@ export const Square = styled(motion.div)<SquareProps>`
   margin: ${({ $margin }) => $margin};
   transition: 0.8s background-color;
   width: 100%;
+
+  ${({ $hasLine }) =>
+    $hasLine &&
+    css`
+      &::before {
+        background-color: ${({ theme }) => theme.colors.background};
+        content: '';
+        height: 2px;
+
+        ${$hasLine.rising &&
+        css`
+          bottom: 0;
+        `}
+
+        left: 0;
+        position: absolute;
+        transform: translateY(100%) rotate(${$hasLine.degrees});
+        transform-origin: left bottom;
+        transition: 0.8s background-color;
+        width: ${$hasLine.width};
+      }
+    `}
 `;

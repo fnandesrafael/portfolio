@@ -6,15 +6,14 @@ type CustomMarginProps = {
 };
 
 type SquareProps = {
-  $radius?: string;
   $hasLine?: {
     rising: boolean;
     width: string;
     degrees: string;
   };
-  $hasLineDown?: boolean;
-  $degrees?: number;
-} & CustomMarginProps;
+  $margin?: string;
+  $radius?: string;
+};
 
 export const SectionWrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.background};
@@ -70,7 +69,7 @@ export const RowWrapper = styled.div<CustomMarginProps>`
   margin: ${({ $margin }) => $margin};
 `;
 
-export const Square = styled.div<SquareElementProps>`
+export const Square = styled.div<SquareProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
   height: 100%;
