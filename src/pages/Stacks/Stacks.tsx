@@ -73,7 +73,6 @@ export default function Stacks() {
               src={stack.frame}
               drag
               dragMomentum={false}
-              whileDrag={{ scale: 1.1, cursor: 'pointer' }}
               variants={stacksVariant}
               onDragStart={handleZIndex}
               $scale={stack.scale}
