@@ -17,7 +17,7 @@ export const SectionWrapper = styled(motion.section)`
   display: flex;
   flex-flow: row;
   height: 36rem;
-  transition: 0.4s background-color;
+  transition: 0.8s background-color;
   width: 100%;
 `;
 
@@ -70,6 +70,6 @@ export const Square = styled(motion.div)<SquareProps>`
   border-radius: ${({ $radius }) => $radius};
   height: ${({ $height }) => $height}%;
   margin: ${({ $margin }) => $margin};
-  transition: 0.6s background-color;
+  transition: 0.8s background-color;
   width: 100%;
 `;
