@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
+import { ScrollIcon } from '@components/ScrollIcon';
 
 import * as S from './styles';
 
@@ -24,6 +25,10 @@ export default function NotFound() {
             404
           </S.ErrorElement>
         </S.ErrorWrapper>
+
+        <ScrollIcon.Root>
+          <ScrollIcon.Icon />
+        </ScrollIcon.Root>
       </S.PageWrapper>
 
       <Navigator.Root>
