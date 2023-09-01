@@ -74,7 +74,8 @@ export const Heading = styled.h1`
   line-height: 14rem;
   mix-blend-mode: difference;
   opacity: 0.75;
-  padding: 1rem 2rem;
+  padding-left: 3.5rem;
+  padding-top: 3.5rem;
   pointer-events: none;
   position: absolute;
   width: 37%;
