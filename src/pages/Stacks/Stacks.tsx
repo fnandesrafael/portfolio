@@ -1,10 +1,31 @@
 import React, { useLayoutEffect, useState } from 'react';
+import { Variants } from 'framer-motion';
 import stacksData from '@data/stacks';
 import { EASE_SWEET } from '@constants/animations';
 import { Navigator } from '@components/Navigator';
 import { MouseFollower } from '@components/MouseFollower';
 
 import * as S from './styles';
+
+const wrapperVariant: Variants = {
+  animate: {
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.04,
+    },
+  },
+};
+
+const stacksVariant: Variants = {
+  initial: {
+    scale: 0,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+  },
+};
 
 export default function Stacks() {
   const [frontIndex, setFrontIndex] = useState(10);
@@ -40,7 +61,12 @@ export default function Stacks() {
           </MouseFollower.Element>
         </MouseFollower.Root>
 
-        <S.StacksWrapper>
+        <S.StacksWrapper
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={wrapperVariant}
+        >
           {stacksData.map((stack) => (
             <S.StackElement
               key={stack.id}
@@ -48,6 +74,7 @@ export default function Stacks() {
               drag
               dragMomentum={false}
               whileDrag={{ scale: 1.1, cursor: 'pointer' }}
+              variants={stacksVariant}
               onDragStart={handleZIndex}
               $scale={stack.scale}
               $left={stack.left}
