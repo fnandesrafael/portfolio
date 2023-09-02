@@ -52,7 +52,6 @@ export default function HeroSection() {
   return (
     <S.SectionWrapper>
       <GoghFrame.Root
-        hasLink
         motionValues={{
           initial: {
             alignItems: 'center',
@@ -60,10 +59,10 @@ export default function HeroSection() {
           },
           animate: {
             borderRadius: '10rem 10rem 0 0',
-            height: '88rem',
+            height: '200vh',
             top: 72,
             transition: { duration: 1.5, ease: EASE_SWEET },
-            width: '100%',
+            width: '100vw',
           },
         }}
       >
@@ -71,7 +70,7 @@ export default function HeroSection() {
           <GoghFrame.Paint
             src={darkPaint}
             motionValues={{
-              initial: { y: 0, scale: 3, marginTop: '12.5rem' },
+              initial: { y: 0, scale: 3, marginTop: '11.5rem' },
               animate: {
                 y: 350,
                 scale: 2.65,
@@ -88,7 +87,7 @@ export default function HeroSection() {
           <GoghFrame.Paint
             src={lightPaint}
             motionValues={{
-              initial: { y: 0, scale: 3, marginTop: '12.5rem' },
+              initial: { y: 0, scale: 3, marginTop: '11.5rem' },
               animate: {
                 y: 300,
                 scale: 2.65,
