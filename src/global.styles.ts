@@ -2,6 +2,15 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import grungeTexture from './assets/images/grunge_texture.png';
 
+export const AppWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.textPrimary};
+  display: flex;
+  flex-flow: column;
+  transition: 0.8s background-color;
+  width: 100%;
+`;
+
 export const Overall = createGlobalStyle`
   * {
     margin: 0;
@@ -45,14 +54,3 @@ export const Overall = createGlobalStyle`
   display: none;
 }
 `;
-
-export const AppWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.textPrimary};
-  display: flex;
-  flex-flow: column;
-  transition: 0.8s background-color;
-  width: 100%;
-`;
-
-export default Overall;

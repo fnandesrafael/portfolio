@@ -7,12 +7,6 @@ type StackElementProps = {
   $top: number;
 };
 
-export const PageWrapper = styled(motion.main)`
-  align-items: center;
-  display: flex;
-  flex-flow: column;
-`;
-
 export const PageHeading = styled.h1`
   display: flex;
   font-size: 31rem;
@@ -25,14 +19,10 @@ export const PageHeading = styled.h1`
   z-index: 0;
 `;
 
-export const StacksWrapper = styled(motion.div)`
-  height: 46rem;
-  margin-left: 2.8rem;
-  margin-top: 6rem;
-  padding: 4rem;
-  padding-bottom: 0;
-  position: relative;
-  width: 56rem;
+export const PageWrapper = styled(motion.main)`
+  align-items: center;
+  display: flex;
+  flex-flow: column;
 `;
 
 export const StackElement = styled(motion.img)<StackElementProps>`
@@ -48,4 +38,14 @@ export const StackElement = styled(motion.img)<StackElementProps>`
     scale: 1.025;
     transition: 0.2s scale;
   }
+`;
+
+export const StacksWrapper = styled(motion.div)`
+  height: 46rem;
+  margin-left: 2.8rem;
+  margin-top: 6rem;
+  padding: 4rem;
+  padding-bottom: 0;
+  position: relative;
+  width: 56rem;
 `;

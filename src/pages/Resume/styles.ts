@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const PageWrapper = styled(motion.main)`
-  display: flex;
-  flex-flow: row;
-  transition: 0.8s color;
-`;
-
 export const PageHeading = styled.h1`
   display: flex;
   font-size: 24rem;
@@ -19,11 +13,10 @@ export const PageHeading = styled.h1`
   z-index: 0;
 `;
 
-export const RowContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
-  border-right: 2px solid ${({ theme }) => theme.colors.background};
-  transition: 0.8s border-right, 0.8s background-color;
-  width: 20%;
+export const PageWrapper = styled(motion.main)`
+  display: flex;
+  flex-flow: row;
+  transition: 0.8s color;
 `;
 
 export const ResumeContainer = styled.div`
@@ -65,4 +58,11 @@ export const ResumeInfo = styled.div`
     font-size: 1.25rem;
     transition: 0.8s color;
   }
+`;
+
+export const RowContainer = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-right: 2px solid ${({ theme }) => theme.colors.background};
+  transition: 0.8s border-right, 0.8s background-color;
+  width: 20%;
 `;

@@ -21,17 +21,17 @@ export default function BioSection() {
         </S.BioText>
       </S.BioContainer>
 
-      <S.SquaresWrapper>
+      <S.RightWrapper>
         <S.RowWrapper $margin="0 0 2px 0 ">
-          <S.Square $margin="0 2px 0 0" $radius="0 0 4rem 0" />
-          <S.Square $radius="0 0 0 4rem" />
+          <S.Container $margin="0 2px 0 0" $radius="0 0 4rem 0" />
+          <S.Container $radius="0 0 0 4rem" />
         </S.RowWrapper>
 
         <S.RowWrapper $margin="0 0 2px 0">
-          <S.Square $margin="0 2px 0 0" $radius="0 4rem 0 4rem" />
-          <S.Square $radius="4rem 0 0 0" />
+          <S.Container $margin="0 2px 0 0" $radius="0 4rem 0 4rem" />
+          <S.Container $radius="4rem 0 0 0" />
         </S.RowWrapper>
-      </S.SquaresWrapper>
+      </S.RightWrapper>
     </S.SectionWrapper>
   );
 }
