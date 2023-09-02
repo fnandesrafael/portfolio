@@ -2,25 +2,27 @@ import styled from 'styled-components';
 
 type ContainerProps = {
   $height?: string;
+  $margin?: string;
   $width?: string;
 };
 
 export const Column = styled.div<ContainerProps>`
-  border: 1px solid red;
   display: flex;
   flex-flow: column;
   height: 100%;
+  margin: ${({ $margin }) => $margin};
   width: ${({ $width }) => $width};
 `;
 
 export const Container = styled.div<ContainerProps>`
-  border: 1px solid red;
+  background-color: ${({ theme }) => theme.colors.primary};
   height: ${({ $height }) => $height};
+  margin: ${({ $margin }) => $margin};
+  transition: 0.8s background-color;
   width: ${({ $width }) => $width};
 `;
 
 export const Row = styled.div<ContainerProps>`
-  border: 1px solid red;
   display: flex;
   flex-flow: row;
   height: ${({ $height }) => $height};
@@ -28,8 +30,9 @@ export const Row = styled.div<ContainerProps>`
 `;
 
 export const SectionWrapper = styled.section`
-  border: 1px solid red;
+  background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   height: 46rem;
+  transition: 0.8s background-color;
   width: 100%;
 `;

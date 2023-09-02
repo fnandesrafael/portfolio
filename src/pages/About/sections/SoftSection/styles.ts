@@ -103,7 +103,7 @@ export const SectionWrapper = styled(motion.section)`
   background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   flex-flow: row;
-  height: 36rem;
+  height: 46rem;
   transition: 0.8s background-color;
   width: 100%;
 `;
