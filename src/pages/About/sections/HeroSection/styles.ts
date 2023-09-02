@@ -6,6 +6,13 @@ export const SectionWrapper = styled.section`
   z-index: 10;
 `;
 
+export const SubHeading = styled(motion.h2)`
+  font-size: 1.15rem;
+  font-weight: 200;
+  letter-spacing: 0.15rem;
+  width: 18rem;
+`;
+
 export const TextWrapper = styled.div`
   align-items: 'flex-start';
   color: ${({ theme }) => (theme.title === 'dark' ? '#d9d9d9' : '#131313')};
@@ -18,11 +25,4 @@ export const TextWrapper = styled.div`
   top: 8rem;
   transition: 1s;
   z-index: 10;
-`;
-
-export const SubHeading = styled(motion.h2)`
-  font-size: 1.15rem;
-  font-weight: 200;
-  letter-spacing: 0.15rem;
-  width: 18rem;
 `;

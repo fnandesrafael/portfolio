@@ -11,15 +11,6 @@ type ContainerProps = {
   $radius?: string;
 };
 
-export const SectionWrapper = styled.section`
-  background-color: ${({ theme }) => theme.colors.background};
-  display: flex;
-  height: 36rem;
-  position: relative;
-  transition: background-color 0.8s;
-  z-index: 10;
-`;
-
 export const BioContainer = styled.div<ContainerProps>`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.primary};
@@ -32,18 +23,6 @@ export const BioContainer = styled.div<ContainerProps>`
   width: 65%;
 `;
 
-export const QuoteElement = styled(motion.svg)`
-  left: 2rem;
-  position: absolute;
-  top: -1rem;
-  width: 10rem;
-
-  path {
-    fill: ${({ theme }) => theme.colors.background};
-    transition: 0.8s;
-  }
-`;
-
 export const BioText = styled.p`
   color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
   font-size: 1.5rem;
@@ -51,19 +30,6 @@ export const BioText = styled.p`
   padding: 2rem;
   transition: 0.8s color;
   width: 85%;
-`;
-
-export const RightWrapper = styled.div`
-  display: flex;
-  flex-flow: column;
-  width: 35%;
-`;
-
-export const RowWrapper = styled.div<ContainerProps>`
-  display: flex;
-  flex-flow: row;
-  height: 100%;
-  margin: ${({ $margin }) => $margin};
 `;
 
 export const Container = styled.div<ContainerProps>`
@@ -96,4 +62,38 @@ export const Container = styled.div<ContainerProps>`
         width: ${$hasLine.width};
       }
     `}
+`;
+
+export const QuoteElement = styled(motion.svg)`
+  left: 2rem;
+  position: absolute;
+  top: -1rem;
+  width: 10rem;
+
+  path {
+    fill: ${({ theme }) => theme.colors.background};
+    transition: 0.8s;
+  }
+`;
+
+export const RightWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  width: 35%;
+`;
+
+export const RowWrapper = styled.div<ContainerProps>`
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  margin: ${({ $margin }) => $margin};
+`;
+
+export const SectionWrapper = styled.section`
+  background-color: ${({ theme }) => theme.colors.background};
+  display: flex;
+  height: 36rem;
+  position: relative;
+  transition: background-color 0.8s;
+  z-index: 10;
 `;

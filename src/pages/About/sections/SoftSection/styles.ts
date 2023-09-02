@@ -13,41 +13,8 @@ type ContainerProps = {
   $width?: string;
 };
 
-export const SectionWrapper = styled(motion.section)`
-  background-color: ${({ theme }) => theme.colors.background};
-  display: flex;
-  flex-flow: row;
-  height: 36rem;
-  transition: 0.8s background-color;
-  width: 100%;
-`;
-
-export const LeftWrapper = styled(motion.div)<ContainerProps>`
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-  margin: 0 2px 0 0;
-  width: ${({ $width }) => $width};
-`;
-
-export const PaintWrapper = styled.div`
-  display: flex;
-  height: 80%;
-  overflow: hidden;
-  width: 100%;
-`;
-
-export const PaintElement = styled(motion.img)`
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-`;
-
-export const RightWrapper = styled(motion.div)<ContainerProps>`
-  display: flex;
-  flex-flow: row;
-  height: 100%;
-  width: ${({ $width }) => $width};
+export const BadgeElement = styled(motion.img)`
+  height: 16rem;
 `;
 
 export const Column = styled(motion.div)<ContainerProps>`
@@ -93,6 +60,27 @@ export const Container = styled(motion.div)<ContainerProps>`
     `}
 `;
 
+export const LeftWrapper = styled(motion.div)<ContainerProps>`
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  margin: 0 2px 0 0;
+  width: ${({ $width }) => $width};
+`;
+
+export const PaintElement = styled(motion.img)`
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+`;
+
+export const PaintWrapper = styled.div`
+  display: flex;
+  height: 80%;
+  overflow: hidden;
+  width: 100%;
+`;
+
 export const Paragraph = styled.p`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
@@ -104,6 +92,18 @@ export const Paragraph = styled.p`
   z-index: 0;
 `;
 
-export const BadgeElement = styled(motion.img)`
-  height: 16rem;
+export const RightWrapper = styled(motion.div)<ContainerProps>`
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  width: ${({ $width }) => $width};
+`;
+
+export const SectionWrapper = styled(motion.section)`
+  background-color: ${({ theme }) => theme.colors.background};
+  display: flex;
+  flex-flow: row;
+  height: 36rem;
+  transition: 0.8s background-color;
+  width: 100%;
 `;

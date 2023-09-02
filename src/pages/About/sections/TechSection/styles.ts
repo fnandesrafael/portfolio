@@ -8,16 +8,7 @@ type ContainerProps = {
   $width?: string;
 };
 
-export const SectionWrapper = styled.section`
-  background-color: ${({ theme }) => theme.colors.background};
-  display: flex;
-  flex-flow: row;
-  height: 52rem;
-  transition: 0.8s background-color;
-  width: 100%;
-`;
-
-export const LeftWrapper = styled.div<ContainerProps>`
+export const Column = styled.div<ContainerProps>`
   display: flex;
   flex-flow: column;
   height: 100%;
@@ -37,36 +28,6 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
 `;
 
-export const RightWrapper = styled.div<ContainerProps>`
-  display: flex;
-  flex-flow: row;
-  height: 100%;
-  margin: ${({ $margin }) => $margin};
-  width: ${({ $width }) => $width};
-`;
-
-export const Column = styled.div<ContainerProps>`
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-  margin: ${({ $margin }) => $margin};
-  width: ${({ $width }) => $width};
-`;
-
-export const PaintWrapper = styled.div`
-  display: flex;
-  height: 100%;
-  margin-bottom: 2px;
-  overflow: hidden;
-  width: 100%;
-`;
-
-export const PaintElement = styled(motion.img)`
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-`;
-
 export const Heading = styled.h1`
   color: #fff;
   font-size: 15rem;
@@ -83,6 +44,28 @@ export const Heading = styled.h1`
   z-index: 20;
 `;
 
+export const LeftWrapper = styled.div<ContainerProps>`
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  margin: ${({ $margin }) => $margin};
+  width: ${({ $width }) => $width};
+`;
+
+export const PaintElement = styled(motion.img)`
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+`;
+
+export const PaintWrapper = styled.div`
+  display: flex;
+  height: 100%;
+  margin-bottom: 2px;
+  overflow: hidden;
+  width: 100%;
+`;
+
 export const Paragraph = styled.p`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
@@ -93,4 +76,21 @@ export const Paragraph = styled.p`
   transition: 0.8s color, 0.8s background-color;
   width: 125%;
   z-index: 0;
+`;
+
+export const RightWrapper = styled.div<ContainerProps>`
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  margin: ${({ $margin }) => $margin};
+  width: ${({ $width }) => $width};
+`;
+
+export const SectionWrapper = styled.section`
+  background-color: ${({ theme }) => theme.colors.background};
+  display: flex;
+  flex-flow: row;
+  height: 52rem;
+  transition: 0.8s background-color;
+  width: 100%;
 `;
