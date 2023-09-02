@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import { EASE_SWEET } from '@constants/animations';
 import augustine from '@assets/images/paints/augustine.png';
 import softDark from '@assets/images/soft_dark.png';
 import softLight from '@assets/images/soft_light.png';
 
-import { ThemeContext } from 'styled-components';
 import * as S from './styles';
 
 export default function SoftSection() {

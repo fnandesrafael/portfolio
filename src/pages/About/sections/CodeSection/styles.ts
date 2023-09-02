@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 type ContainerProps = {
   $height?: string;
@@ -16,10 +17,46 @@ export const Column = styled.div<ContainerProps>`
 
 export const Container = styled.div<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.primary};
+  display: flex;
+  flex-direction: column;
   height: ${({ $height }) => $height};
+  justify-content: center;
   margin: ${({ $margin }) => $margin};
   transition: 0.8s background-color;
   width: ${({ $width }) => $width};
+`;
+
+export const Heading = styled.h1`
+  font-size: 8rem;
+  font-weight: 400;
+  margin-bottom: 9rem;
+  margin-right: 1rem;
+  transform: rotate(-90deg);
+  transition: 0.8s color;
+`;
+
+export const PaintElement = styled(motion.img)`
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+`;
+
+export const PaintWrapper = styled.div`
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+`;
+
+export const Paragraph = styled.p`
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  transition: 0.8s color, 0.8s background-color;
+  width: 75%;
+  z-index: 0;
 `;
 
 export const Row = styled.div<ContainerProps>`
