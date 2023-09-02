@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-type SquareProps = {
+type ContainerProps = {
   $hasLine?: {
     rising: boolean;
     width: string;
@@ -20,7 +20,7 @@ export const SectionWrapper = styled.section`
   z-index: 10;
 `;
 
-export const BioContainer = styled.div<SquareProps>`
+export const BioContainer = styled.div<ContainerProps>`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
@@ -53,20 +53,20 @@ export const BioText = styled.p`
   width: 85%;
 `;
 
-export const SquaresWrapper = styled.div`
+export const RightWrapper = styled.div`
   display: flex;
   flex-flow: column;
   width: 35%;
 `;
 
-export const RowWrapper = styled.div<SquareProps>`
+export const RowWrapper = styled.div<ContainerProps>`
   display: flex;
   flex-flow: row;
   height: 100%;
   margin: ${({ $margin }) => $margin};
 `;
 
-export const Square = styled.div<SquareProps>`
+export const Container = styled.div<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
   height: 100%;

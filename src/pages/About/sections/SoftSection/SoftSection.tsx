@@ -12,7 +12,7 @@ export default function SoftSection() {
 
   return (
     <S.SectionWrapper>
-      <S.LeftWrapper>
+      <S.LeftWrapper $width="35%">
         <S.PaintWrapper>
           <S.PaintElement
             src={augustine}
@@ -23,27 +23,13 @@ export default function SoftSection() {
           />
         </S.PaintWrapper>
 
-        <S.Square $height={20} $margin="2px 0 2px 0" />
+        <S.Container $height="20%" $margin="2px 0 2px 0" />
       </S.LeftWrapper>
 
-      <S.RightWrapper>
-        <S.Column $width={53.5} $margin="0 2px 0 0">
-          <S.Square $height={20} $radius="0 4rem 0 0" $margin="0 0 2px 0" />
-          <S.Square $height={60}>
-            <S.Paragraph>
-              As a professional, I have experience in{' '}
-              <b>agile environments and methodologies</b>, organizing and
-              executing tasks with <b>Kanban</b> and <b>Scrum</b>. I also have
-              proficiency in <b>communication</b>, <b>collaboration</b>,{' '}
-              <b>creativity</b>, and <b>self-leadership</b>.
-            </S.Paragraph>
-          </S.Square>
-          <S.Square $height={20} $margin="2px 0 2px 0" />
-        </S.Column>
-
-        <S.Column $width={47}>
-          <S.Square $height={20} $radius="4rem 0 0 0" $margin="0 0 2px 0" />
-          <S.Square $height={60}>
+      <S.RightWrapper $width="65%">
+        <S.Column $width="46%" $margin="0 2px 0 0">
+          <S.Container $height="20%" $radius="0 4rem 0 0" $margin="0 0 2px 0" />
+          <S.Container $height="60%">
             <S.BadgeElement
               src={theme.title === 'dark' ? softDark : softLight}
               whileInView={{
@@ -56,8 +42,22 @@ export default function SoftSection() {
                 },
               }}
             />
-          </S.Square>
-          <S.Square $height={20} $margin="2px 0 2px 0" />
+          </S.Container>
+          <S.Container $height="20%" $margin="2px 0 2px 0" />
+        </S.Column>
+
+        <S.Column $width="54%">
+          <S.Container $height="20%" $radius="4rem 0 0 0" $margin="0 0 2px 0" />
+          <S.Container $height="60%">
+            <S.Paragraph>
+              As a professional, I have experience in{' '}
+              <b>agile environments and methodologies</b>, organizing and
+              executing tasks with <b>Kanban</b> and <b>Scrum</b>. I also have
+              proficiency in <b>communication</b>, <b>collaboration</b>,{' '}
+              <b>creativity</b>, and <b>self-leadership</b>.
+            </S.Paragraph>
+          </S.Container>
+          <S.Container $height="20%" $margin="2px 0 2px 0" />
         </S.Column>
       </S.RightWrapper>
     </S.SectionWrapper>

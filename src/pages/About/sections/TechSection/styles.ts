@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-type SquareProps = {
+type ContainerProps = {
   $height?: string;
   $margin?: string;
   $radius?: string;
@@ -17,7 +17,7 @@ export const SectionWrapper = styled.section`
   width: 100%;
 `;
 
-export const LeftWrapper = styled.div<SquareProps>`
+export const LeftWrapper = styled.div<ContainerProps>`
   display: flex;
   flex-flow: column;
   height: 100%;
@@ -25,7 +25,7 @@ export const LeftWrapper = styled.div<SquareProps>`
   width: ${({ $width }) => $width};
 `;
 
-export const Square = styled.div<SquareProps>`
+export const Container = styled.div<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
   display: flex;
@@ -37,7 +37,7 @@ export const Square = styled.div<SquareProps>`
   width: 100%;
 `;
 
-export const RightWrapper = styled.div<SquareProps>`
+export const RightWrapper = styled.div<ContainerProps>`
   display: flex;
   flex-flow: row;
   height: 100%;
@@ -45,7 +45,7 @@ export const RightWrapper = styled.div<SquareProps>`
   width: ${({ $width }) => $width};
 `;
 
-export const Column = styled.div<SquareProps>`
+export const Column = styled.div<ContainerProps>`
   display: flex;
   flex-flow: column;
   height: 100%;
@@ -74,7 +74,7 @@ export const Heading = styled.h1`
   line-height: 14rem;
   mix-blend-mode: difference;
   opacity: 0.75;
-  padding-left: 3.5rem;
+  padding-left: 4.25rem;
   padding-top: 3.5rem;
   pointer-events: none;
   position: absolute;
@@ -87,9 +87,10 @@ export const Paragraph = styled.p`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
   font-size: 1.5rem;
+  margin-left: 1rem;
   padding: 1rem;
   text-align: end;
   transition: 0.8s color, 0.8s background-color;
-  width: 140%;
+  width: 125%;
   z-index: 0;
 `;
