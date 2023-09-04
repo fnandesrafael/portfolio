@@ -7,6 +7,7 @@ import BioSection from './sections/BioSection';
 import SoftSection from './sections/SoftSection';
 import TechSection from './sections/TechSection';
 import CodeSection from './sections/CodeSection';
+import FinalSection from './sections/FinalSection';
 
 import * as S from './styles';
 
@@ -54,6 +55,7 @@ export default function About() {
         <SoftSection />
         <TechSection />
         <CodeSection />
+        <FinalSection />
       </S.PageWrapper>
 
       <Navigator.Root>
