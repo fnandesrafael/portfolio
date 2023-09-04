@@ -41,8 +41,8 @@ export const StackElement = styled(motion.img)<StackElementProps>`
 `;
 
 export const StacksWrapper = styled(motion.div)`
-  height: 46rem;
-  margin-left: 2.8rem;
+  height: 58rem;
+  margin-left: 2.4rem;
   margin-top: 6rem;
   padding: 4rem;
   padding-bottom: 0;
