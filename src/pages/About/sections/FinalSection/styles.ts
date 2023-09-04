@@ -9,9 +9,9 @@ type ContainerProps = {
 export const Container = styled.div<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ $radius }) => $radius};
-  transition: 0.8s background-color;
   height: 100%;
   margin: ${({ $margin }) => $margin};
+  transition: 0.8s background-color;
   width: ${({ $width }) => $width};
 `;
 
