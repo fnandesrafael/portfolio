@@ -12,7 +12,7 @@ export default function CodeSection() {
         <S.Container $height="60%" $margin="2px 0 0 0">
           <S.Heading>Code</S.Heading>
         </S.Container>
-        <S.Container $height="20%" $margin="2px 0 2px 0" />
+        <S.Container $height="20%" $margin="2px 0 2px 0" $radius="0 0 4rem 0" />
       </S.Column>
 
       <S.Column $width="30%" $margin="0 2px 0 2px">
@@ -27,7 +27,7 @@ export default function CodeSection() {
             />
           </S.PaintWrapper>
         </S.Container>
-        <S.Container $height="20%" $margin="2px 0 2px 0" />
+        <S.Container $height="20%" $margin="2px 0 2px 0" $radius="0 0 0 4rem" />
       </S.Column>
 
       <S.Column $width="35%">

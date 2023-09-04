@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 type ContainerProps = {
   $height?: string;
   $margin?: string;
+  $radius?: string;
   $width?: string;
 };
 
@@ -17,6 +18,7 @@ export const Column = styled.div<ContainerProps>`
 
 export const Container = styled.div<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ $radius }) => $radius};
   display: flex;
   flex-direction: column;
   height: ${({ $height }) => $height};
