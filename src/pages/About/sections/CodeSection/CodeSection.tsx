@@ -21,7 +21,8 @@ export default function CodeSection() {
           <S.PaintWrapper>
             <S.PaintElement
               src={deadNature}
-              whileHover={{ scale: 1.1 }}
+              initial={{ scale: 1.1 }}
+              whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.4, ease: EASE_SWEET }}
             />
           </S.PaintWrapper>
