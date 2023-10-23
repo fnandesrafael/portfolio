@@ -55,8 +55,9 @@ export const Paragraph = styled.p`
   color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
   font-size: 1.5rem;
   padding: 2rem;
+  padding-right: 0;
   transition: 0.8s color, 0.8s background-color;
-  width: 95%;
+  width: 93%;
   z-index: 0;
 `;
 

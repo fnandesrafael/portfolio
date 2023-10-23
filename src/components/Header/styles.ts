@@ -7,9 +7,9 @@ export const HeaderWrapper = styled(motion.header)`
   flex-flow: row-reverse;
   height: 4rem;
   justify-items: center;
-  padding: 2rem;
   position: fixed;
-  width: 100%;
+  top: 1rem;
+  right: 2rem;
   z-index: 20;
 `;
 

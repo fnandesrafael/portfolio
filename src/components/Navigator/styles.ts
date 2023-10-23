@@ -7,7 +7,6 @@ export const NavigationWrapper = styled(motion.footer)`
   gap: 0;
   margin-top: 8rem;
   padding: 2rem;
-  width: 100%;
 `;
 
 export const NavText = styled.h1`
