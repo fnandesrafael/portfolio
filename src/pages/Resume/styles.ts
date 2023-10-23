@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const PageHeading = styled.h1`
+  @media screen and (height > 768px) {
+    font-size: 34.25rem;
+  }
+
   display: flex;
-  font-size: 24rem;
+  font-size: 25rem;
   font-weight: 400;
   left: -4rem;
   opacity: 0.025;
@@ -54,6 +58,10 @@ export const ResumeInfo = styled.div`
   }
 
   h5 {
+    @media screen and (height > 1080px) {
+      font-size: 1.5rem;
+    }
+
     color: ${({ theme }) => (theme.title === 'dark' ? '#B3B0AA' : '#131313')};
     font-size: 1.25rem;
     transition: 0.8s color;

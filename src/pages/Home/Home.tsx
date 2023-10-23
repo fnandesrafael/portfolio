@@ -162,6 +162,7 @@ export default function Home() {
           whiteSpace: 'nowrap',
           width: '108.75%',
         }}
+        subheading
       >
         <Signature.Text
           wordVariants={firstNameVariant}

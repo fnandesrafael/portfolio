@@ -8,6 +8,11 @@ type StackElementProps = {
 };
 
 export const PageHeading = styled.h1`
+  @media screen and (height > 768px) {
+    top: -16rem;
+    font-size: 42rem;
+  }
+
   display: flex;
   font-size: 31rem;
   font-weight: 400;
@@ -41,6 +46,13 @@ export const StackElement = styled(motion.img)<StackElementProps>`
 `;
 
 export const StacksWrapper = styled(motion.div)`
+  @media screen and (height > 768px) {
+    margin-bottom: 22rem;
+    margin-left: 2.35rem;
+    margin-top: 24rem;
+    scale: 1.5;
+  }
+
   height: 58rem;
   margin-left: 2.4rem;
   margin-top: 6rem;
