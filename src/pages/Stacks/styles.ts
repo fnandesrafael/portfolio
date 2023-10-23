@@ -9,8 +9,8 @@ type StackElementProps = {
 
 export const PageHeading = styled.h1`
   @media screen and (height > 768px) {
-    top: -16rem;
     font-size: 42rem;
+    top: -16rem;
   }
 
   display: flex;

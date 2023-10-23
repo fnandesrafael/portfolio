@@ -6,10 +6,10 @@ export const HeaderWrapper = styled(motion.header)`
   display: flex;
   flex-flow: row-reverse;
   height: 4rem;
-  justify-items: center;
+  justify-content: center;
   position: fixed;
-  top: 1rem;
   right: 2rem;
+  top: 1rem;
   z-index: 20;
 `;
 
