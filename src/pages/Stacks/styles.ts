@@ -54,7 +54,7 @@ export const StacksWrapper = styled(motion.div)`
   }
 
   height: 58rem;
-  margin-left: 2.4rem;
+  margin-left: 2.2rem;
   margin-top: 6rem;
   padding: 4rem;
   padding-bottom: 0;
