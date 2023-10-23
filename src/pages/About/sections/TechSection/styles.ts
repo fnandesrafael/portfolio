@@ -29,6 +29,10 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const Heading = styled.h1`
+  @media screen and (height > 768px) {
+    width: 32%;
+  }
+
   color: #fff;
   font-size: 15rem;
   font-weight: 400;

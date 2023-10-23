@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 
 export const HeaderWrapper = styled(motion.header)`
   align-items: center;
-  height: 3rem;
-  padding: 2rem;
+  display: flex;
+  flex-flow: row-reverse;
+  height: 4rem;
+  justify-content: center;
   position: fixed;
-  right: 0;
-  top: 0;
+  right: 2rem;
+  top: 1rem;
   z-index: 20;
 `;
 

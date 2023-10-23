@@ -7,6 +7,11 @@ export const SectionWrapper = styled.section`
 `;
 
 export const SubHeading = styled(motion.h2)`
+  @media screen and (height > 768px) {
+    font-size: 2rem;
+    width: 28rem;
+  }
+
   font-size: 1.15rem;
   font-weight: 200;
   letter-spacing: 0.15rem;

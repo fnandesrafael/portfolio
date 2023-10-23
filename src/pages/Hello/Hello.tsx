@@ -4,7 +4,7 @@ import { EASE_OUT } from '@constants/animations/eases';
 
 import * as S from './styles';
 
-const greetings = ['Pax!', 'Olá!', '¡Hola!', 'Hello!'];
+const greetings = ['Pax!', 'Olá!', 'Hello!', 'Salut!'];
 
 export default function Hello() {
   const [greetingIndex, setGreetingIndex] = useState(0);

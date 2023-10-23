@@ -47,7 +47,7 @@ export default function HeroSection() {
   const theme = useContext(ThemeContext);
   const { scrollYProgress } = useScroll();
 
-  const scrollPosition = useTransform(scrollYProgress, [0, 1], [2.65, 5]);
+  const scrollPosition = useTransform(scrollYProgress, [0, 1], [3, 5]);
 
   return (
     <S.SectionWrapper>
@@ -73,7 +73,7 @@ export default function HeroSection() {
               initial: { y: 0, scale: 3, marginTop: '11.5rem' },
               animate: {
                 y: 350,
-                scale: 2.65,
+                scale: 3,
                 filter: 'saturate(0.5)',
                 transition: {
                   duration: 1.5,
@@ -90,7 +90,7 @@ export default function HeroSection() {
               initial: { y: 0, scale: 3, marginTop: '11.5rem' },
               animate: {
                 y: 300,
-                scale: 2.65,
+                scale: 3,
                 filter: 'saturate(0.5)',
                 transition: {
                   duration: 1.5,
@@ -110,10 +110,8 @@ export default function HeroSection() {
       <S.TextWrapper>
         <Signature.Root
           styles={{
-            fontSize: '6.5rem',
             lineHeight: '125%',
             letterSpacing: '2rem',
-            width: '64rem',
           }}
         >
           <Signature.Text

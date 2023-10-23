@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const GreetingElement = styled(motion.h1)`
+  @media screen and (height > 768px) {
+    font-size: 2.5rem;
+  }
+
   color: ${({ theme }) => theme.colors.textSecundary};
   font-size: 2rem;
   font-weight: 100;
