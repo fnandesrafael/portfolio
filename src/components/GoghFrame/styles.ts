@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 export const FrameWrapper = styled(motion.div)`
   @media screen and (height > 768px) {
     height: 30rem;
-    top: 46%;
     width: 18rem;
   }
 

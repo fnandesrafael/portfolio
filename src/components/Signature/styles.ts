@@ -9,6 +9,7 @@ export const SignatureWrapper = styled(motion.div)<SignatureWrapperProps>`
   @media screen and (height > 768px) {
     font-size: ${({ subheading }) => (subheading ? '6.5rem' : '10rem')};
     margin-top: ${({ subheading }) => (subheading ? 0 : '7rem')};
+    width: 70rem;
   }
 
   font-size: 6.5rem;

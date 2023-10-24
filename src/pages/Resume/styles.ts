@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 export const PageHeading = styled.h1`
   @media screen and (height > 768px) {
     font-size: 34.25rem;
+    top: -13rem;
   }
 
   display: flex;
@@ -13,7 +14,7 @@ export const PageHeading = styled.h1`
   opacity: 0.025;
   pointer-events: none;
   position: absolute;
-  top: -8rem;
+  top: -9.5rem;
   z-index: 0;
 `;
 

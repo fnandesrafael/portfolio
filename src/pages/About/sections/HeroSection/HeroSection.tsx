@@ -60,7 +60,7 @@ export default function HeroSection() {
           animate: {
             borderRadius: '10rem 10rem 0 0',
             height: '200vh',
-            top: 72,
+            top: '19vw',
             transition: { duration: 1.5, ease: EASE_SWEET },
             width: '100vw',
           },

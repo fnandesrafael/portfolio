@@ -4,8 +4,6 @@ import projects from '@assets/images/projects.png';
 
 export const PageWrapper = styled(motion.main)`
   @media screen and (height > 768px) {
-    margin-bottom: 6rem;
-    margin-top: 18rem;
     scale: 1.4;
   }
 
@@ -52,12 +50,18 @@ export const Container = styled.div`
   display: flex;
   height: 100%;
   justify-content: center;
-  width: 97%;
 `;
 
 export const Projects = styled.div`
+  @media screen and (height > 768px) {
+    margin-bottom: 16rem;
+    margin-top: 12rem;
+    width: 50%;
+  }
+
   display: flex;
   flex-flow: column;
+  margin-bottom: 10rem;
   width: 70%;
 `;
 
@@ -93,8 +97,9 @@ export const Header = styled(Project)`
 
 export const PageHeading = styled.h1`
   @media screen and (height > 768px) {
-    font-size: 42rem;
-    top: -16rem;
+    font-size: 24.25rem;
+    left: 14rem;
+    top: -6.5rem;
   }
 
   display: flex;
@@ -104,6 +109,6 @@ export const PageHeading = styled.h1`
   opacity: 0.025;
   pointer-events: none;
   position: absolute;
-  top: -10rem;
+  top: -9.5rem;
   z-index: 0;
 `;
